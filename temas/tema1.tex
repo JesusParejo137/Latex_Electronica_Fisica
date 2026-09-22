@@ -1,0 +1,146 @@
+% !TEX root = ../main.tex
+\chapter{Introducción a la Electrónica}
+
+% ==========================================
+% 1. DEFINICIÓN Y CONCEPTOS FUNDAMENTALES
+% ==========================================
+\section{Definición de Electrónica}
+
+\begin{concepto}[Definición de Electrónica]
+La \textbf{Electrónica} es la rama de la Física que estudia el transporte controlado de cargas eléctricas: los principios en que se basa, los dispositivos en que ocurre y las aplicaciones a que da lugar.
+\end{concepto}
+
+% ==========================================
+% 2. EVOLUCIÓN HISTÓRICA DE LA ELECTRÓNICA
+% ==========================================
+\section{Evolución histórica de la Electrónica}
+
+\subsection{El electrón}
+
+El desarrollo formal de la electrónica requería la caracterización previa del portador de carga fundamental: el electrón.
+
+\begin{itemize}
+    \item \textbf{1897 --- J. J. Thomson}: Descubrimiento del electrón mediante el estudio de los rayos catódicos. Determina experimentalmente la relación entre la carga y la masa del electrón:
+    \[
+    \frac{q}{m_e} = \SI{1.76e11}{\coulomb\per\kilogram}
+    \]
+    
+    \item \textbf{1909 --- R. Millikan}: Mediante el experimento de la gota de aceite, determina el valor de la carga elemental:
+    \[
+    q = \SI{1.6e-19}{\coulomb}
+    \]
+    A partir de la relación carga/masa de Thomson y el valor de $q$, se deduce la masa del electrón en reposo:
+    \[
+    m_e = \SI{9.1e-31}{\kilogram}
+    \]
+\end{itemize}
+
+\subsection{Electrónica de vacío}
+
+La electrónica de vacío se basa en el fenómeno de la \textbf{emisión termoiónica}, descubierto por Thomas Edison en 1880. Consiste en la liberación de electrones desde la superficie de un conductor (cátodo) al suministrarle energía térmica.
+
+\subsubsection{Diodo de vacío (J. A. Fleming, 1904)}
+Consiste en una ampolla de vidrio en la que se ha realizado el vacío y que aloja dos electrodos:
+\begin{itemize}
+    \item \textbf{Cátodo (filamento):} Emite electrones al calentarse por efecto Joule.
+    \item \textbf{Ánodo (placa):} Recoge los electrones emitidos cuando se encuentra polarizado a un potencial positivo respecto al cátodo.
+\end{itemize}
+
+\begin{concepto}[Propiedad rectificadora]
+Al polarizar el ánodo positivamente ($V_p > 0$), se establece un campo eléctrico $\vec{E}$ que acelera los electrones hacia la placa, permitiendo el paso de corriente $I_p$. Si la polarización es inversa ($V_p < 0$), los electrones son repelidos y la corriente es nula. Este comportamiento convierte al diodo de vacío en un elemento \textbf{rectificador}.
+\end{concepto}
+
+\subsubsection{Triodo de vacío (Lee de Forest, 1907)}
+Introduce un tercer electrodo denominado \textbf{rejilla de control} intercalado entre el cátodo y el ánodo. Variando el potencial aplicado a la rejilla ($V_g$), se modifica de forma efectiva el campo eléctrico próximo al cátodo, permitiendo controlar grandes corrientes de placa mediante pequeñas señales de tensión. 
+\begin{itemize}
+    \item \textbf{Aplicaciones principales:} Amplificador de señal y detector.
+\end{itemize}
+
+\subsubsection{Tetrodo}
+Para trabajar a frecuencias más altas, se introduce una segunda rejilla denominada \textbf{rejilla de pantalla} entre la rejilla de control y la placa (normalmente conectada al mismo voltaje del cátodo o a un potencial fijo).
+
+El objetivo es reducir la capacidad parásita entre la placa y la rejilla de control. Si consideramos la placa y el cátodo como las armaduras de un condensador de placas paralelas con capacidad $C$, al colocar una placa intermedia generamos un circuito equivalente con dos condensadores en serie:
+\[
+\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} \implies C_{eq} < C
+\]
+Al reducir la capacidad equivalente $C_{eq}$, disminuyen los efectos capacitivos indeseados a altas frecuencias, mejorando la respuesta del dispositivo.
+
+\subsubsection{Pentodo}
+Para solucionar el problema de la emisión secundaria de electrones que surge en el tetrodo (donde los electrones que impactan con fuerza contra la placa liberan electrones secundarios que son atraídos por la rejilla de pantalla), se añade un quinto electrodo: la \textbf{rejilla supresora}.
+
+Esta rejilla adicional se coloca entre la rejilla de pantalla y la placa, evitándose así la pérdida de corriente en el ánodo y logrando una característica $I$-$V$ mucho más estable.
+
+\subsubsection{Electrónica y Comunicaciones}
+
+Las válvulas de vacío proporcionaron el impulso definitivo para la consolidación de la radio durante su denominada época dorada (décadas de 1930 y 1940). A lo largo de este periodo, surgieron tecnologías clave basadas enteramente en estos dispositivos:
+
+\begin{itemize}
+    \item \textbf{Televisión:} Aparición del iconoscopio, desarrollado por V. K. Zworykin en 1931.
+    \item \textbf{Calculadora analógica:} Basada en la arquitectura del amplificador operacional.
+    \item \textbf{Radar:} Desarrollado e implantado hacia 1934.
+    \item \textbf{Computación digital:} Desarrollo del primer computador electrónico (ENIAC, 1945).
+\end{itemize}
+
+El contexto histórico de la Segunda Guerra Mundial impulsó de forma decisiva las aplicaciones militares de la electrónica (radiocomunicaciones móviles, sistemas de radar, etc.). Cabe destacar que todos estos avances se lograron utilizando \textbf{exclusivamente válvulas de vacío}, sin la aparición de nuevos dispositivos electrónicos fundamentales.
+
+\subsubsection{El ENIAC y las limitaciones de la electrónica de vacío}
+
+El \textbf{ENIAC} (\textit{Electronic Numerical Integrator And Computer}), construido en 1945 en la Universidad de Pennsylvania, se considera el primer ordenador electrónico digital de propósito general.
+
+\begin{concepto}[Especificaciones y características del ENIAC]
+\begin{itemize}
+    \item \textbf{Dimensiones y componentes:} Ocupaba una superficie de unos $\SI{160}{\metre\squared}$ y albergaba aproximadamente $19\,000$ válvulas de vacío.
+    \item \textbf{Capacidad de cálculo:} Realizaba cerca de $3000$ sumas y $500$ multiplicaciones por segundo.
+    \item \textbf{Consumo energético:} Consumía una potencia eléctrica de $\SI{150}{\kilo\watt}$ (generando el mito urbano de que la ciudad de Filadelfia sufría apagones cuando entraba en funcionamiento).
+    \item \textbf{Arquitectura de procesamiento:} Introdujo la filosofía de la electrónica moderna al ejecutar sus procesos mediante instrucciones en \textbf{lenguaje máquina}, marcando la diferencia respecto a las computadoras analógicas previas.
+\end{itemize}
+\end{concepto}
+
+A pesar de utilizar lenguaje máquina, el programa (\textit{software}) no residía en una memoria volátil reescribible. Cuando se requería modificar o reprogramar el ENIAC, el proceso implicaba la manipulación mecánica y manual de unos $6000$ interruptores y la reconexión de cables, lo que demoraba su puesta en marcha durante semanas.
+
+El desarrollo y mantenimiento del ENIAC puso de manifiesto los cuellos de botella insuperables de la tecnología basada en válvulas termoiónicas:
+
+\begin{enumerate}
+    \item \textbf{Gran tamaño físico} de las válvulas y los módulos resultantes.
+    \item \textbf{Elevado consumo de potencia} y enorme disipación de calor.
+    \item \textbf{Vida útil muy corta} e inestabilidad (averías continuas por fundido de filamentos)[cite: 1].
+    \item \textbf{Elevado precio} de fabricación y mantenimiento.
+\end{enumerate}
+
+\subsection{El electrón y la física pre-semiconductora}
+% TODO: Thomson (1897) -> q/m = 1.76e11 C/kg
+% TODO: Millikan (1909) -> q = 1.6e-19 C, m_e = 9.1e-31 kg
+
+\subsection{Electrónica de vacío}
+% TODO: Emisión termoiónica (Edison, 1880)
+% TODO: Diodo de vacío (Fleming, 1904) - Cátodo, Ánodo y característica rectificadora
+% TODO: Triodo de vacío (Lee de Forest, 1907) - Rejilla, amplificación y detección
+% TODO: Tetrodo y Pentodo (rejilla de pantalla y supresora)
+% TODO: Primeras computadoras (ENIAC, 1945) y limitaciones de las válvulas (tamaño, consumo, disipación, vida útil)
+
+\subsection{Electrónica de estado sólido}
+% TODO: Avances en física de sólidos (1925 en adelante)
+% TODO: Modelo Schottky (1938), Unión PN (Ohl, 1940)
+% TODO: Transistor de puntas de contacto (Bardeen y Brattain, 1947)
+
+\subsection{Electrónica integrada y Nanoelectrónica}
+% TODO: Primer circuito integrado (Kilby, 1958) y tecnología planar (Noyce, 1960)
+% TODO: Primer microprocesador (Intel 4004, 1971)
+% TODO: Elementos discretos vs. Circuitos integrados
+% TODO: Ley de Moore (1965) y escalado tecnológico (de micro a nanoescala, nodos actuales de 3-2 nm)
+
+\subsection{Hitos y Premios Nobel de Física vinculados}
+% TODO: Resumen cronológico de Premios Nobel (Thomson, Millikan, Shockley/Bardeen/Brattain, Esaki, Alferov/Kroemer/Kilby, Geim/Novoselov, Akasaki/Amano/Nakamura)
+
+% ==========================================
+% 3. CIRCUITOS ANALÓGICOS Y DIGITALES
+% ==========================================
+\section{Circuitos analógicos y digitales}
+% TODO: Definición de señal analógica vs. señal digital
+% TODO: Necesidad de conversores A/D y D/A
+
+% ==========================================
+% 4. APLICACIONES DE LA ELECTRÓNICA
+% ==========================================
+\section{Aplicaciones de la Electrónica}
+% TODO: Telecomunicaciones, automatización/control, electrónica de potencia, medicina, domótica, etc.

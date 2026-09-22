@@ -1,0 +1,91 @@
+% ==========================================
+% PREÁMBULO Y CONFIGURACIÓN DE PAQUETES
+% ==========================================
+
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+
+% Paquetes matemáticos y de física
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{physics}
+\usepackage{siunitx} % Para magnitudes físicas y unidades SI
+
+% -----------------------------------------------------------------
+% DESACTIVACIÓN DEFINITIVA DEL WARNING SIUNITX + PHYSICS
+% -----------------------------------------------------------------
+% 1. Desactiva el mensaje de advertencia interno de LaTeX3
+\ExplSyntaxOn
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
+
+% 2. Asigna el comando \qty a siunitx (para escribir ej: \qty{5}{\volt})
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+% -----------------------------------------------------------------
+
+% Formato de listas e imágenes
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{capt-of}
+
+% Cajas de texto personalizadas
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{breakable}
+
+\newcounter{problemacontador}[chapter]
+
+% Definición de colores principales
+\definecolor{maincolor}{RGB}{0, 51, 102}      % Azul oscuro académico
+\definecolor{accentcolor}{RGB}{0, 128, 128}   % Verde azulado / Teal
+\definecolor{boxbg}{RGB}{245, 247, 250}       % Fondo claro para cajas
+
+% Configuración de hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=maincolor,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=accentcolor
+}
+
+% Entornos para conceptos clave y fórmulas destacadas
+\newtcolorbox{concepto}[1][]{
+  colback=boxbg,
+  colframe=maincolor,
+  fonttitle=\bfseries,
+  title={#1},
+  arc=2mm,
+  boxrule=1pt
+}
+
+\newtcolorbox{formula}[1][]{
+  colback=boxbg,
+  colframe=accentcolor,
+  fonttitle=\bfseries,
+  title={Fórmula clave: #1},
+  arc=2mm,
+  boxrule=1pt
+}
+
+\newtcolorbox{problema}[1][]{
+  enhanced,
+  breakable,
+  colback=boxbg,
+  colframe=maincolor,
+  fonttitle=\bfseries,
+  coltitle=white,
+  arc=2mm,
+  boxrule=1pt,
+  before upper={\refstepcounter{problemacontador}},
+  title={Problema~\theproblemacontador\ifstrempty{#1}{}{: #1}},
+  lower separated=true
+}
+
+% Configuración de unidades físicas
+\sisetup{
+  per-mode = symbol,
+  separate-uncertainty = true
+}
