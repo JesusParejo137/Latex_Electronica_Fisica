@@ -1575,3 +1575,258 @@ Resolviendo numéricamente esta ecuación trascendente para $T$, se obtiene:
 T \approx \SI{40.05}{\kelvin}
 \]
 \end{problema}
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 4 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Propiedades cristalográficas, portadores e ionización en Germanio]
+Utilizando rayos X se encuentra que la estructura cristalográfica del Germanio ($\text{Ge}$) es tal que en una celda cúbica de lado $a = \SI{5.62}{\text{\AA}}$ hay $18$ átomos distribuidos de la siguiente forma: $8$ en los vértices, $6$ en los centros de las caras y $4$ interiores. Se pide:
+\begin{enumerate}[label=\alph*)]
+    \item Calcular la densidad de electrones de valencia en el Germanio puro.
+    \item Suponiendo que para el Germanio puro a $T = \SI{300}{\kelvin}$ las densidades equivalentes de estados son $N_c = \SI{1.02e19}{\cm^{-3}}$, $N_v = \SI{0.56e19}{\cm^{-3}}$ y que la banda prohibida tiene una anchura $E_g = \SI{0.69}{\eV}$, calcular la densidad de portadores e indicar la posición del nivel de Fermi en dicho semiconductor a \SI{300}{\kelvin}.
+    \item La muestra anterior se impurifica con $\SI{1e17}{\cm^{-3}}$ átomos de Arsénico ($\text{As}$), siendo para el Arsénico $E_C - E_D = \SI{0.01}{\eV}$. Calcúlese la concentración de portadores y la posición del nivel de Fermi a \SI{300}{\kelvin}.
+    \item ¿Qué dificultades cuantitativas introduciría el hecho de que el tipo de impurezas añadido fuese tal que $E_C - E_D = \SI{0.3}{\eV}$?
+\end{enumerate}
+
+\tcblower
+
+\textbf{a) Densidad de electrones de valencia en Germanio puro}
+
+La celda unidad descrita corresponde a la estructura de diamante propia del Germanio (red \textit{fcc} con base de dos átomos). El número de átomos por celda unidad se calcula sumando las contribuciones cristalográficas:
+\[
+N_{\text{átomos}} = 8 \cdot \frac{1}{8} + 6 \cdot \frac{1}{2} + 4 = 1 + 3 + 4 = 8 \text{ átomos/celda}
+\]
+
+Dado que el Germanio pertenece al Grupo IV de la tabla periódica, cada átomo aporta $4$ electrones de valencia. El número total de electrones de valencia por celda es $8 \times 4 = 32 \text{ e}^-$.
+
+Sabiendo que el parámetro de red es $a = \SI{5.62}{\text{\AA}} = \SI{5.62e-8}{\cm}$, el volumen de la celda es $V_{\text{celda}} = a^3$. La densidad volumétrica de electrones de valencia resulta:
+\[
+\rho_v = \frac{32}{a^3} = \frac{32}{(\num{5.62e-8})^3} = \frac{32}{\num{1.7716e-22}} \approx \SI{1.80e23}{\text{e}^-\text{ valencia/cm}^3}
+\]
+
+\textbf{b) Densidad de portadores y nivel de Fermi en Germanio intrínseco ($T = \SI{300}{\kelvin}$)}
+
+\textit{1. Concentración intrínseca de portadores ($n_i$):}
+En un semiconductor puro en equilibrio, $n = p = n_i$. Empleando las densidades equivalentes de estados y el gap $E_g = \SI{0.69}{\eV}$ ($k_B T = \SI{0.0259}{\eV}$ a \SI{300}{\kelvin}):
+\[
+\begin{array}{rl}
+    n_i & \displaystyle = \sqrt{N_c N_v} \exp\left( -\frac{E_g}{2 k_B T} \right) \\[4pt]
+     & \displaystyle = \sqrt{(\num{1.02e19}) (\num{0.56e19})} \exp\left( -\frac{0.69}{2 \cdot 0.0259} \right) \approx \SI{1.30e13}{\cm^{-3}}
+\end{array}
+\]
+
+\textit{2. Posición del nivel de Fermi intrínseco ($E_{Fi}$):}
+Referenciando el nivel de Fermi respecto al fondo de la Banda de Conducción ($E_C$):
+\[
+n_i = N_c \exp\left( \frac{E_{Fi} - E_C}{k_B T} \right) \implies E_{Fi} - E_C = k_B T \ln\left( \frac{n_i}{N_c} \right)
+\]
+\[
+E_{Fi} - E_C = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{1.30e13}}{\num{1.02e19}} \right) \approx \SI{-0.353}{\eV}
+\]
+El nivel de Fermi intrínseco se sitúa a \SI{0.353}{\eV} por debajo de la Banda de Conducción (prácticamente en el centro del gap, ya que $E_g / 2 = \SI{0.345}{\eV}$).
+
+\textbf{c) Dopado con Arsénico ($N_D = \SI{1e17}{\cm^{-3}}$, $E_C - E_D = \SI{0.01}{\eV}$)}
+
+Para determinar las concentraciones planteamos las hipótesis de partida habituales:
+\begin{enumerate}
+    \item \textbf{Hipótesis 1:} Ionización total de donadores ($N_D^+ = N_D = \SI{1e17}{\cm^{-3}}$).
+    \item \textbf{Hipótesis 2:} Portadores minoritarios despreciables frente al dopado ($p \ll N_D^+$), de modo que $n \approx N_D^+ = \SI{1e17}{\cm^{-3}}$.
+\end{enumerate}
+
+\textit{Cálculo de la densidad de huecos ($p$):}
+Por la ley de acción de masas:
+\[
+p = \frac{n_i^2}{n} = \frac{(\num{1.30e13})^2}{\num{1e17}} = \SI{1.69e9}{\cm^{-3}}
+\]
+Se verifica que $p = \SI{1.69e9}{\cm^{-3}} \ll N_D^+ = \SI{1e17}{\cm^{-3}}$, validando la Hipótesis 2.
+
+\textit{Posición del nivel de Fermi ($E_F$):}
+\[
+E_F - E_C = k_B T \ln\left( \frac{n}{N_c} \right) = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{1e17}}{\num{1.02e19}} \right) = \SI{-0.120}{\eV}
+\]
+
+\textit{Comprobación de la Hipótesis 1 (Ionización total):}
+Determinamos la separación entre el nivel de Fermi y el nivel donador:
+\[
+E_F - E_D = (E_F - E_C) + (E_C - E_D) = \SI{-0.120}{\eV} + \SI{0.010}{\eV} = \SI{-0.110}{\eV}
+\]
+
+Evaluamos la fracción de donadores ionizados ($g_d = 2$):
+\[
+\frac{N_D^+}{N_D} = \frac{1}{1 + g_d \exp\left( \frac{E_F - E_D}{k_B T} \right)} = \frac{1}{1 + 2 \exp\left( \frac{-0.110}{0.0259} \right)} \approx 0.972 \quad (97.2\%)
+\]
+La fracción está muy próxima a $1$, por lo que aceptamos la hipótesis de ionización total como una buena aproximación, aunque se encuentra en el límite de validez debido a la alta densidad de dopado.
+
+\textbf{d) Impurezas profundas ($E_C - E_D = \SI{0.3}{\eV}$)}
+
+Si mantuviésemos la hipótesis de ionización total obtendríamos $E_F - E_C = \SI{-0.120}{\eV}$, lo que daría $E_F - E_D = \SI{-0.120}{\eV} + \SI{0.300}{\eV} = \SI{+0.180}{\eV}$. Al calcular la fracción ionizada:
+\[
+\frac{N_D^+}{N_D} = \frac{1}{1 + 2 \exp\left( \frac{0.180}{0.0259} \right)} \approx \num{0.00047} \ll 1
+\]
+Esto demuestra que la hipótesis de ionización total \textbf{no es válida} cuando la energía de ionización es grande (nivel donador profundo).
+
+Sin embargo, la Hipótesis 2 ($p \ll N_D^+$) sigue siendo totalmente correcta, lo que implica $n = N_D^+$.
+
+Relacionando la ocupación de donadores con los parámetros del semiconductor:
+\[
+\begin{array}{rl}
+    \displaystyle \frac{N_D^+}{N_D^0} & \displaystyle = \frac{1}{g_d} \exp\left( \frac{E_D - E_F}{k_B T} \right) = \frac{1}{g_d} \exp\left( \frac{E_D - E_C}{k_B T} \right) \exp\left( \frac{E_C - E_F}{k_B T} \right) = \\[4pt]
+     & \displaystyle \frac{1}{g_d} \frac{N_c}{n} \exp\left( \frac{E_D - E_C}{k_B T} \right)
+\end{array}
+\]
+
+Sustituyendo $n = N_D^+$ y $N_D^0 = N_D - N_D^+$, obtenemos la ecuación cuadrática exacta para $N_D^+$:
+\[
+\frac{(N_D^+)^2 g_d}{N_c (N_D - N_D^+)} = \exp\left( \frac{E_D - E_C}{k_B T} \right) \:\implies
+\]
+\[
+\implies \: g_d (N_D^+)^2 + N_c \exp\left(\frac{E_D - E_C}{k_B T}\right) N_D^+ - N_c N_D \exp\left(\frac{E_D - E_C}{k_B T}\right) = 0
+\]
+
+Evaluando la constante exponencial $K = N_c \exp\left( \frac{-0.300}{0.0259} \right) = (\num{1.02e19}) \exp(-11.583) \approx \SI{9.51e13}{\cm^{-3}}$:
+\[
+2 (N_D^+)^2 + (\num{9.51e13}) N_D^+ - (\num{9.51e13}) (\num{1e17}) = 0
+\]
+
+Tomando la raíz positiva de la ecuación cuadrática:
+\[
+N_D^+ = \frac{-\num{9.51e13} + \sqrt{(\num{9.51e13})^2 + 4 \cdot 2 \cdot (\num{9.51e30})}}{2 \cdot 2} \approx \SI{2.205e15}{\cm^{-3}}
+\]
+
+Por lo tanto, las concentraciones reales son:
+\begin{itemize}
+    \item Concentración de electrones: $n = N_D^+ = \SI{2.205e15}{\cm^{-3}}$ (solo el $2.2\%$ de las impurezas están ionizadas).
+    \item Concentración de huecos: $p = \frac{n_i^2}{N_D^+} = \frac{(\num{1.30e13})^2}{\num{2.205e15}} = \SI{7.72e10}{\cm^{-3}}$ (se confirma que $p \ll N_D^+$).
+\end{itemize}
+
+\textit{Nivel de Fermi real:}
+\[
+E_F - E_C = k_B T \ln\left( \frac{n}{N_c} \right) = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{2.205e15}}{\num{1.02e19}} \right) = \SI{-0.2194}{\eV}
+\]
+El nivel de Fermi se ubica a \SI{0.2194}{\eV} por debajo del fondo de la Banda de Conducción.
+\end{problema}
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 5 ---------------------------
+%-----------------------------------------------------
+
+\begin{problema}[Densidad intrínseca e ionización de impurezas a distintas temperaturas]
+Consideremos un semiconductor que para $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.026}{\eV}$) tiene las siguientes constantes físicas:
+\[
+E_g = \SI{1.0}{\eV}, \quad N_c = \SI{1.0e19}{\cm^{-3}}, \quad N_v = \SI{0.5e18}{\cm^{-3}}
+\]
+mientras que para $T = \SI{200}{\kelvin}$ ($k_B T = \SI{0.017}{\eV}$) dichas constantes toman los valores:
+\[
+E_g = \SI{1.05}{\eV}, \quad N_c = \SI{0.54e19}{\cm^{-3}}, \quad N_v = \SI{0.28e18}{\cm^{-3}}
+\]
+
+A las citadas temperaturas:
+\begin{enumerate}[label=\alph*)]
+    \item ¿Cuál es la densidad intrínseca de portadores?
+    \item Determinar la densidad de portadores cuando dicho semiconductor se impurifica con una densidad de impurezas donadoras de $N_D = \SI{1e15}{\cm^{-3}}$, siendo su nivel de energía:
+    \[
+    E_{D1} - E_C = \SI{-0.01}{\eV}, \quad E_{D2} - E_C = \SI{-0.05}{\eV}, \quad E_{D3} - E_C = \SI{-0.10}{\eV}, \quad E_{D4} - E_C = \SI{-0.30}{\eV}
+    \]
+    y $g_D = 2$ (factor de degeneración del nivel donador).
+\end{enumerate}
+
+\tcblower
+
+\textbf{a) Cálculo de la densidad intrínseca de portadores ($n_i$)}
+
+La densidad intrínseca de portadores libremente generados térmicamente se expresa como:
+\[
+n_i = \sqrt{N_c N_v} \exp\left( -\frac{E_g}{2 k_B T} \right)
+\]
+
+\begin{itemize}
+    \item \textbf{A $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.026}{\eV}$, $E_g = \SI{1.0}{\eV}$):}
+    \[
+    n_i(\SI{300}{\kelvin}) = \sqrt{(\num{1.0e19}) (\num{0.5e18})} \exp\left( -\frac{1.0}{2 \cdot 0.026} \right) = \sqrt{\num{5.0e36}} \exp(-19.2308) \approx \SI{9.94e9}{\cm^{-3}}
+    \]
+
+    \item \textbf{A $T = \SI{200}{\kelvin}$ ($k_B T = \SI{0.017}{\eV}$, $E_g = \SI{1.05}{\eV}$):}
+    \[
+    n_i(\SI{200}{\kelvin}) = \sqrt{(\num{0.54e19}) (\num{0.28e18})} \exp\left( -\frac{1.05}{2 \cdot 0.017} \right) = \sqrt{\num{1.512e36}} \exp(-30.8824) \approx \SI{4.76e4}{\cm^{-3}}
+    \]
+\end{itemize}
+
+\textbf{b) Densidad de portadores y grado de ionización de donadores}
+
+\textit{1. Densidad de portadores en la hipótesis de ionización total ($n \approx N_D = \SI{1e15}{\cm^{-3}}$):}
+
+Asumiendo inicialmente que la casi totalidad de los donadores se ionizan ($N_D^+ \approx N_D$), la concentración de electrones en la banda de conducción es $n \approx N_D = \SI{1e15}{\cm^{-3}}$. La concentración de portadores minoritarios (huecos) se despeja de la ley de acción de masas ($p = n_i^2 / n$):
+\begin{itemize}
+    \item A $T = \SI{300}{\kelvin}$: $p = \frac{(\num{9.94e9})^2}{\num{1e15}} = \SI{9.88e4}{\cm^{-3}}$
+    \item A $T = \SI{200}{\kelvin}$: $p = \frac{(\num{4.76e4})^2}{\num{1e15}} = \SI{2.26e-6}{\cm^{-3}}$
+\end{itemize}
+En ambos casos $p \ll N_D$, de modo que la hipótesis de despreciar los huecos frente al dopado es completamente exacta.
+
+\textit{2. Posición del nivel de Fermi ($E_F - E_C$):}
+Empleando la estadística de Maxwell-Boltzmann ($n = N_c \exp\left(\frac{E_F - E_C}{k_B T}\right)$):
+\[
+E_F - E_C = k_B T \ln\left( \frac{n}{N_c} \right)
+\]
+\begin{itemize}
+    \item A $T = \SI{300}{\kelvin}$: $(E_F - E_C)_{300} = (\SI{0.026}{\eV}) \ln\left( \frac{\num{1e15}}{\num{1.0e19}} \right) = \SI{-0.239}{\eV}$
+    \item A $T = \SI{200}{\kelvin}$: $(E_F - E_C)_{200} = (\SI{0.017}{\eV}) \ln\left( \frac{\num{1e15}}{\num{0.54e19}} \right) = \SI{-0.146}{\eV}$
+\end{itemize}
+
+\textit{3. Evaluación del grado de ionización ($N_D^+ / N_D$):}
+La diferencia de energía entre el nivel de Fermi y el nivel donador viene dada por $E_F - E_D = (E_F - E_C) + (E_C - E_D)$. La fracción ionizada se determina con la estadística de ocupación donadora ($g_D = 2$):
+\[
+\frac{N_D^+}{N_D} = \frac{1}{1 + g_D \exp\left( \frac{E_F - E_D}{k_B T} \right)}
+\]
+
+A continuación se comparan los resultados para las distintas profundidades del nivel donador $E_C - E_D$:
+
+\begin{center}
+\begin{tabular}{cccc}
+\hline
+$E_C - E_D$ (\si{\eV}) & $T$ (\si{\kelvin}) & $E_F - E_D$ (\si{\eV}) & $N_D^+ / N_D$ \\
+\hline
+$0.01$ & $300$ & $-0.229$ & $0.9997$ \\
+       & $200$ & $-0.136$ & $0.9993$ \\
+\hline
+$0.05$ & $300$ & $-0.189$ & $0.9986$ \\
+       & $200$ & $-0.096$ & $0.9929$ \\
+\hline
+$0.10$ & $300$ & $-0.139$ & $0.9907$ \\
+       & $200$ & $-0.046$ & $0.8827$ \\
+\hline
+$0.30$ & $300$ & $+0.061$ & $0.0464$ \\
+       & $200$ & $+0.154$ & $\num{5.81e-5} \approx 0$ \\
+\hline
+\end{tabular}
+\captionof{table}{Fracción de ionización donadora según la profundidad del nivel energético y la temperatura.}
+\label{tab:ionizacion_donadores}
+\end{center}
+
+\textbf{Conclusiones:}
+\begin{itemize}
+    \item Para impurificaciones poco profundas ($E_C - E_D \le \SI{0.05}{\eV}$), más del $99\%$ de las impurezas se encuentran ionizadas tanto a \SI{300}{\kelvin} como a \SI{200}{\kelvin}, confirmando el régimen extrínseco o de agotamiento.
+    \item Con $E_C - E_D = \SI{0.10}{\eV}$, la ionización decae al $88.27\%$ a \SI{200}{\kelvin}.
+    \item Para un nivel profundo ($E_C - E_D = \SI{0.30}{\eV}$), la hipótesis $n \approx N_D$ es inválida, pues casi todos los electrones permanecen atrapados en el nivel donador (congelación de portadores o \textit{freeze-out}).
+\end{itemize}
+\end{problema}
+
+
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 6 ---------------------------
+%-----------------------------------------------------
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 7 ---------------------------
+%-----------------------------------------------------
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 8 ---------------------------
+%-----------------------------------------------------
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 9 ---------------------------
+%-----------------------------------------------------
