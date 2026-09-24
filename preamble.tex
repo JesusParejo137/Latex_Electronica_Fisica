@@ -37,6 +37,11 @@
 
 \newcounter{problemacontador}[chapter]
 
+\newcommand{\seccionproblemas}[1][Problemas resueltos]{%
+  \section{#1}%
+  \setcounter{problemacontador}{1}%
+}
+
 % Definición de colores principales
 \definecolor{maincolor}{RGB}{0, 51, 102}      % Azul oscuro académico
 \definecolor{accentcolor}{RGB}{0, 128, 128}   % Verde azulado / Teal

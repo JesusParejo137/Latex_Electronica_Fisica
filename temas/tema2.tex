@@ -1347,9 +1347,14 @@ Si la concentración de donadores se incrementa hasta alcanzar o superar la dens
 \end{concepto}
 
 \newpage
+\phantom{a}
 
-\section{Problemas resueltos}
-
+\newpage
+%=======================================================
+\seccionproblemas
+%-----------------------------------------------------
+%-------------- Problema 1 ---------------------------
+%-----------------------------------------------------
 \begin{problema}[Densidades de portadores en Silicio dopado tipo N]
 Una muestra de Silicio ($\text{Si}$) está impurificada con $10^{15} \text{ átomos/cm}^3$ de Fósforo ($\text{P}$, impureza donadora). Suponiendo que todos estos átomos de impureza están ionizados a temperatura ambiente, hallar las densidades de portadores (electrones y huecos) en dicho material.
 
@@ -1427,7 +1432,9 @@ Esto confirma que la aproximación $n \approx N_D$ es exacta en la práctica con
 \end{problema}
 
 \newpage
-
+%-----------------------------------------------------
+%-------------- Problema 2 ---------------------------
+%-----------------------------------------------------
 \begin{problema}[Determinar tipo y concentración de dopado]
 Un semiconductor presenta concentraciones de portadores $n = \SI{1e18}{\cm^{-3}}$ y $p = \SI{1e6}{\cm^{-3}}$ a $T = \SI{300}{\kelvin}$. ¿Con cuántas impurezas y de qué tipo ha sido dopada la muestra? (Suponer que es dopado por un único tipo de impureza y que todas están completamente ionizadas).
 
@@ -1463,7 +1470,9 @@ La muestra ha sido dopada con impurezas de tipo \textbf{donador} (tipo N) en una
 \end{problema}
 
 \newpage
-
+%-----------------------------------------------------
+%-------------- Problema 3 ---------------------------
+%-----------------------------------------------------
 \begin{problema}[Nivel de Fermi e ionización parcial de donadores]
 Una barra de semiconductor tipo N posee las siguientes propiedades a $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.026}{\eV}$): $N_c = \SI{2e19}{\cm^{-3}}$, $n_i = \SI{2e10}{\cm^{-3}}$, y contiene $N_D = \SI{1e15}{\cm^{-3}}$ átomos de impurezas donadoras por $\text{cm}^3$ con una energía de ionización $E_C - E_D = \SI{0.03}{\eV}$ y factor de degeneración $g_D = 2$.
 
@@ -1671,8 +1680,8 @@ Sin embargo, la Hipótesis 2 ($p \ll N_D^+$) sigue siendo totalmente correcta, l
 Relacionando la ocupación de donadores con los parámetros del semiconductor:
 \[
 \begin{array}{rl}
-    \displaystyle \frac{N_D^+}{N_D^0} & \displaystyle = \frac{1}{g_d} \exp\left( \frac{E_D - E_F}{k_B T} \right) = \frac{1}{g_d} \exp\left( \frac{E_D - E_C}{k_B T} \right) \exp\left( \frac{E_C - E_F}{k_B T} \right) = \\[4pt]
-     & \displaystyle \frac{1}{g_d} \frac{N_c}{n} \exp\left( \frac{E_D - E_C}{k_B T} \right)
+    \displaystyle \frac{N_D^+}{N_D^0} & \displaystyle = \frac{1}{g_d} \exp\left( \frac{E_D - E_F}{k_B T} \right) = \frac{1}{g_d} \exp\left( \frac{E_D - E_C}{k_B T} \right) \exp\left( \frac{E_C - E_F}{k_B T} \right) = \\[8pt]
+     & \displaystyle =\frac{1}{g_d} \frac{N_c}{n} \exp\left( \frac{E_D - E_C}{k_B T} \right)
 \end{array}
 \]
 
@@ -1711,7 +1720,6 @@ El nivel de Fermi se ubica a \SI{0.2194}{\eV} por debajo del fondo de la Banda d
 %-----------------------------------------------------
 %-------------- Problema 5 ---------------------------
 %-----------------------------------------------------
-
 \begin{problema}[Densidad intrínseca e ionización de impurezas a distintas temperaturas]
 Consideremos un semiconductor que para $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.026}{\eV}$) tiene las siguientes constantes físicas:
 \[
@@ -1727,7 +1735,10 @@ A las citadas temperaturas:
     \item ¿Cuál es la densidad intrínseca de portadores?
     \item Determinar la densidad de portadores cuando dicho semiconductor se impurifica con una densidad de impurezas donadoras de $N_D = \SI{1e15}{\cm^{-3}}$, siendo su nivel de energía:
     \[
-    E_{D1} - E_C = \SI{-0.01}{\eV}, \quad E_{D2} - E_C = \SI{-0.05}{\eV}, \quad E_{D3} - E_C = \SI{-0.10}{\eV}, \quad E_{D4} - E_C = \SI{-0.30}{\eV}
+    \begin{array}{ll}
+        E_{D1} - E_C = \SI{-0.01}{\eV}, & \quad E_{D2} - E_C = \SI{-0.05}{\eV},\\[4pt]
+        E_{D3} - E_C = \SI{-0.10}{\eV}, & \quad E_{D4} - E_C = \SI{-0.30}{\eV}
+    \end{array}
     \]
     y $g_D = 2$ (factor de degeneración del nivel donador).
 \end{enumerate}
@@ -1744,12 +1755,12 @@ n_i = \sqrt{N_c N_v} \exp\left( -\frac{E_g}{2 k_B T} \right)
 \begin{itemize}
     \item \textbf{A $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.026}{\eV}$, $E_g = \SI{1.0}{\eV}$):}
     \[
-    n_i(\SI{300}{\kelvin}) = \sqrt{(\num{1.0e19}) (\num{0.5e18})} \exp\left( -\frac{1.0}{2 \cdot 0.026} \right) = \sqrt{\num{5.0e36}} \exp(-19.2308) \approx \SI{9.94e9}{\cm^{-3}}
+    n_i(\SI{300}{\kelvin}) = \sqrt{(\num{1.0e19}) (\num{0.5e18})} \exp\left( -\frac{1.0}{2 \cdot 0.026} \right) \approx \SI{9.94e9}{\cm^{-3}}
     \]
 
     \item \textbf{A $T = \SI{200}{\kelvin}$ ($k_B T = \SI{0.017}{\eV}$, $E_g = \SI{1.05}{\eV}$):}
     \[
-    n_i(\SI{200}{\kelvin}) = \sqrt{(\num{0.54e19}) (\num{0.28e18})} \exp\left( -\frac{1.05}{2 \cdot 0.017} \right) = \sqrt{\num{1.512e36}} \exp(-30.8824) \approx \SI{4.76e4}{\cm^{-3}}
+    n_i(\SI{200}{\kelvin}) = \sqrt{(\num{0.54e19}) (\num{0.28e18})} \exp\left( -\frac{1.05}{2 \cdot 0.017} \right) \approx \SI{4.76e4}{\cm^{-3}}
     \]
 \end{itemize}
 
@@ -1812,16 +1823,209 @@ $0.30$ & $300$ & $+0.061$ & $0.0464$ \\
 \end{itemize}
 \end{problema}
 
-
-
 \newpage
 %-----------------------------------------------------
 %-------------- Problema 6 ---------------------------
 %-----------------------------------------------------
+\begin{problema}[Efecto de una segunda subbanda de conducción en el nivel de Fermi]
+Consideremos un semiconductor intrínseco cuya banda de valencia es esférica con densidad equivalente de estados $N_V$. La banda de conducción está formada por dos subbandas o mínimos:
+\begin{itemize}
+    \item Un primer mínimo situado en $E_C$ con densidad equivalente de estados $N_{C1}$.
+    \item Un segundo mínimo ubicado a una energía $\Delta E$ por encima del primero ($E_C + \Delta E$) con densidad equivalente de estados $N_{C2}$.
+\end{itemize}
+
+\begin{enumerate}[label=\alph*)]
+    \item Obtener la expresión de la densidad total de electrones y deducir la posición del nivel de Fermi ($E_F$) en función de la temperatura $T$.
+    \item Analizar el comportamiento del nivel de Fermi con la temperatura y determinar a qué temperatura $T \neq \SI{0}{\kelvin}$ vuelve a situarse exactamente en el centro del gap. Discutir las condiciones físicas necesarias para que exista dicha solución.
+\end{enumerate}
+
+\tcblower
+
+\textbf{Análisis cualitativo previo}
+
+\begin{itemize}
+    \item \textbf{¿Qué haría el nivel de Fermi en función de la temperatura si el semiconductor no tuviera la segunda banda?}
+    Si no existiera el segundo mínimo de conducción y se cumpliera $N_V > N_{C1}$, el nivel de Fermi comenzaría a $T = \SI{0}{\kelvin}$ en el centro del gap ($E_{Fi} = \frac{E_C + E_V}{2}$). Al aumentar la temperatura, dado que $N_V > N_{C1}$, para mantener la igualdad $n = p$ el nivel de Fermi tendría que desplazarse progresivamente hacia arriba (hacia la banda de conducción), alejándose del centro del gap.
+    
+    \item \textbf{¿Qué tendría que pasar para que el nivel de Fermi volviera a bajar hasta el medio del gap al subir la temperatura?}
+    Tendría que haber un mecanismo que haga que la densidad de estados disponible en la banda de conducción aumente a temperaturas más altas.
+    
+    \item \textbf{Función de la segunda subbanda:}
+    En nuestro caso, la segunda subbanda de energía contribuye con un conjunto de estados adicionales ubicados a $E_C + \Delta E$. A temperaturas bajas esta subbanda está prácticamente despoblada, pero al subir la temperatura los electrones adquieren suficiente energía térmica para ocuparla, incrementando la densidad equivalente de estados efectiva de la banda de conducción y provocando que el nivel de Fermi vuelva a descender hacia el centro del gap.
+\end{itemize}
+
+\textbf{a) Obtención de la posición del nivel de Fermi ($E_F$)}
+
+\textit{1. Densidad de huecos en la banda de valencia:}
+\[
+p = N_V \exp\left( \frac{E_V - E_F}{k_B T} \right)
+\]
+
+\textit{2. Densidad de electrones en el primer mínimo de conducción ($E_C$):}
+\[
+n_1 = N_{C1} \exp\left( \frac{E_F - E_C}{k_B T} \right)
+\]
+
+\textit{3. Densidad de electrones en el segundo mínimo de conducción ($E_C + \Delta E$):}
+\[
+n_2 = N_{C2} \exp\left( \frac{E_F - (E_C + \Delta E)}{k_B T} \right) = N_{C2} \exp\left( -\frac{\Delta E}{k_B T} \right) \exp\left( \frac{E_F - E_C}{k_B T} \right)
+\]
+
+\textit{4. Densidad total de electrones ($n = n_1 + n_2$):}
+\[
+n = \left[ N_{C1} + N_{C2} \exp\left( -\frac{\Delta E}{k_B T} \right) \right] \exp\left( \frac{E_F - E_C}{k_B T} \right)
+\]
+
+\textit{5. Condición de semiconductor intrínseco ($n = p$):}
+\[
+\left[ N_{C1} + N_{C2} \exp\left( -\frac{\Delta E}{k_B T} \right) \right] \exp\left( \frac{E_F - E_C}{k_B T} \right) = N_V \exp\left( \frac{E_V - E_F}{k_B T} \right)
+\]
+
+Reagrupando los términos exponenciales con $E_F$:
+\[
+\exp\left( \frac{2 E_F - E_C - E_V}{k_B T} \right) = \frac{N_V}{N_{C1} + N_{C2} \exp\left( -\frac{\Delta E}{k_B T} \right)}
+\]
+
+Tomando logaritmos naturales y despejando $E_F$:
+\[
+E_F = \frac{E_C + E_V}{2} + \frac{1}{2} k_B T \ln\left( \frac{N_V}{N_{C1} + N_{C2} \exp\left( -\frac{\Delta E}{k_B T} \right)} \right)
+\]
+
+O equivalentemente, expresado respecto a la anchura de la banda prohibida ($E_g = E_C - E_V$):
+\[
+E_F - E_C = -\frac{E_g}{2} + \frac{1}{2} k_B T \ln\left( \frac{N_V}{N_{C1} + N_{C2} \exp\left( -\frac{\Delta E}{k_B T} \right)} \right)
+\]
+
+\textbf{b) Temperatura a la que el nivel de Fermi vuelve al centro del gap}
+
+A $T = \SI{0}{\kelvin}$, el nivel de Fermi se encuentra en el centro geométrico del gap ($E_F = \frac{E_C + E_V}{2}$).
+
+Para encontrar una segunda temperatura $T > \SI{0}{\kelvin}$ en la que el nivel de Fermi vuelva a ubicarse exactamente en el medio del gap, el término logarítmico debe anularse, lo que requiere que su argumento sea igual a $1$:
+\[
+\frac{N_V}{N_{C1} + N_{C2} \exp\left( -\frac{\Delta E}{k_B T} \right)} = 1 \implies N_V = N_{C1} + N_{C2} \exp\left( -\frac{\Delta E}{k_B T} \right)
+\]
+
+Despejando el término exponencial:
+\[
+\exp\left( -\frac{\Delta E}{k_B T} \right) = \frac{N_V - N_{C1}}{N_{C2}}
+\]
+
+Tomando logaritmos y despejando $T$:
+\[
+T = \frac{-\Delta E}{k_B \ln\left( \frac{N_V - N_{C1}}{N_{C2}} \right)} = \frac{\Delta E}{k_B \ln\left( \frac{N_{C2}}{N_V - N_{C1}} \right)}
+\]
+
+\textbf{Discusión física de las condiciones necesarias:}
+
+\begin{enumerate}
+    \item \textbf{Primera condición ($N_V > N_{C1}$):} 
+    Si $N_V < N_{C1}$, a temperaturas bajas el nivel de Fermi comenzaría descendiendo progresivamente hacia la banda de valencia, de modo que nunca ascendería por encima del centro del gap y no podría existir un "retorno". Además, matemáticamente exige que $N_V - N_{C1} > 0$ para que el argumento del logaritmo sea real y positivo.
+
+    \item \textbf{Segunda condición ($N_V < N_{C1} + N_{C2}$):} 
+    Al aumentar la temperatura, el término $\exp\left(-\frac{\Delta E}{k_B T}\right)$ aumenta de $0$ a $1$, haciendo que la densidad equivalente efectiva de la banda de conducción pase de $N_{C1}$ a un valor máximo asintótico de $N_{C1} + N_{C2}$. Si no se cumpliera que $N_{C1} + N_{C2} > N_V$, por mucho que subamos la temperatura la densidad de estados de la banda de conducción nunca superaría a $N_V$ y el nivel de Fermi jamás volvería al centro del gap. 
+    
+    Matemáticamente, esta condición garantiza que $\frac{N_V - N_{C1}}{N_{C2}} < 1$, lo que hace que su logaritmo natural sea negativo y asegure una temperatura $T > \SI{0}{\kelvin}$ físicamente válida y positiva.
+\end{enumerate}
+\end{problema}
+
 \newpage
 %-----------------------------------------------------
 %-------------- Problema 7 ---------------------------
 %-----------------------------------------------------
+\begin{problema}[Doble dopado donador e ionización parcial en Silicio]
+Una muestra de Silicio ($N_c = \SI{2e19}{\cm^{-3}}$, $n_i = \SI{1e10}{\cm^{-3}}$) está uniformemente impurificada con $\SI{1e16}{\cm^{-3}}$ átomos de una impureza donadora cuyo nivel de energía, $E_{D1}$, se encuentra $\SI{0.05}{\eV}$ por debajo del fondo de la banda de conducción, $E_C$.
+
+\begin{enumerate}[label=\alph*)]
+    \item Demostrar cuantitativamente que es admisible suponer que todas estas impurezas están ionizadas a temperatura ambiente ($T = \SI{300}{\kelvin}$, $k_B T = \SI{0.026}{\eV}$).
+    \item Queremos que el anterior semiconductor tenga más electrones en la banda de conducción y sólo disponemos de otra impureza, también bipolar y donadora, pero cuyo nivel de energía en el Silicio, $E_{D2}$, está $\SI{0.15}{\eV}$ por debajo de $E_C$. Con este nivel de energía, no parece adecuado suponer que en el Silicio este tipo de impureza esté totalmente ionizada a $T = \SI{300}{\kelvin}$. ¿Qué densidad de impurezas de este segundo tipo ($N_{D2}$) habría que introducir en la muestra anterior, manteniendo las primeras, para tener una concentración en la banda de conducción de $n = \SI{5e16}{\cm^{-3}}$?
+    \item ¿Cómo están ahora las impurezas con nivel de energía $E_{D1}$? Razónese la respuesta.
+\end{enumerate}
+
+\tcblower
+
+\textbf{a) Justificación cuantitativa de ionización total para la primera impureza ($N_{D1}$)}
+
+\textit{1. Acotación de la densidad de huecos ($p$):}
+Por la condición de neutralidad de carga en un semiconductor tipo N ($n = p + N_{D1}^+$), se cumple que $n > N_{D1}^+$. Asumiendo ionización elevada ($N_{D1}^+ \approx N_{D1}$), tenemos $n > N_{D1} = \SI{1e16}{\cm^{-3}}$.
+
+Despejando la densidad de portadores minoritarios mediante la ley de acción de masas:
+\[
+p = \frac{n_i^2}{n} < \frac{n_i^2}{N_{D1}} = \frac{(\num{1e10})^2}{\num{1e16}} = \SI{1e4}{\cm^{-3}}
+\]
+Dado que $p \le \SI{1e4}{\cm^{-3}} \ll N_{D1} = \SI{1e16}{\cm^{-3}}$, la densidad de huecos es totalmente despreciable frente al dopado, por lo que podemos tomar con precisión $n = N_{D1} = \SI{1e16}{\cm^{-3}}$.
+
+\textit{2. Posición del nivel de Fermi ($E_F$):}
+Empleando la estadística de Maxwell-Boltzmann para electrones en la banda de conducción:
+\[
+n = N_c \exp\left( \frac{E_F - E_C}{k_B T} \right) \implies E_F - E_C = k_B T \ln\left( \frac{n}{N_c} \right)
+\]
+\[
+E_F - E_C = (\SI{0.026}{\eV}) \ln\left( \frac{\num{1e16}}{\num{2e19}} \right) \approx \SI{-0.197}{\eV}
+\]
+
+La separación energética respecto al nivel donador $E_{D1}$ es:
+\[
+E_F - E_{D1} = (E_F - E_C) + (E_C - E_{D1}) = \SI{-0.197}{\eV} + \SI{0.05}{\eV} = \SI{-0.147}{\eV}
+\]
+
+\textit{3. Fracción de ionización de $N_{D1}$ ($g_d = 2$):}
+\[
+\frac{N_{D1}^+}{N_{D1}} = \frac{1}{1 + g_d \exp\left( \frac{E_F - E_{D1}}{k_B T} \right)} = \frac{1}{1 + 2 \exp\left( \frac{-0.147}{0.026} \right)} \approx 0.993 \quad (99.3\%)
+\]
+Dado que el $99.3\%$ de los donadores están ionizados, la hipótesis de ionización total es completamente válida.
+
+\textbf{b) Densidad de impurezas del segundo tipo ($N_{D2}$)}
+
+Queremos fijar una concentración final de electrones libres de $n = \SI{5e16}{\cm^{-3}}$.
+
+\textit{1. Nueva posición del nivel de Fermi ($E_F'$):}
+\[
+E_F' - E_C = k_B T \ln\left( \frac{n}{N_c} \right) = (\SI{0.026}{\eV}) \ln\left( \frac{\num{5e16}}{\num{2e19}} \right) \approx \SI{-0.156}{\eV}
+\]
+
+\textit{2. Reevaluación de la ionización de $E_{D1}$ bajo el nuevo $E_F'$:}
+La nueva distancia energética respecto a $E_{D1}$ resulta:
+\[
+E_F' - E_{D1} = \SI{-0.156}{\eV} + \SI{0.05}{\eV} = \SI{-0.106}{\eV} \quad (\text{o }\SI{-0.1057}{\eV})
+\]
+Recalculamos el grado de ionización de la primera impureza:
+\[
+\frac{N_{D1}^+}{N_{D1}} = \frac{1}{1 + 2 \exp\left( \frac{-0.1057}{0.026} \right)} \approx 0.966 \quad (96.6\%)
+\]
+Por lo tanto, la densidad efectiva de electrones aportada por la primera impureza es:
+\[
+N_{D1}^+ = 0.966 \cdot \SI{1e16}{\cm^{-3}} = \SI{9.66e15}{\cm^{-3}}
+\]
+
+\textit{3. Densidad necesaria de impurezas ionizadas del segundo tipo ($N_{D2}^+$):}
+Como $n = N_{D1}^+ + N_{D2}^+$ (despreciando minoritarios $p$):
+\[
+N_{D2}^+ = n - N_{D1}^+ = \SI{5e16}{\cm^{-3}} - \SI{9.66e15}{\cm^{-3}} = \SI{4.034e16}{\cm^{-3}}
+\]
+
+\textit{4. Densidad total de impurezas del segundo tipo ($N_{D2}$):}
+La distancia energética del nivel de Fermi respecto a $E_{D2}$ ($E_C - E_{D2} = \SI{0.15}{\eV}$) es:
+\[
+E_F' - E_{D2} = (E_F' - E_C) + (E_C - E_{D2}) = \SI{-0.156}{\eV} + \SI{0.150}{\eV} = \SI{-0.006}{\eV}
+\]
+
+Relacionando $N_{D2}^+$ con la densidad total $N_{D2}$:
+\[
+\begin{array}{rl}
+    \displaystyle N_{D2} & \displaystyle = N_{D2}^+ \left[ 1 + g_d \exp\left( \frac{E_F' - E_{D2}}{k_B T} \right) \right] = \\[8pt]
+     & \displaystyle = (\SI{4.034e16}{\cm^{-3}}) \left[ 1 + 2 \exp\left( \frac{-0.006}{0.026} \right) \right] \approx \SI{1.051e17}{\cm^{-3}}
+\end{array}
+\]
+
+
+\textbf{c) Estado final de las impurezas con nivel de energía $E_{D1}$}
+
+Al añadir el segundo dopante e incrementar la densidad total de electrones en la banda de conducción hasta $\SI{5e16}{\cm^{-3}}$, el nivel de Fermi se ha desplazado hacia arriba, aproximándose al fondo de la banda de conducción (pasando de $\SI{-0.197}{\eV}$ a $\SI{-0.156}{\eV}$).
+
+Este ascenso de $E_F$ incrementa la probabilidad de ocupación por electrones de todos los niveles situados por debajo. En consecuencia, un pequeño porcentaje de las primeras impurezas ($E_{D1}$) se neutraliza al reatrapados electrones, reduciendo su grado de ionización del $99.3\%$ inicial al $96.6\%$ actual ($N_{D1}^+ = \SI{9.66e15}{\cm^{-3}}$). Siguen estando mayoritariamente ionizadas, pero la ocupación de sus estados neutros ha aumentado ligeramente.
+\end{problema}
+
+
 \newpage
 %-----------------------------------------------------
 %-------------- Problema 8 ---------------------------
