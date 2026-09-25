@@ -1345,6 +1345,335 @@ Bajo ionización total ($n_0 \approx N_D$ y $p_0 \approx N_A$):
 \begin{concepto}[Límite de degeneración por dopado]
 Si la concentración de donadores se incrementa hasta alcanzar o superar la densidad equivalente de estados ($N_D \ge N_c$), el nivel de Fermi alcanza el borde de la banda ($E_F \ge E_C$) y penetra en la Banda de Conducción. El semiconductor entra en el régimen \textbf{degenerado}, adquiriendo propiedades conductoras similares a las de un metal. De forma simétrica, si $N_A \ge N_v$, $E_F$ penetra en la Banda de Valencia ($E_F \le E_V$).
 \end{concepto}
+\newpage
+
+% ==========================================
+% SECCIÓN 5: PROPIEDADES ÓPTICAS DE LOS SEMICONDUCTORES
+% ==========================================
+\section{Propiedades ópticas de los semiconductores}
+
+\subsection{Espectro electromagnético y gap de los principales semiconductores}
+
+La interacción entre la radiación electromagnética y un semiconductor está gobernada por la energía de los fotones incidentes ($E$), la cual depende de su frecuencia $\nu$ o de su longitud de onda en el vacío $\lambda$:
+\[
+E = h\nu = \frac{hc}{\lambda}
+\]
+Expresando la longitud de onda en micrómetros ($\si{\micro\meter}$) y la energía en electronvoltios ($\si{\eV}$), se utiliza la relación práctica:
+\[
+E \, (\text{eV}) \approx \frac{1.24}{\lambda \, (\si{\micro\meter})}
+\]
+
+El espectro visible comprende longitudes de onda desde $\lambda \approx \SI{0.39}{\micro\meter}$ (violeta) hasta $\lambda \approx \SI{0.77}{\micro\meter}$ (rojo), lo que corresponde a un rango de energías de fotón entre $\SI{3.15}{\eV}$ y $\SI{1.61}{\eV}$.
+
+\begin{concepto}[Anchura de banda prohibida ($E_g$) y respuesta espectral]
+Un fotón solo puede ser absorbido intrínsecamente por el semiconductor si su energía es igual o superior a la anchura de la banda prohibida ($h\nu \ge E_g$). Esto define una \textbf{longitud de onda umbral o límite} ($\lambda_g$):
+\[
+\lambda_g = \frac{hc}{E_g} \approx \frac{1.24}{E_g \, (\text{eV})} \, (\si{\micro\meter})
+\]
+\begin{itemize}
+    \item \textbf{Silicio ($\text{Si}$):} $E_g = \SI{1.12}{\eV} \implies \lambda_g \approx \SI{1.11}{\micro\meter}$ (región del infrarrojo cercano).
+    \item \textbf{Arseniuro de Galio ($\text{GaAs}$):} $E_g = \SI{1.42}{\eV} \implies \lambda_g \approx \SI{0.87}{\micro\meter}$ (infrarrojo cercano).
+    \item \textbf{Semiconductores de gap ancho (ej. $\text{GaN}$, $\text{SiC}$):} Presentan $E_g > \SI{3.0}{\eV}$, respondiendo en el espectro azul y ultravioleta.
+\end{itemize}
+\end{concepto}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagenes/5-1-Espectro_electromagnetico.png}
+    \caption{Espectro electromagnético en función de la longitud de onda y la energía del fotón, junto con la respuesta espectral relativa del ojo humano y la ubicación de los gaps energéticos de los principales semiconductores.}
+    \label{fig:espectro_electromagnetico}
+\end{figure}
+
+\newpage
+%---------------------------------------------------
+\subsection{Interacción radiación electromagnética - semiconductor}
+
+Al incidir radiación electromagnética sobre un semiconductor se pueden producir los siguientes procesos fundamentales:
+
+\subsubsection{1. Absorción y efectos fotoeléctricos}
+Cuando la energía de los fotones incidentes satisface $h\nu \ge E_g$, los fotones son absorbidos generando pares electrón-hueco adicionales (portadores en exceso $\delta n = \delta p$). La tasa de generación óptica de pares por unidad de volumen y tiempo se denota por $G$ ($\si{\cm^{-3}\per\second}$).
+
+Este incremento en la densidad de portadores modifica las propiedades eléctricas del material, dando lugar a los siguientes \textbf{efectos fotoeléctricos}:
+\begin{itemize}
+    \item \textbf{Fotoconductividad:} Ocurre en un semiconductor homogéneo. El aumento en la densidad de portadores libres incrementa la conductividad del material ($\Delta \sigma = q(\mu_n + \mu_p)\delta n$), disminuyendo su resistencia eléctrica bajo iluminación.
+    \item \textbf{Efecto fotovoltaico:} Ocurre en estructuras semiconductoras no homogéneas (como uniones p-n o heterouniones). El campo eléctrico interno de la unión separa los pares electrón-hueco fotogenerados antes de que se recombinen, originando una diferencia de potencial o una corriente utilizable (fundamento de las células solares y fotodiodos).
+    \item \textbf{Efecto fotoelectromagnético:} Aparece al aplicar simultáneamente un campo magnético transversal a una muestra iluminada, induciendo una fuerza de Lorentz sobre los portadores fotogenerados que difunden hacia el interior.
+\end{itemize}
+
+\subsubsection{2. Recombinación y emisión radiativa}
+Los electrones de la Banda de Conducción tienden a regresar a la Banda de Valencia liberando la energía excedente:
+\begin{itemize}
+    \item \textbf{Recombinación no radiativa:} La energía se cede a la red cristalina en forma de vibraciones térmicas (fonones).
+    \item \textbf{Recombinación radiativa (Luminiscencia):} La transición produce la emisión espontánea de un fotón de energía $h\nu \approx E_g$.
+\end{itemize}
+
+\subsubsection{3. Recombinación estimulada}
+Un fotón incidente con energía $h\nu \approx E_g$ puede estimular la transición descendente de un electrón desde la Banda de Conducción a la de Valencia. Este proceso emite un segundo fotón de idéntica frecuencia, fase, polarización y dirección de propagación que el fotón estimulante. Constituye la base física para la amplificación óptica y la fabricación de \textbf{diodos láser}.
+
+\newpage
+%---------------------------------------------------
+\subsection{Reflexión, absorción y transmisión de la radiación}
+
+Cuando un haz de radiación electromagnética de intensidad $I_0$ incide perpendicularmente sobre una muestra semiconductora de grosor $d$, la intensidad total se conserva y se distribuye en tres componentes:
+\[
+I_0 = I_R + I_A + I_T \implies \frac{I_R}{I_0} + \frac{I_A}{I_0} + \frac{I_T}{I_0} = 1
+\]
+donde $I_R$ es la intensidad reflejada en la superficie de entrada, $I_A$ es la intensidad absorbida en el interior del volumen, e $I_T$ es la intensidad transmitida a través de la cara posterior.
+
+Para aplicaciones optoelectrónicas basadas en detección o conversión de energía (fotodetectores y células solares), el objetivo de diseño es maximizar la absorción cancelando las pérdidas por reflexión y transmisión ($I_R \to 0$, $I_T \to 0$).
+
+\subsubsection{a) Reflexión de la radiación}
+
+Se define el \textbf{factor de reflexión (o reflectancia)} $R$ como la fracción de intensidad reflejada respecto a la incidente:
+\[
+R = \frac{I_R}{I_0}
+\]
+Cuando este factor varía con la longitud de onda, se define el espectro de reflexión $R(\lambda)$.
+
+Para incidencia normal en la interfaz entre el aire ($n_1 = 1.0$) y un semiconductor con índice de refracción $\overline{n}_2$, el coeficiente de reflexión de Fresnel viene dado por:
+\[
+R = \left( \frac{\overline{n}_2 - n_1}{\overline{n}_2 + n_1} \right)^2 = \left( \frac{\overline{n}_2 - 1}{\overline{n}_2 + 1} \right)^2
+\]
+
+\begin{concepto}[Consecuencias técnicas de la reflexión]
+Puesto que los semiconductores presentan índices de refracción elevados ($\overline{n} \sim 3.5 - 4.0$), la reflexión en la superficie es considerable (por ejemplo, $R \approx 34\%$ en el $\text{GaAs}$).
+
+Esto acarrea dos inconvenientes principales:
+\begin{enumerate}
+    \item Reduce drásticamente la eficiencia de los dispositivos fotodetectores y fotovoltaicos al perder más de un tercio de los fotones incidentes.
+    \item Introduce una sensibilidad dependiente de la frecuencia.
+\end{enumerate}
+Para mitigar estas pérdidas se depositan recubrimientos ópticos delgados antireflectantes (de grosor $\lambda / 4$).
+\end{concepto}
+
+\begin{problema}[Cálculo del coeficiente de reflexión en la interfaz $\text{GaAs}$-Aire]
+Considerar la interfaz entre un semiconductor de Arseniuro de Galio ($\text{GaAs}$) y el aire. El índice de refracción del $\text{GaAs}$ a una longitud de onda $\lambda = \SI{0.70}{\micro\meter}$ es $\overline{n}_2 = 3.8$, mientras que para el aire es $n_1 = 1.0$. Calcular el coeficiente de reflexión.
+
+\tcblower
+
+Aplicando la fórmula de Fresnel para incidencia normal:
+\[
+R = \left( \frac{\overline{n}_2 - n_1}{\overline{n}_2 + n_1} \right)^2 = \left( \frac{3.8 - 1.0}{3.8 + 1.0} \right)^2 = \left( \frac{2.8}{4.8} \right)^2 \approx 0.34
+\]
+
+\textbf{Comentario:} Un coeficiente de reflexión de $R = 0.34$ indica que el $34\%$ de los fotones que inciden desde el aire sobre la superficie del $\text{GaAs}$ se reflejan hacia el exterior sin penetrar en el semiconductor.
+\end{problema}
+
+\subsubsection{b) Absorción de la radiación: Ley de Bouguer-Lambert}
+
+A medida que la luz penetra a lo largo de la dirección $x$ en el interior del semiconductor, la atenuación diferencial de la intensidad $I(x)$ por unidad de longitud es proporcional a la intensidad local:
+\[
+dI(x) = -\alpha I(x) dx
+\]
+donde $\alpha$ es el \textbf{coeficiente de absorción} del material (expresado en $\si{\cm^{-1}}$). Integrando con la condición de contorno $I(0) = I_0$:
+\[
+I(x) = I_0 \exp(-\alpha x)
+\]
+
+La magnitud inversa $\delta = \frac{1}{\alpha}$ representa la \textbf{longitud o profundidad de absorción}, definida como la distancia requerida para que la intensidad del haz incidente se reduzca al factor $1/e \approx 36.8\%$ de su valor inicial $I_0$.
+
+El coeficiente de absorción depende fuertemente de la energía del fotón, definiéndose el \textbf{espectro de absorción} $\alpha(\omega)$ o $\alpha(\lambda)$. Cuando $h\nu \ge E_g$, el coeficiente $\alpha$ experimenta un incremento abrupto de varios órdenes de magnitud.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{imagenes/5-2-Coeficiente_absorcion.png}
+    \caption{Coeficiente de absorción $\alpha$ en función de la longitud de onda $\lambda$ y de la energía del fotón para diversos materiales semiconductores.}
+    \label{fig:coeficiente_absorcion}
+\end{figure}
+
+\subsubsection{Mecanismos de absorción}
+
+\paragraph{i) Absorción intrínseca (banda a banda)}
+Es el mecanismo fotoeléctrico de mayor interés tecnológico. Consiste en la excitación de un electrón desde la Banda de Valencia hasta la Banda de Conducción mediante la absorción de un fotón con $h\nu \ge E_g$. Se clasifican en dos tipos según la estructura de bandas del material:
+
+\begin{itemize}
+    \item \textbf{Transición directa:} 
+    Ocurre en semiconductores de \textbf{gap directo} (como el $\text{GaAs}$ o $\text{InP}$), donde el mínimo de la Banda de Conducción y el máximo de la Banda de Valencia coinciden en el mismo vector de onda ($\vec{k} = 0$, punto $\Gamma$). Puesto que el momento espacial del fotón es despreciable ($k_{\text{fotón}} \approx 0$), la transición es vertical y conserva directamente el momento cristalino. Es un proceso cuántico de primer orden, muy probable, caracterizado por un elevado coeficiente de absorción ($\alpha \approx \SI{1e4}{\cm^{-1}} - \SI{1e5}{\cm^{-1}}$) que sigue la ley:
+    \[
+    \alpha \propto (h\nu - E_g)^{1/2}
+    \]
+
+    \item \textbf{Transición indirecta:} 
+    Ocurre en semiconductores de \textbf{gap indirecto} (como el $\text{Si}$ o $\text{Ge}$), donde el mínimo de la Banda de Conducción está desplazado un vector $\Delta \vec{k}$ respecto al máximo de la Banda de Valencia. Para conservar el momento cristalino, el proceso requiere la participación simultánea de una vibración de la red (\textbf{fonón}):
+    \[
+    h\nu_{\text{fotón}} = E_g \pm h\nu_{\text{fonón}}
+    \]
+    Es un proceso cuántico de segundo orden, mucho menos probable, dando lugar a coeficientes de absorción menores ($\alpha \approx \SI{1e2}{\cm^{-1}} - \SI{1e3}{\cm^{-1}}$) con una dependencia del tipo:
+    \[
+    \alpha \propto (h\nu - E_g \pm h\nu_{\text{fonón}})^2
+    \]
+\end{itemize}
+
+\begin{concepto}[Consideraciones de diseño tecnológico según el gap]
+\begin{itemize}
+    \item \textbf{Semiconductores de gap directo ($\text{GaAs}$):} Al poseer un coeficiente $\alpha$ muy elevado, la absorción ocurre casi íntegramente en una fina capa superficial ($\approx \SI{1}{\micro\meter}$). La zona activa del dispositivo debe situarse muy próxima a la superficie.
+    \item \textbf{Semiconductores de gap indirecto ($\text{Si}$):} La absorción es en volumen y requiere grosores mayores ($\approx \SI{100}{\micro\meter}$) para absorber la totalidad de la luz incidente.
+    \item \textbf{Parámetros críticos de transporte:} Para maximizar la recolección de los portadores fotogenerados es fundamental disponer de una elevada \textbf{vida media} $\tau$ (tiempo medio que un portador sobrevive antes de recombinarse) y una alta \textbf{longitud de difusión} $L = \sqrt{D\tau}$ (distancia media recorrida antes de recombinarse).
+\end{itemize}
+\end{concepto}
+
+\paragraph{ii) Absorción extrínseca}
+Ocurre cuando fotones con energía inferior al gap ($h\nu < E_g$) fotoionizan niveles de impurezas donadoras o aceptadoras en la banda prohibida. Genera picos discretos en el espectro de absorción situados en torno a la energía de ionización de la impureza. Se utiliza experimentalmente en espectroscopía para identificar la presencia y concentración de dopantes.
+
+\paragraph{iii) Absorción por portadores libres}
+Transición de electrones (o huecos) entre estados permitidos pertenecientes a su propia banda de energía (dentro de la BC o BV). Al existir un cuasicontinuo de niveles energéticos disponibles, este mecanismo genera una línea de fondo de absorción suave y casi constante en todo el espectro con valores de $\alpha$ reducidos.
+
+\paragraph{iv) Absorción excitónica}
+A temperaturas bajas, un fotón con energía ligeramente inferior al gap ($h\nu = E_g - E_B$) puede crear un \textbf{excitón} (un par electrón-hueco ligado electrostáticamente en un estado hidrogenoide con energía de enlace $E_B$). Se manifiesta en el espectro como líneas de absorción muy afiladas inmediatamente por debajo del borde de absorción fundamental.
+
+\paragraph{v) Absorción por vibraciones de la red (fonones)}
+Interacción directa de la radiación con las vibraciones de la red cristalina. Los fotones incidentes (típicamente en el infrarrojo lejano) son absorbidos directamente para crear fonones ópticos. Produce picos intensos en el espectro en frecuencias correspondientes a múltiplos de la energía de los fonones de la red.
+
+\newpage
+%---------------------------------------------------
+\subsection{Fotoconductividad en semiconductores}
+
+La \textbf{fotoconductividad} es el incremento de la conductividad eléctrica de un semiconductor provocado por la absorción de radiación electromagnética, la cual genera portadores libres adicionales ($\Delta n, \Delta p$) al romper enlaces de valencia.
+
+En ausencia de iluminación (equilibrio térmico), el semiconductor presenta una conductividad en oscuridad $\sigma_0$:
+\[
+\sigma_0 = q (n_0 \mu_{n0} + p_0 \mu_{p0})
+\]
+Bajo iluminación, la conductividad total $\sigma_L$ pasa a ser:
+\[
+\sigma_L = \sigma_0 + \Delta\sigma
+\]
+donde $\Delta\sigma$ representa el incremento de conductividad fotogenerado.
+
+\begin{concepto}[Desglose del incremento de conductividad $\Delta\sigma$]
+Tomando como ejemplo un semiconductor de tipo N ($\sigma_0 \approx q n_0 \mu_{n0}$), la conductividad bajo iluminación se expresa como:
+\[
+\sigma_0 + \Delta\sigma = q (n_0 + \Delta n)(\mu_{n0} + \Delta\mu)
+\]
+Desarrollando el producto y restando la conductividad en oscuridad $\sigma_0$:
+\[
+\Delta\sigma = q \mu_{n0} \Delta n + q (n_0 + \Delta n) \Delta\mu
+\]
+\begin{itemize}
+    \item \textbf{Contribución por generación de portadores ($q \mu_{n0} \Delta n$):} Es el término dominante en la mayoría de aplicaciones. La densidad de portadores fotogenerados en régimen estacionario es $\Delta n = G \tau$, donde $G$ es la tasa de generación óptica ($\si{\cm^{-3}\per\second}$) y $\tau$ es la vida media de los portadores en exceso.
+    \item \textbf{Contribución por variación de movilidad ($\Delta\mu$):} Cambio originado por modificaciones en el estado de ionización de las impurezas o por la dispersión de portadores hacia subbandas con distinta masa efectiva.
+\end{itemize}
+\end{concepto}
+
+\begin{problema}[Modelo analítico de un fotoconductor]
+Considerar un fotoconductor compuesto por una barra semiconductora homogénea de longitud $L$, área de sección transversal $A$ y contactos óhmicos en sus extremos, a la que se aplica una diferencia de potencial $V$. La muestra se somete a una iluminación uniforme que produce una tasa de generación $G$. Determinar la fotocorriente $\Delta I$.
+
+\tcblower
+
+La corriente total $I$ que circula a través del fotoconductor sometido a un campo eléctrico uniforme $E = \frac{V}{L}$ es:
+\[
+I = A \sigma_L E = A (\sigma_0 + \Delta\sigma) E = I_0 + \Delta I
+\]
+donde la \textbf{fotocorriente} (incremento de corriente producido por la luz) viene dada por:
+\[
+\Delta I = A \Delta\sigma E = A \Delta\sigma \frac{V}{L}
+\]
+
+Si la variación de movilidad es despreciable ($\Delta\mu \approx 0$) y se considera la generación de pares electrón-hueco ($\Delta n = \Delta p = G \tau$), el incremento de conductividad se simplifica a:
+\[
+\Delta\sigma = q (\mu_{n0} + \mu_{p0}) G \tau
+\]
+Sustituyendo en la ecuación de la corriente:
+\[
+\Delta I = A q (\mu_{n0} + \mu_{p0}) G \tau \frac{V}{L}
+\]
+\end{problema}
+
+\begin{problema}[Cálculo de la tasa de generación óptica y densidad de portadores en $\text{GaAs}$]
+Considerar una muestra de Arseniuro de Galio ($\text{GaAs}$) a $T = \SI{300}{\kelvin}$ expuesta a una radiación fotónica incidente de intensidad $I_\nu(x) = \SI{0.05}{\watt\per\cm^2}$ a una longitud de onda de $\lambda = \SI{0.75}{\micro\meter}$ (intensidad representativa de la luz solar).
+
+El coeficiente de absorción del $\text{GaAs}$ para esta longitud de onda es $\alpha \approx \SI{0.9e4}{\cm^{-1}}$. Asumiendo un factor de eficiencia cuántica unidad:
+\begin{enumerate}[label=\alph*)]
+    \item Calcular la energía de los fotones incidentes $E = h\nu$ en $\si{\eV}$.
+    \item Obtener la tasa de generación de pares electrón-hueco $g'$ por unidad de volumen y tiempo.
+    \item Determinar la concentración de portadores en exceso en régimen estacionario ($\delta n$) si la vida media de los portadores es $\tau = \SI{1e-7}{\second}$.
+\end{enumerate}
+
+\tcblower
+
+\textbf{a) Energía del fotón $E$:}
+\[
+E = h\nu = \frac{hc}{\lambda} \approx \frac{1.24}{\lambda \, (\si{\micro\meter})} = \frac{1.24}{0.75} = \SI{1.65}{\eV}
+\]
+
+\textbf{b) Tasa de generación óptica $g'$:}
+La tasa de generación por unidad de volumen corresponde al número de fotones absorbidos por unidad de volumen y tiempo:
+\[
+g' = \frac{\alpha I_\nu(x)}{h\nu}
+\]
+Convertimos la energía a julios ($\SI{1.65}{\eV} = 1.65 \times \num{1.6e-19} \text{ J}$):
+\[
+g' = \frac{(\num{0.9e4} \, \si{\cm^{-1}}) \cdot (\num{0.05} \, \si{\watt\per\cm^2})}{(\num{1.6e-19} \, \si{\joule\per\eV}) \cdot (\SI{1.65}{\eV})} = \frac{450}{\num{2.64e-19}} = \SI{1.70e21}{\cm^{-3}\per\second}
+\]
+
+\textbf{c) Concentración de portadores en exceso ($\delta n$):}
+En régimen estacionario, la densidad de portadores en exceso equilibra la generación con la recombinación:
+\[
+\delta n = g' \tau = (\num{1.70e21} \, \si{\cm^{-3}\per\second}) \cdot (\num{1e-7} \, \si{\second}) = \SI{1.70e14}{\cm^{-3}}
+\]
+
+\textbf{Comentario:} A medida que la luz penetra en el interior del semiconductor, la intensidad $I_\nu(x)$ disminuye de forma exponencial según la ley de Bouguer-Lambert, reduciendo proporcionalmente la tasa de generación $g'$ y la densidad de portadores libres.
+\end{problema}
+
+\newpage
+%---------------------------------------------------
+\subsection{Luminiscencia en semiconductores}
+
+La \textbf{luminiscencia} es el proceso inverso a la absorción óptica: consiste en la emisión de radiación electromagnética (infrarroja, visible o ultravioleta) por parte del semiconductor debido a la desexcitación de electrones que ceden su energía en exceso al regresar a niveles de energía inferiores.
+
+\subsubsection{Mecanismos de desexcitación}
+
+Las transiciones de desexcitación se dividen en \textbf{radiativas} (con emisión de fotones) y \textbf{no radiativas} (liberación de energía en forma de calor/fonones). Se distinguen tres categorías principales de transiciones:
+
+\begin{enumerate}
+    \item \textbf{Transiciones interbanda (banda a banda):} Recombinación directa de un electrón de la Banda de Conducción con un hueco de la Banda de Valencia. La energía del fotón emitido es $h\nu \approx E_g$.
+    \item \textbf{Transiciones de impurezas:} Ocurren a través de niveles discretos introducidos por dopantes o defectos en la banda prohibida:
+    \begin{itemize}
+        \item Transición de Banda de Conducción a nivel aceptador ($E_A$).
+        \item Transición de nivel donador ($E_D$) a Banda de Valencia.
+        \item Transición entre niveles de impurezas ($E_D \to E_A$).
+        \item Atrapamiento y recombinación no radiativa en niveles profundos o trampas ($E_T$).
+    \end{itemize}
+    \item \textbf{Transiciones intrabanda:} Relajación de energía de portadores dentro de la misma banda, emitiendo fonones o fotones de baja energía (infrarrojo lejano).
+\end{enumerate}
+
+\begin{concepto}[Eficiencia radiativa según el tipo de gap]
+La máxima eficiencia radiativa se alcanza en \textbf{semiconductores intrínsecos con gap directo} ($\text{GaAs}$, $\text{InP}$), donde la conservación del momento cristalino se satisface de forma directa ($\hbar\omega_{\text{fotón}} \approx E_g$).
+
+En semiconductores extrínsecos o de gap indirecto ($\text{Si}$, $\text{Ge}$), la desexcitación radiativa exige la mediación de un fonón (proceso cuántico de segundo orden, menos probable), por lo que predominan las vías no radiativas.
+\end{concepto}
+
+\begin{itemize}
+    \item \textbf{Arseniuro de Galio ($\text{GaAs}$):} $E_g \approx \SI{1.42}{\eV} \implies \lambda \approx \SI{0.88}{\micro\meter}$ (emisión en el infrarrojo cercano).
+    \item \textbf{Fosfuro de Indio ($\text{InP}$):} $E_g \approx \SI{1.35}{\eV} \implies \lambda \approx \SI{0.92}{\micro\meter}$ (emisión en el infrarrojo cercano).
+\end{itemize}
+
+\subsubsection{Ingeniería del GAP para emisión en el espectro visible}
+
+Dado que los semiconductores binarios de gap directo habituales emiten en la región del infrarrojo, se utiliza la \textbf{ingeniería de gap} mezclando semiconductores para sintetizar aleaciones binarias, ternarias o cuaternarias con emisión sintonizable en el espectro visible:
+
+\paragraph{1. Aleación $\text{GaAs}_{1-x}\text{P}_x$}
+Ajustando la fracción molar $x$ de fósforo se varía la anchura del gap $E_g$, modificando la longitud de onda del fotón emitido:
+\begin{itemize}
+    \item $x = 0.40 \implies E_g \approx \SI{1.90}{\eV}$ (Rojo).
+    \item $x = 0.65 \implies E_g \approx \SI{2.10}{\eV}$ (Naranja).
+    \item $x = 0.85 \implies E_g \approx \SI{2.20}{\eV}$ (Amarillo).
+    \item $x = 1.00 \, (\text{GaP}) \implies E_g = \SI{2.26}{\eV}$ (Verde).
+\end{itemize}
+
+\begin{concepto}[Transición de gap directo a indirecto en $\text{GaAs}_{1-x}\text{P}_x$]
+Para una composición de $x \approx 0.45$ ($E_g \approx \SI{1.977}{\eV}$), el mínimo de la banda de conducción en el punto $\Gamma$ (gap directo) pasa a situarse por encima del mínimo en la dirección $X$ (gap indirecto). Para $x > 0.45$, el material se convierte en un semiconductor de **gap indirecto**, reduciéndose drásticamente su eficiencia radiativa a menos que se introduzcan isaimpurezas (como nitrógeno, $\text{N}$) como centros lumínicos recombinadores.
+\end{concepto}
+
+\paragraph{2. Aleación $\text{Al}_x\text{Ga}_{1-x}\text{As}$}
+Mantiene gap directo hasta $x \approx 0.45$ ($E_g \approx \SI{1.98}{\eV}$), muy empleada en emisores de luz roja e infrarroja cercana.
+
+\paragraph{3. Alternativas de gap ancho para el espectro visible y ultravioleta}
+\begin{itemize}
+    \item \textbf{Carburo de Silicio ($\text{SiC}$):} $E_g \approx \SI{2.99}{\eV}$ (emisión en el azul, gap indirecto).
+    \item \textbf{Nitruro de Galio ($\text{GaN}$):} $E_g \approx \SI{3.44}{\eV}$ (gap directo, emisión en azul/ultravioleta).
+    \item \textbf{Nitruro de Indio y Galio ($\text{InGaN}$):} Material fundamental para la fabricación de LED comerciales de alta eficiencia en toda la gama del visible (azul, verde y luz blanca).
+\end{itemize}
 
 \newpage
 \phantom{a}
