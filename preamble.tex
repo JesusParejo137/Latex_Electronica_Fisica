@@ -30,6 +30,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{capt-of}
+\usepackage{tabularx}
 
 % Cajas de texto personalizadas
 \usepackage[most]{tcolorbox}
@@ -87,6 +88,28 @@
   before upper={\refstepcounter{problemacontador}},
   title={Problema~\theproblemacontador\ifstrempty{#1}{}{: #1}},
   lower separated=true
+}
+
+%------------------- Entorno Ejemplo ------------------------
+
+\newcounter{ejemplocontador}[chapter]
+\definecolor{examplecolor}{RGB}{0, 121, 107} % verde-azulado, distinto del azul de "problema"
+
+\newenvironment{ejemplo}[1][]{%
+  \refstepcounter{ejemplocontador}%
+  \begin{tcolorbox}[
+    enhanced,
+    breakable,
+    colback=boxbg,
+    colframe=examplecolor,
+    fonttitle=\bfseries\itshape,
+    coltitle=white,
+    arc=1mm,
+    boxrule=0.75pt,
+    title={Ejemplo~\theejemplocontador\ifstrempty{#1}{}{: #1}}
+  ]%
+}{%
+  \end{tcolorbox}%
 }
 
 % Configuración de unidades físicas

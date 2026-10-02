@@ -529,10 +529,10 @@ Los niveles excitados ($n > 1$) no se ocupan en la práctica. La razón física 
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{
-  >{\raggedright\arraybackslash}p{0.3\textwidth}
-  >{\raggedright\arraybackslash}p{0.32\textwidth}
-  >{\raggedright\arraybackslash}p{0.32\textwidth}
+\begin{tabularx}{\textwidth}{
+  >{\raggedright\arraybackslash}X
+  >{\raggedright\arraybackslash}X
+  >{\raggedright\arraybackslash}X
 }
 \toprule
 \textbf{Propiedad} & \textbf{Estados de Bloch} & \textbf{Estados de Impurezas} \\
@@ -543,10 +543,9 @@ Los niveles excitados ($n > 1$) no se ocupan en la práctica. La razón física 
 \addlinespace
 \textbf{Estadística de ocupación} & Ocupación independiente entre estados (obedecen estadística de Fermi-Dirac). & Ocupación dependiente (la ocupación de un estado bloquea la de los demás por repulsión coulombiana). \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \caption{Diferencias fundamentales entre los estados de Bloch y los estados de impurezas hidrogenoides.}
 \end{table}
-
 \newpage
 
 % ==========================================
@@ -864,7 +863,7 @@ n_i \propto T^{3/2} \exp\left( -\frac{E_g}{2 k_B T} \right)
 
 \newpage
 
-\begin{problema}[Variación de la concentración intrínseca del Silicio con la temperatura]
+\begin{ejemplo}[Variación de la concentración intrínseca del Silicio con la temperatura]
 Calcular la concentración de portadores intrínsecos ($n_i$) en el Silicio a $T = \SI{250}{\kelvin}$ y a $T = \SI{400}{\kelvin}$.
 
 \textbf{Datos:}
@@ -909,7 +908,7 @@ n_i(400) = \SI{2.38e12}{\cm^{-3}}
 \textbf{4. Comentario físico}
 
 Se observa que un incremento de temperatura de solo $\SI{150}{\kelvin}$ provoca un aumento en la densidad de portadores intrínsecos de más de cuatro órdenes de magnitud (de $\SI{7.0e7}{\cm^{-3}}$ a $\SI{2.38e12}{\cm^{-3}}$).
-\end{problema}
+\end{ejemplo}
 
 \newpage
 
@@ -1008,7 +1007,7 @@ Cuando la concentración de dopante es extremadamente elevada ($N_D > N_c$ o $N_
 
 \newpage
 
-\begin{problema}[Cálculo de concentraciones de electrones y huecos a partir del nivel de Fermi]
+\begin{ejemplo}[Cálculo de concentraciones de electrones y huecos a partir del nivel de Fermi]
 Determinar las concentraciones de electrones ($n_0$) y huecos ($p_0$) en equilibrio térmico para una muestra de Silicio a $T = \SI{300}{\kelvin}$.
 
 \textbf{Datos:}
@@ -1048,7 +1047,7 @@ p_0 = (\SI{1.04e19}{\cm^{-3}}) \exp\left( -\frac{0.87}{0.0259} \right) = \SI{2.7
 \textbf{3. Comentario físico}
 
 El desplazamiento del nivel de Fermi unas pocas décimas de electronvoltio respecto a la posición intrínseca modifica la concentración de portadores mayoritarios y minoritarios en varios órdenes de magnitud con respecto a la densidad intrínseca ($n_i \approx \SI{1.5e10}{\cm^{-3}}$).
-\end{problema}
+\end{ejemplo}
 
 \newpage
 
@@ -1134,7 +1133,7 @@ En la mayoría de los casos prácticos con dopado moderado o elevado, la densida
 
 \newpage
 
-\begin{problema}[Concentraciones de portadores en Silicio dopado]
+\begin{ejemplo}[Concentraciones de portadores en Silicio dopado]
 Determinar las concentraciones de electrones ($n_0$) y huecos ($p_0$) en equilibrio térmico para muestras de Silicio a $T = \SI{300}{\kelvin}$ sometidas a las siguientes concentraciones de dopado:
 \begin{enumerate}
     \item $N_D = \SI{1e16}{\cm^{-3}}$ y $N_A = 0$.
@@ -1175,11 +1174,11 @@ p_0 = \frac{n_i^2}{n_0} = \frac{(\num{1.5e10})^2}{\num{3e15}} = \SI{7.5e4}{\cm^{
 \textbf{3. Comentario físico}
 
 En ambos casos se cumple $N_D - N_A \gg n_i$, por lo que la concentración de portadores mayoritarios en equilibrio es prácticamente igual a la diferencia entre las concentraciones de donadores y aceptadores ($n_0 \approx N_D - N_A$). Asimismo, la densidad de mayoritarios es varios órdenes de magnitud superior a la de minoritarios.
-\end{problema}
+\end{ejemplo}
 
 \newpage
 
-\begin{problema}[Concentración de portadores en Germanio con dopado moderado]
+\begin{ejemplo}[Concentración de portadores en Germanio con dopado moderado]
 Calcular las concentraciones de electrones ($n_0$) y huecos ($p_0$) en equilibrio térmico a $T = \SI{300}{\kelvin}$ para una muestra de Germanio dopada con $N_D = \SI{2e14}{\cm^{-3}}$ y $N_A = 0$.
 
 \textbf{Datos:}
@@ -1204,7 +1203,9 @@ p_0 = \frac{n_i^2}{n_0} = \frac{(\num{2.4e13})^2}{\num{2.028e14}} \approx \SI{2.
 \textbf{Comentario físico}
 
 Cuando la concentración de impurezas donadoras no es mucho mayor que la densidad intrínseca (misma escala de magnitud), la generación térmica aporta una fracción apreciable a la concentración total de mayoritarios, haciendo necesario el cálculo exacto sin aproximaciones.
-\end{problema}
+\end{ejemplo}
+
+\newpage
 
 \subsection{Densidad de portadores y nivel de Fermi en función de la temperatura}
 
@@ -1446,7 +1447,7 @@ Esto acarrea dos inconvenientes principales:
 Para mitigar estas pérdidas se depositan recubrimientos ópticos delgados antireflectantes (de grosor $\lambda / 4$).
 \end{concepto}
 
-\begin{problema}[Cálculo del coeficiente de reflexión en la interfaz $\text{GaAs}$-Aire]
+\begin{ejemplo}[Cálculo del coeficiente de reflexión en la interfaz $\text{GaAs}$-Aire]
 Considerar la interfaz entre un semiconductor de Arseniuro de Galio ($\text{GaAs}$) y el aire. El índice de refracción del $\text{GaAs}$ a una longitud de onda $\lambda = \SI{0.70}{\micro\meter}$ es $\overline{n}_2 = 3.8$, mientras que para el aire es $n_1 = 1.0$. Calcular el coeficiente de reflexión.
 
 \tcblower
@@ -1457,7 +1458,7 @@ R = \left( \frac{\overline{n}_2 - n_1}{\overline{n}_2 + n_1} \right)^2 = \left( 
 \]
 
 \textbf{Comentario:} Un coeficiente de reflexión de $R = 0.34$ indica que el $34\%$ de los fotones que inciden desde el aire sobre la superficie del $\text{GaAs}$ se reflejan hacia el exterior sin penetrar en el semiconductor.
-\end{problema}
+\end{ejemplo}
 
 \subsubsection{b) Absorción de la radiación: Ley de Bouguer-Lambert}
 
@@ -1555,7 +1556,7 @@ Desarrollando el producto y restando la conductividad en oscuridad $\sigma_0$:
 \end{itemize}
 \end{concepto}
 
-\begin{problema}[Modelo analítico de un fotoconductor]
+\begin{ejemplo}[Modelo analítico de un fotoconductor]
 Considerar un fotoconductor compuesto por una barra semiconductora homogénea de longitud $L$, área de sección transversal $A$ y contactos óhmicos en sus extremos, a la que se aplica una diferencia de potencial $V$. La muestra se somete a una iluminación uniforme que produce una tasa de generación $G$. Determinar la fotocorriente $\Delta I$.
 
 \tcblower
@@ -1577,9 +1578,9 @@ Sustituyendo en la ecuación de la corriente:
 \[
 \Delta I = A q (\mu_{n0} + \mu_{p0}) G \tau \frac{V}{L}
 \]
-\end{problema}
+\end{ejemplo}
 
-\begin{problema}[Cálculo de la tasa de generación óptica y densidad de portadores en $\text{GaAs}$]
+\begin{ejemplo}[Cálculo de la tasa de generación óptica y densidad de portadores en $\text{GaAs}$]
 Considerar una muestra de Arseniuro de Galio ($\text{GaAs}$) a $T = \SI{300}{\kelvin}$ expuesta a una radiación fotónica incidente de intensidad $I_\nu(x) = \SI{0.05}{\watt\per\cm^2}$ a una longitud de onda de $\lambda = \SI{0.75}{\micro\meter}$ (intensidad representativa de la luz solar).
 
 El coeficiente de absorción del $\text{GaAs}$ para esta longitud de onda es $\alpha \approx \SI{0.9e4}{\cm^{-1}}$. Asumiendo un factor de eficiencia cuántica unidad:
@@ -1613,7 +1614,7 @@ En régimen estacionario, la densidad de portadores en exceso equilibra la gener
 \]
 
 \textbf{Comentario:} A medida que la luz penetra en el interior del semiconductor, la intensidad $I_\nu(x)$ disminuye de forma exponencial según la ley de Bouguer-Lambert, reduciendo proporcionalmente la tasa de generación $g'$ y la densidad de portadores libres.
-\end{problema}
+\end{ejemplo}
 
 \newpage
 %---------------------------------------------------
@@ -2345,7 +2346,6 @@ Relacionando $N_{D2}^+$ con la densidad total $N_{D2}$:
      & \displaystyle = (\SI{4.034e16}{\cm^{-3}}) \left[ 1 + 2 \exp\left( \frac{-0.006}{0.026} \right) \right] \approx \SI{1.051e17}{\cm^{-3}}
 \end{array}
 \]
-
 
 \textbf{c) Estado final de las impurezas con nivel de energía $E_{D1}$}
 
