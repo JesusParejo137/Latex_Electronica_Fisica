@@ -13,6 +13,7 @@ Un semiconductor en equilibrio termodinámico y de composición homogénea se ca
     \item \textbf{Efectos magnéticos:} Modificación de la trayectoria de los portadores por la acción conjunta de un campo magnético y eléctrico (efecto Hall).
 \end{itemize}
 
+\newpage
 % ==========================================
 % SECCIÓN 1: CORRIENTES DE ARRASTRE Y DIFUSIÓN
 % ==========================================
@@ -27,13 +28,6 @@ En el seno de un semiconductor, el movimiento de los portadores de carga ($q = \
 \end{enumerate}
 
 Por lo tanto, la trayectoria microscópica de un portador en el semiconductor consiste en una secuencia continua de \textbf{recorridos libres} interrumpidos periódicamente por eventos de \textbf{dispersión}.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.7\textwidth]{imagenes/Tema3/T3_1.png}
-    \caption{Trayectoria aleatoria de un portador de carga en la red cristalina: (a) En ausencia de campo eléctrico ($E = 0$), con velocidad media nula; (b) En presencia de un campo eléctrico ($E > 0$), produciéndose un desplazamiento neto en la dirección de la fuerza eléctrica (velocidad de arrastre $v_d$).}
-    \label{fig:arrastre_microscopico}
-\end{figure}
 
 En ausencia de campo eléctrico ($\vec{E} = 0$), el movimiento térmico de los portadores es completamente aleatorio. Al promediar en el espacio sobre un conjunto elevado de portadores, la velocidad térmica media es nula:
 \[
@@ -50,6 +44,17 @@ Al tomar el promedio sobre todos los portadores y sobre el tiempo medio de recor
 \langle v_x \rangle = v_d = \frac{q \tau}{m^*} E_x
 \]
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagenes/Tema3/T3_1.png}
+    \caption{Trayectoria aleatoria de un portador de carga en la red cristalina: (a) En ausencia de campo eléctrico ($E = 0$), con velocidad media nula; (b) En presencia de un campo eléctrico ($E > 0$), produciéndose un desplazamiento neto en la dirección de la fuerza eléctrica (velocidad de arrastre $v_d$).}
+    \label{fig:velocidad_arrastre}
+\end{figure}
+
+\newpage
+%============================================
+%==== SUBSECCIÓN: VELOCIDAD Y CORRIENTE =====
+%============================================
 \subsection{Velocidad y corriente}
 
 Se define la \textbf{movilidad} ($\mu_n$ para electrones y $\mu_p$ para huecos) como el factor de proporcionalidad entre la velocidad de arrastre y el campo eléctrico aplicado. Sus unidades en el Sistema Internacional y en física de semiconductores son $\si{\cm^2\per\volt\per\second}$:
@@ -135,8 +140,6 @@ J_a = (\num{1.6e-19} \, \si{\coulomb}) \cdot (\SI{8500}{\cm^2\per\volt\per\secon
 \end{ejemplo}
 
 \newpage
-
-% !TEX root = ../main.tex
 
 \subsection{Ley de Ohm: de la escala microscópica a la macroscópica}
 
@@ -248,6 +251,10 @@ La contribución de cada mecanismo de dispersión presenta una dependencia opues
 \end{itemize}
 \end{concepto}
 
+\newpage
+%============================================
+%==== SUBSECCIÓN: CORRIENTE DE DIFUSIÓN =====
+%============================================
 \subsection{Corriente de difusión}
 
 La \textbf{difusión} es un proceso de transporte de origen estadístico y térmico por el cual las partículas tienden a desplazarse desde zonas de alta concentración hacia zonas de menor concentración hasta homogenizar la densidad espacial.
@@ -852,6 +859,10 @@ Descomponiendo las concentraciones en componentes de equilibrio y perturbaciones
 \frac{\partial \delta p}{\partial t} &= D_p \frac{\partial^2 \delta p}{\partial x^2} - \mu_p \frac{\partial (p E)}{\partial x} - \frac{\delta p}{\tau_p} + g_L \tag{II}
 \end{align}
 
+\newpage
+%==================================================
+%=== SUBSECCIÓN: HIPÓTESIS DE CUASI-NEUTRALIDAD ===
+%==================================================
 \subsection{Hipótesis de cuasi-neutralidad eléctrica y transporte ambipolar}
 
 Al generar un exceso local de portadores bajo un campo eléctrico aplicado $\vec{E}_{\text{app}}$, electrones y huecos tienden a separarse espacialmente. Este desplazamiento induce una pequeña densidad de carga neta que genera un campo eléctrico interno $\vec{E}_{\text{int}}$ opuesto al movimiento de separación.
@@ -907,6 +918,13 @@ donde las magnitudes efectivas ambipolares se definen como:
     Los parámetros de la ecuación ambipolar coinciden exactamente con los de los \textbf{portadores minoritarios}. Por tanto, la dinámica del exceso de carga queda gobernada exclusivamente por las propiedades de los minoritarios, reduciéndose la ecuación a la ecuación de continuidad lineal de minoritarios (sin el término explícito de $\vec{E}$).
 \end{enumerate}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.75\textwidth]{imagenes/Tema3/T3_21.png}
+    \caption{Casos particulares.}
+    \label{fig:casos_particulares}
+\end{figure}
+
 \begin{concepto}[Metodología de cálculo para semiconductores extrínsecos]
 Para resolver las distribuciones de portadores y campo eléctrico en un semiconductor extrínseco:
 \begin{enumerate}
@@ -957,6 +975,12 @@ Bajo la condición de \textbf{débil inyección} y por la \textbf{hipótesis de 
 \delta n(t) = \delta p(t) = \delta p(0) \exp\left( -\frac{t}{\tau_{p0}} \right)
 \]
 
+\newpage
+
+\begin{center}
+    \includegraphics[width=0.55\linewidth]{imagenes/Tema3/T3_22.png}
+\end{center}
+
 \textbf{Interpretación física:} Tras el cese de la excitación externa, el exceso de portadores decae exponencialmente hasta anularse, devolviendo el semiconductor a sus concentraciones de equilibrio térmico ($n_0, p_0$). La constante de tiempo que gobierna esta relajación es la vida media de los portadores minoritarios ($\tau_{p0}$).
 \end{ejemplo}
 
@@ -984,7 +1008,7 @@ Dividiendo entre el coeficiente de difusión $D_n$:
 \[
 \frac{d^2 (\delta n)}{dx^2} - \frac{\delta n}{D_n \tau_{n0}} = 0 \implies \frac{d^2 (\delta n)}{dx^2} - \frac{\delta n}{L_n^2} = 0
 \]
-donde se ha definido la **longitud de difusión de electrones** como $L_n = \sqrt{D_n \tau_{n0}}$.
+donde se ha definido la \textbf{longitud de difusión de electrones} como $L_n = \sqrt{D_n \tau_{n0}}$.
 
 La solución general de esta ecuación diferencial ordinaria homogénea de segundo orden se plantea por regiones:
 \begin{itemize}
@@ -992,7 +1016,7 @@ La solución general de esta ecuación diferencial ordinaria homogénea de segun
     \item \textbf{Región $x < 0$:} $\delta n(x) = A_2 e^{x/L_n} + B_2 e^{-x/L_n}$
 \end{itemize}
 
-Aplicamos las **condiciones de contorno físicas**:
+Aplicamos las \textbf{condiciones de contorno físicas}:
 \begin{enumerate}
     \item Al alejarnos indefinidamente de la fuente de generación ($x \to \pm \infty$), el exceso de portadores debe ser finito y tender a cero:
     \[
@@ -1014,5 +1038,9 @@ Unificando ambas regiones mediante la función valor absoluto, obtenemos el perf
 
 Por la condición de cuasi-neutralidad eléctrica ($\delta p(x) \approx \delta n(x)$), el exceso de huecos mayoritarios presenta exactamente la misma distribución perfilada.
 
-\textbf{Interpretación física:} La concentración de portadores en exceso alcanza su valor máximo $\delta n(0)$ en el plano de generación y disminuye exponencialmente a medida que los portadores se difunden hacia las regiones adyacentes mientras se recombinan. La **longitud de difusión** $L_n$ representa la distancia media que se desplaza un portador minoritario por difusión antes de recombinarse con un portador mayoritario.
+\begin{center}
+    \includegraphics[width=0.55\linewidth]{imagenes/Tema3/T3_23.png}
+\end{center}
+
+\textbf{Interpretación física:} La concentración de portadores en exceso alcanza su valor máximo $\delta n(0)$ en el plano de generación y disminuye exponencialmente a medida que los portadores se difunden hacia las regiones adyacentes mientras se recombinan. La longitud de difusión $L_n$ representa la distancia media que se desplaza un portador minoritario por difusión antes de recombinarse con un portador mayoritario.
 \end{ejemplo}
