@@ -1503,7 +1503,6 @@ En el caso ideal de una superficie perfectamente pasivada o una frontera pasiva 
 \end{figure}
 
 \newpage
-
 %===============================================
 %====== SECCIÓN. PROBLEMAS RESUELTOS ===========
 %===============================================
@@ -1833,12 +1832,216 @@ E_c - E_d = 0,156\,\text{eV}
 %===============================================
 %================= PROBLEMA 6 ==================
 %===============================================
+\begin{problema}[Distribución de portadores en exceso con generación volumétrica y recombinación superficial]
+Consideremos un semiconductor intrínseco, como el mostrado en la figura, en el que se generan $G$ pares electrón-hueco por unidad de volumen y de tiempo.
 
+Estando en condiciones de débil nivel de inyección y suponiendo conocidas las constantes $\tau_n = \tau_p = \tau$, $D_n$ y $D_p$, obtener la distribución de portadores en exceso sabiendo que la superficie $x=0$ se caracteriza por una velocidad superficial de recombinación $s$.
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{imagenes/Tema3/T3_P6_a.png}
+    \captionof{figure}{Muestra semiconductora semi-infinita ($x \ge 0$) sometida a fotogeneración uniforme $G$ y recombinación superficial en $x = 0$.}
+    \label{fig:problema6_esquema}
+\end{center}
+
+\tcblower
+\paragraph{1. Ecuación de difusión ambipolar}
+En un semiconductor intrínseco ($n_0 = p_0 = n_i$), bajo la hipótesis de cuasi-neutralidad ($\delta n(x) = \delta p(x)$) y débil nivel de inyección, la dinámica de los portadores en exceso se describe mediante la ecuación de transporte ambipolar. El coeficiente de difusión ambipolar $D_D$ para una muestra intrínseca es:
+\[
+D_D = \frac{2 D_n D_p}{D_n + D_p}
+\]
+definimos la longitud de difusión ambipolar como $L = \sqrt{D_D \tau}$.
+
+La ecuación de continuidad en régimen estacionario con generación volumétrica constante $G$ y recombinación en el volumen es:
+\[
+D_D \frac{d^2(\delta p)}{dx^2} - \frac{\delta p}{\tau} + G = 0 \implies \frac{d^2(\delta p)}{dx^2} - \frac{\delta p}{L^2} = -\frac{G}{D_D}
+\]
+
+\paragraph{2. Solución general de la ecuación diferencial}
+La solución general se compone de la solución de la ecuación homogénea más una solución particular constante $\delta p_p = G \tau$:
+\[
+\delta p(x) = C_1 e^{-x/L} + C_2 e^{x/L} + G \tau
+\]
+
+\paragraph{3. Aplicación de condiciones de contorno}
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Condición de acotación en el volumen ($x \to \infty$):}
+    Dado que la concentración de exceso no puede divergir al adentrarse en la muestra, la constante asociada a la exponencial creciente debe anularse ($C_2 = 0$):
+    \[
+    \lim_{x \to \infty} \delta p(x) = G \tau \implies C_2 = 0 \implies \delta p(x) = G \tau + C_1 e^{-x/L}
+    \]
+
+    \item \textbf{Recombinación superficial en la frontera ($x = 0$):}
+    En la superficie $x = 0$, el flujo de portadores que difunde hacia la superficie alimenta el proceso de recombinación superficial caracterizado por la velocidad $s$:
+    \[
+    D_D \left. \frac{d(\delta p)}{dx} \right|_{x=0} = s \, \delta p(0)
+    \]
+
+    Evaluando la derivada y el exceso en $x = 0$:
+    \[
+    \left. \frac{d(\delta p)}{dx} \right|_{x=0} = -\frac{C_1}{L}, \qquad \delta p(0) = G \tau + C_1
+    \]
+
+    Sustituyendo en la condición de contorno:
+    \[
+    D_D \left(-\frac{C_1}{L}\right) = s (G \tau + C_1) \implies -C_1 \frac{D_D}{L} = s G \tau + s C_1
+    \]
+
+    Despejando la constante $C_1$:
+    \[
+    C_1 \left(s + \frac{D_D}{L}\right) = -s G \tau \implies C_1 = -\frac{s G \tau}{s + \frac{D_D}{L}} = -\frac{G \tau}{1 + \frac{D_D}{s L}}
+    \]
+\end{enumerate}
+
+\paragraph{4. Distribución espacial definitiva}
+Sustituyendo $C_1$, la distribución del exceso de portadores $\delta p(x) = \delta n(x)$ resulta:
+\[
+\delta p(x) = G \tau \left[ 1 - \frac{s}{s + \frac{D_D}{L}} e^{-x/L} \right] = G \tau \left[ 1 - \frac{1}{1 + \frac{D_D}{s L}} e^{-x/L} \right]
+\]
+
+\paragraph{Análisis de los casos límite}
+\begin{itemize}
+    \item \textbf{Superficie pasivada / ideal ($s = 0$):} No existe recombinación superficial, alcanzándose un perfil uniforme en toda la muestra:
+    \[
+    \delta p(x) = G \tau
+    \]
+    \item \textbf{Recombinación superficial infinita / contacto óhmico ($s \to \infty$):} La frontera $x = 0$ actúa como un sumidero perfecto ($\delta p(0) = 0$):
+    \[
+    \delta p(x) = G \tau \left( 1 - e^{-x/L} \right)    \]
+\end{itemize}
+
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{imagenes/Tema3/T3_P6_b.png}
+\end{center}
+
+\end{problema}
 
 \newpage
 %===============================================
 %================= PROBLEMA 7 ==================
 %===============================================
+\begin{problema}[Resistencia equivalente de un bloque semiconductor bajo iluminación no uniforme]
+Se dispone de un semiconductor homogéneo tipo N, como el mostrado en la figura, caracterizado por unas densidades de portadores en equilibrio $n_0$ y $p_0$, así como por su movilidad y vida media (con suposición de débil nivel de inyección), todas ellas conocidas.
+
+Para $x \le 0$ se generan uniformemente $G$ pares electrón-hueco (por iluminación) por unidad de volumen y de tiempo. La superficie $x = -A$ es ideal. En la superficie $x = A$ se establece un contacto metálico (su comportamiento es tal que puede considerarse como un sumidero perfecto del exceso de portadores).
+
+En condiciones estacionarias determinar, en función del número de pares electrón-hueco generados, $G$, la resistencia que presenta entre las caras $y = 0$ e $y = B$ el semiconductor comprendido entre las caras $x = 0$ y $x = A$.
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{imagenes/Tema3/T3_P7_a.png}
+\end{center}
+
+\tcblower
+
+\paragraph{1. Distribución espacial del exceso de portadores $\delta p(x)$}
+Al tratarse de un semiconductor de tipo N bajo débil nivel de inyección, la dinámica del exceso de portadores viene gobernada por la ecuación de continuidad de los portadores minoritarios (huecos), con $L_p = \sqrt{D_p \tau_p}$.
+
+Dividimos la muestra en dos regiones a lo largo del eje $x$:
+\begin{itemize}
+    \item \textbf{Región I ($-A \le x \le 0$):} Iluminada con generación constante $G$.
+    \[
+    D_p \frac{d^2(\delta p_{\text{I}})}{dx^2} - \frac{\delta p_{\text{I}}}{\tau_p} + G = 0 \implies \frac{d^2(\delta p_{\text{I}})}{dx^2} - \frac{\delta p_{\text{I}}}{L_p^2} + \frac{G}{D_p} = 0
+    \]
+    La solución general expresada en funciones hiperbólicas centradas en $x = -A$ es:
+    \[
+    \delta p_{\text{I}}(x) = G \tau_p + A_1 \cosh\left(\frac{x+A}{L_p}\right) + B_1 \sinh\left(\frac{x+A}{L_p}\right)
+    \]
+
+    \item \textbf{Región II ($0 \le x \le A$):} En la oscuridad ($G = 0$).
+    \[
+    D_p \frac{d^2(\delta p_{\text{II}})}{dx^2} - \frac{\delta p_{\text{II}}}{\tau_p} = 0 \implies \frac{d^2(\delta p_{\text{II}})}{dx^2} - \frac{\delta p_{\text{II}}}{L_p^2} = 0
+    \]
+    La solución general expresada en funciones hiperbólicas centradas en $x = A$ es:
+    \[
+    \delta p_{\text{II}}(x) = C_1 \sinh\left(\frac{x-A}{L_p}\right) + D_1 \cosh\left(\frac{x-A}{L_p}\right)
+    \]
+\end{itemize}
+
+\paragraph{2. Condiciones de contorno e interfaz}
+\begin{enumerate}
+    \item \textbf{Superficie ideal en $x = -A$ ($s = 0$):} La corriente de difusión en la frontera exterior izquierda es nula:
+    \[
+    \left. \frac{d(\delta p_{\text{I}})}{dx} \right|_{x=-A} = 0 \implies \frac{B_1}{L_p} = 0 \implies B_1 = 0
+    \]
+
+    \item \textbf{Contacto óhmico en $x = A$ (sumidero perfecto):} El exceso de portadores se anula en la frontera metálica:
+    \[
+    \delta p_{\text{II}}(A) = 0 \implies D_1 = 0
+    \]
+
+    \item \textbf{Continuidad del exceso en $x = 0$:}
+    \[
+    \delta p_{\text{I}}(0) = \delta p_{\text{II}}(0) \implies G \tau_p + A_1 \cosh\left(\frac{A}{L_p}\right) = C_1 \sinh\left(-\frac{A}{L_p}\right) = -C_1 \sinh\left(\frac{A}{L_p}\right)
+    \]
+
+    \item \textbf{Continuidad del flujo de difusión en $x = 0$:}
+    \[
+    \left. \frac{d(\delta p_{\text{I}})}{dx} \right|_{x=0} = \left. \frac{d(\delta p_{\text{II}})}{dx} \right|_{x=0} \implies A_1 \sinh\left(\frac{A}{L_p}\right) = C_1 \cosh\left(\frac{A}{L_p}\right)
+    \]
+\end{enumerate}
+
+Despejando $C_1 = A_1 \tanh\left(\frac{A}{L_p}\right)$ y sustituyendo en la relación de continuidad de concentración:
+\[
+G \tau_p + A_1 \cosh\left(\frac{A}{L_p}\right) = -A_1 \tanh\left(\frac{A}{L_p}\right) \sinh\left(\frac{A}{L_p}\right)
+\]
+\[
+G \tau_p = -A_1 \left[ \frac{\cosh^2\left(\frac{A}{L_p}\right) + \sinh^2\left(\frac{A}{L_p}\right)}{\cosh\left(\frac{A}{L_p}\right)} \right] = -A_1 \frac{\cosh\left(\frac{2A}{L_p}\right)}{\cosh\left(\frac{A}{L_p}\right)}
+\]
+
+Obtenemos los coeficientes $A_1$ y $C_1$:
+\[
+A_1 = -G \tau_p \frac{\cosh\left(\frac{A}{L_p}\right)}{\cosh\left(\frac{2A}{L_p}\right)}, \qquad C_1 = -G \tau_p \frac{\sinh\left(\frac{A}{L_p}\right)}{\cosh\left(\frac{2A}{L_p}\right)}
+\]
+
+Sustituyendo $C_1$ en $\delta p_{\text{II}}(x)$ y reordenando el argumento de la función seno hiperbólico:
+\[
+\delta p_{\text{II}}(x) = G \tau_p \frac{\sinh\left(\frac{A}{L_p}\right)}{\cosh\left(\frac{2A}{L_p}\right)} \sinh\left(\frac{A-x}{L_p}\right) \qquad (0 \le x \le A)
+\]
+
+\paragraph{3. Perfil de conductividad y cálculo de la resistencia equivalente}
+La conductividad local $\sigma(x)$ en la Región II bajo débil nivel de inyección ($\delta n(x) \approx \delta p_{\text{II}}(x)$) es:
+\[
+\sigma(x) = e \mu_n n(x) + e \mu_p p(x) = \sigma_0 + e (\mu_n + \mu_p) \delta p_{\text{II}}(x)
+\]
+donde $\sigma_0 = e (\mu_n n_0 + \mu_p p_0)$ es la conductividad en la oscuridad.
+
+Dado que la corriente circula en la dirección del eje $y$ (entre las caras $y = 0$ e $y = B$), los elementos diferenciales de volumen de anchura $dx$ comprendidos entre $x = 0$ y $x = A$ se encuentran conectados en \textbf{paralelo}.
+
+La conductancia elemental de una rebanada de grosor $dx$, longitud $B$ y sección transversal $C \cdot dx$ es:
+\[
+dG_y = \sigma(x) \frac{C \cdot dx}{B}
+\]
+
+La conductancia total $1/R$ entre $x = 0$ y $x = A$ se obtiene integrando todas las contribuciones en paralelo:
+\[
+\frac{1}{R} = \int_0^A \sigma(x) \frac{C}{B} dx = \frac{C}{B} \int_0^A \left[ \sigma_0 + e (\mu_n + \mu_p) \delta p_{\text{II}}(x) \right] dx
+\]
+\[
+\frac{1}{R} = \sigma_0 \frac{A C}{B} + \frac{C}{B} e (\mu_n + \mu_p) \int_0^A \delta p_{\text{II}}(x) dx
+\]
+
+Calculamos la integral del exceso de portadores a lo largo de la Región II:
+\[
+\int_0^A \delta p_{\text{II}}(x) dx = G \tau_p \frac{\sinh\left(\frac{A}{L_p}\right)}{\cosh\left(\frac{2A}{L_p}\right)} \int_0^A \sinh\left(\frac{A-x}{L_p}\right) dx = G \tau_p L_p \frac{\sinh\left(\frac{A}{L_p}\right) \left[ \cosh\left(\frac{A}{L_p}\right) - 1 \right]}{\cosh\left(\frac{2A}{L_p}\right)}
+\]
+
+Sustituyendo el resultado de la integral, la conductancia total resulta:
+\[
+\frac{1}{R} = \frac{C}{B} \left[ \sigma_0 A + e (\mu_n + \mu_p) G \tau_p L_p \frac{\sinh\left(\frac{A}{L_p}\right) \left( \cosh\left(\frac{A}{L_p}\right) - 1 \right)}{\cosh\left(\frac{2A}{L_p}\right)} \right]
+\]
+
+Invirtiendo la expresión, la resistencia eléctrica total $R$ del bloque semiconductor entre las caras $y = 0$ e $y = B$ es:
+\[
+R = \frac{B}{C \left[ \sigma_0 A + e (\mu_n + \mu_p) G \tau_p L_p \frac{\sinh\left(\frac{A}{L_p}\right) \left( \cosh\left(\frac{A}{L_p}\right) - 1 \right)}{\cosh\left(\frac{2A}{L_p}\right)} \right]}
+\]
+
+\paragraph{Discusión física}
+En ausencia de iluminación ($G = 0$), la resistencia se reduce a $R_0 = \frac{B}{\sigma_0 A C}$, que corresponde a la resistencia geométrica estándar en oscuridad. La presencia de fotogeneración ($G > 0$) reduce la resistencia global del dispositivo en una cantidad proporcional a la vida media y longitud de difusión de los portadores minoritarios.
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{imagenes/Tema3/T3_P7_b.png}
+\end{center}
+
+\end{problema}
 \newpage
 %===============================================
 %================= PROBLEMA 8 ==================
