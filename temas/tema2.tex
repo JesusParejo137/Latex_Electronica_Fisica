@@ -27,6 +27,13 @@ Atendiendo a la ordenación espacial de sus átomos a larga y corta distancia, c
     \item \textbf{Monocristalinos} (\textit{Single crystals}): Presentan una red cristalina periódica y continua a lo largo de todo el volumen del material.
 \end{enumerate}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagenes/Tema2/T2_1_a.PNG}
+    \caption{Esquema de los tres tipos generales de cristales: a) amorfo, b) policristalino, c) monocristalino.}
+    \label{fig:T2_1_a}
+\end{figure}
+
 \begin{concepto}[Importancia de los monocristales en Electrónica]
 En la fabricación de dispositivos electrónicos se requieren materiales \textbf{monocristalinos}. La periodicidad perfecta de la red permite aplicar el teorema de Bloch y definir estructuras de \textbf{bandas de energía concretas y bien definidas}, garantizando un control preciso sobre las propiedades de transporte electrónico y óptico.
 \end{concepto}
@@ -41,6 +48,13 @@ Las redes cristalinas de los semiconductores más relevantes se construyen a par
     \item \textbf{Cúbica centrada en el cuerpo (\textit{bcc}):} Átomos en los vértices y uno adicional en el centro geométrico del cubo.
     \item \textbf{Cúbica centrada en las caras (\textit{fcc}):} Átomos en los vértices y en el centro de cada una de las 6 caras.
 \end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagenes/Tema2/T2_1_b.PNG}
+    \caption{Tres tipos de redes: a) cúbica simple, b) cúbica centrada en el cuerpo, c) cúbica centrada en las caras.}
+    \label{fig:T2_1_b}
+\end{figure}
 
 \subsubsection{Red recíproca y Primera Zona de Brillouin}
 Para el estudio teórico de las bandas de energía y la dinámica de portadores, resulta esencial analizar el comportamiento en el \textbf{espacio recíproco} (espacio de vectores de onda $\vec{k}$):
@@ -64,6 +78,22 @@ Esta disposición provoca que dentro de la celda unidad de la primera red queden
     \item Los 4 electrones de valencia del $\text{Si}$ se comparten con los 4 vecinos mediante \textbf{enlaces covalentes} altamente estables.
 \end{itemize}
 
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{imagenes/Tema2/T2_1_c.PNG}
+        \caption{Estructura de diamante}
+        \label{fig:T2_1_c}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.6\linewidth]{imagenes/Tema2/T2_1_d.PNG}
+        \caption{Estructura tetraédrica de vecinos próximos en la red tipo diamante}
+        \label{fig:T2_1_d}
+    \end{minipage}
+\end{figure}
+
 \begin{formula}[Cálculo del número de átomos por celda y densidad atómica del Silicio]
 El número de átomos por celda unidad en la estructura de diamante se calcula sumando las contribuciones de las posiciones cristalográficas:
 \[
@@ -76,6 +106,7 @@ Sabiendo que el parámetro de red (constante de arista del cubo) del Silicio es 
 \]
 \end{formula}
 
+\newpage
 \subsubsection{Arseniuro de Galio ($\text{GaAs}$): Estructura zinc-blenda}
 El Arseniuro de Galio ($\text{GaAs}$) es un semiconductor compuesto III-V que cristaliza en la \textbf{estructura zinc-blenda} (o esfalerita).
 
@@ -105,6 +136,13 @@ Tomemos como referencia el átomo de Silicio ($\text{Si}$), con número atómico
     \item \textbf{4 electrones de valencia:} Pertenecen al nivel externo $n=3$ ($3s^2 3p^2$). Se encuentran débilmente ligados y son los responsables de los enlaces interatómicos y de los fenómenos de transporte.
 \end{itemize}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{imagenes/Tema2/T2_1_e.PNG}
+    \caption{a) Esquema de átomo de silicio aislado. b) División de estados $3s$ y $3p$ del silicio en las bandas de energía permitidas y prohibidas.}
+    \label{fig:T2_1_e}
+\end{figure}
+
 \subsubsection{Evolución energética al formar la red cristalina}
 Para un sistema aislado de $N$ átomos de Silicio separados por una distancia infinita ($r \to \infty$), existen $2N$ estados $3s$ completamente ocupados y $6N$ estados $3p$ ocupados por $2N$ electrones (disponiendo de $4N$ estados vacíos).
 
@@ -127,6 +165,13 @@ A medida que los átomos se aproximan para formar la red cristalina y la distanc
 
 Desde el punto de vista del modelo de enlaces, la situación a $T = \SI{0}{\kelvin}$ se corresponde con la red monocristalina perfecta: cada átomo de silicio comparte sus 4 electrones de valencia con 4 átomos vecinos mediante enlaces covalentes estables.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.3\textwidth]{imagenes/Tema2/T2_1_f.PNG}
+    \caption{Representación bidimensional del enlace covalente en un semiconductor a $T=0\,\mathrm{K}$.}
+    \label{fig:T2_1_f}
+\end{figure}
+
 \begin{concepto}[Ausencia de conducción a $T = \SI{0}{\kelvin}$]
 A $T = \SI{0}{\kelvin}$ el semiconductor \textbf{no presenta conducción eléctrica} ($\sigma = 0$). Aunque el material contiene un número elevado de cargas eléctricas, una \textbf{banda completamente llena} (BV) no permite el movimiento neto de carga al no disponer de estados vacíos accesibles a los que los electrones puedan cambiar tras aplicar un campo eléctrico. Del mismo modo, una \textbf{banda completamente vacía} (BC) no conduce por ausencia total de portadores.
 \end{concepto}
@@ -140,10 +185,25 @@ Cuando la temperatura aumenta ($T > \SI{0}{\kelvin}$), la energía térmica del 
     \item \textbf{Modelo de bandas:} Corresponde al salto de un electrón desde la Banda de Valencia ($E_V$) a la Banda de Conducción ($E_C$), superando la energía del gap $E_g$.
 \end{itemize}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{imagenes/Tema2/T2_1_g.PNG}
+    \caption{a) Representación bidimensional de la ruptura del enlace covalente. b) Correspondiente representación lineal de la banda de energía y la generación de una carga positiva y negativa con la ruptura del enlace covalente.}
+    \label{fig:T2_1_g}
+\end{figure}
+
 \begin{concepto}[El Hueco ($h^+$) como portador de carga]
 La vacante dejada en la Banda de Valencia por el electrón promovido a la Banda de Conducción se comporta como una cuasipartícula con \textbf{carga positiva $+q$}, denominada \textbf{hueco}. La conducción en la BV se produce mediante el desplazamiento de electrones adyacentes que van rellenando la vacante, lo que equivale físicamente al movimiento del hueco en sentido opuesto.
 \end{concepto}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{imagenes/Tema2/T2_1_h.PNG}
+    \caption{Visualización del movimiento de un hueco en un semiconductor.}
+    \label{fig:T2_1_h}
+\end{figure}
+
+\newpage
 \subsection{Conductividad del Silicio intrínseco a \texorpdfstring{$T = \SI{300}{\kelvin}$}{T = 300 K}}
 
 A temperatura ambiente ($T = \SI{300}{\kelvin}$), la energía térmica disponible ($k_B T \approx \SI{0.0259}{\eV}$) es pequeña en comparación con la anchura del gap del silicio ($E_g \approx \SI{1.12}{\eV}$).
@@ -206,7 +266,18 @@ Esta aproximación de segundo orden define \textbf{bandas parabólicas} cuyos co
     \item \textbf{Superficies esféricas:} Ocurren cuando los tres coeficientes son idénticos ($m_x^* = m_y^* = m_z^* = m^*$). La relación $\epsilon(\vec{k}) = \epsilon_0 \pm \frac{\hbar^2 k^2}{2m^*}$ es análoga a la de una partícula libre.
 \end{itemize}
 
+\newpage
+%===================================================
+%==== SUBSECCIÓN: BANDAS DE ENERGÍA EN Si Y GaAs
+%===================================================
 \subsection{Bandas de energía en el Silicio (Si) y Arseniuro de Galio (GaAs)}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{imagenes/Tema2/T2_2_a.PNG}
+    \caption{Bandas de energía en Si y GaAs.}
+    \label{fig:T2_2_a}
+\end{figure}
 
 La estructura energética de un semiconductor se representa graficando la energía $\epsilon(\vec{k})$ frente al módulo del vector de onda $|\vec{k}|$ a lo largo de direcciones cristalográficas de alta simetría de la 1ZB:
 \begin{itemize}
@@ -223,6 +294,7 @@ La estructura energética de un semiconductor se representa graficando la energ�
 \end{itemize}
 \end{concepto}
 
+\newpage
 \subsubsection{Distribución de los extremos de banda y valles equivalentes}
 
 \begin{enumerate}
@@ -250,8 +322,9 @@ La estructura energética de un semiconductor se representa graficando la energ�
     \end{itemize}
 \end{enumerate}
 
+\newpage
 % ==========================================
-% DINÁMICA DEL ELECTRÓN Y CONCEPTO DE HUECO
+% SUBSECCIÓN: DINÁMICA DEL ELECTRÓN Y CONCEPTO DE HUECO
 % ==========================================
 \subsection{Dinámica del electrón en la red cristalina}
 
@@ -360,6 +433,16 @@ El hueco se define como una cuasipartícula que describe los estados vacíos en 
 \end{itemize}
 \end{formula}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{imagenes/Tema2/T2_2_b.PNG}
+    \caption{a) Banda de valencia con estados convencionales con electrones y vacíos de electrones. b) Concepto de cargas positivas ocupando los estados vacíos.}
+    \label{fig:T2_2_b}
+\end{figure}
+
+% ==========================================
+% 2.2.X SUBSECCIÓN: CONCEPTO DE HUECO
+% ==========================================
 \subsection{Portadores libres en el semiconductor}
 
 Los \textbf{portadores libres} son las cargas con libertad de movimiento a lo largo del cristal que contribuyen de forma efectiva a la conducción eléctrica. Existen únicamente dos tipos de portadores libres en un semiconductor:
@@ -411,6 +494,10 @@ n_i \approx \SI{1e10}{\cm^{-3}}
 Dado que la densidad total de electrones de valencia es de aproximadamente $2 \times 10^{23} \text{ e}^-/\text{cm}^3$, la conductividad resultante ($\sigma \approx \SI{2.5e-6}{\per\ohm\per\cm}$) hace que el semiconductor intrínseco se comporte como un aislante práctico.
 \end{formula}
 
+\newpage
+% ==========================================
+% 2.3.2 EXTRÍNSECOS
+% ==========================================
 \subsection{Semiconductores extrínsecos: El proceso de dopado}
 
 Para aumentar la conductividad eléctrica de forma controlada y adaptar el material para aplicaciones electrónicas, se introducen impurezas de otros elementos químicos en proporciones muy pequeñas (proceso denominado \textbf{dopado}).
@@ -425,6 +512,21 @@ Se introducen átomos del Grupo V de la tabla periódica (por ejemplo, Fósforo 
     \item El quinto electrón queda excedente y débilmente ligado al núcleo de la impureza mediante una atracción coulombiana apantallada.
     \item En el diagrama de bandas, este estado se representa como un nivel discreto de energía $E_d$ situado ligeramente por debajo de la Banda de Conducción ($E_C$).
 \end{itemize}
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.35\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{imagenes/Tema2/T2_3_a.PNG}
+        \caption{Representación bidimensional de la red de silicio dopada con un átomo de fósforo.}
+        \label{fig:T2_3_a}
+    \end{minipage}\hfill
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{imagenes/Tema2/T2_3_b.PNG}
+        \caption{Diagrama de bandas mostrando a) el estado energético discreto de un donador y b) el efecto de la ionización de un estado donador.}
+        \label{fig:T2_3_b}
+    \end{minipage}
+\end{figure}
 
 \begin{concepto}[Ionización donadora y tipo N]
 La energía de ionización requerida para liberar el quinto electrón es $\Delta E = E_C - E_d$. Como esta energía es del orden de unos pocos milielectronvoltios ($\approx \SI{0.045}{\eV}$ en el $\text{Si}$), la energía térmica ambiente ($E_{\text{th}}$) es suficiente para ionizar prácticamente todos los átomos donadores.
@@ -437,14 +539,27 @@ Cada impureza donadora aporta:
 Dado que $n \gg p$, el material resultante se denomina \textbf{semiconductor extrínseco tipo N}, donde los electrones son los portadores mayoritarios.
 \end{concepto}
 
+\newpage
 \subsubsection{Caso 2: Impurezas aceptadoras y semiconductores tipo P}
 
 Se introducen átomos del Grupo III de la tabla periódica (por ejemplo, Boro $\text{B}$ con número atómico $Z=5$, o Aluminio $\text{Al}$) en una densidad $N_A$:
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imagenes/Tema2/T2_3_c.PNG}
+    \caption{Representación bidimensional de la red de silicio a) dopada con un átomo de boro y b) mostrando la ionización del átomo de boro en el hueco resultante.}
+    \label{fig:T2_3_c}
+\end{figure}
 \begin{itemize}
     \item El átomo de Boro dispone únicamente de 3 electrones de valencia para formar enlaces con los 4 átomos de Silicio vecinos.
     \item Se genera una vacante o defecto de enlace local débilmente ligado al átomo de Boro.
     \item En el diagrama de bandas, esta vacante discreta se sitúa en un nivel de energía $E_a$ ubicado ligeramente por encima de la Banda de Valencia ($E_V$).
 \end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{imagenes/Tema2/T2_3_d.PNG}
+    \caption{Diagrama de bandas mostrando a) el estado energético discreto de un aceptador y b) el efecto de la ionización de un estado aceptador.}
+    \label{fig:T2_3_d}
+\end{figure}
 
 \begin{concepto}[Ionización aceptadora y tipo P]
 La energía de ionización necesaria para promover un electrón de la BV al nivel aceptador es $\Delta E = E_a - E_V$. Dado que esta energía es reducida ($\approx \SI{0.045}{\eV}$ en el $\text{Si}$), los electrones de la Banda de Valencia saltan fácilmente al nivel $E_a$ ocupando la vacante de la impureza.
@@ -861,6 +976,13 @@ n_i \propto T^{3/2} \exp\left( -\frac{E_g}{2 k_B T} \right)
 \end{itemize}
 \end{concepto}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.22\textwidth]{imagenes/Tema2/T2_4_a.PNG}
+    \caption{Densidad intrínseca de portadores del Ge, Si y GaAs en función de la temperatura.}
+    \label{fig:T2_4_a}
+\end{figure}
+
 \newpage
 
 \begin{ejemplo}[Variación de la concentración intrínseca del Silicio con la temperatura]
@@ -920,6 +1042,13 @@ En un semiconductor intrínseco, la concentración de electrones en la Banda de 
 
 En el diagrama energético, la densidad de electrones $n_0$ se obtiene integrando la densidad de estados $g_C(E)$ ponderada por la probabilidad de ocupación de Fermi-Dirac $f_F(E)$. De forma análoga, la densidad de huecos $p_0$ corresponde a la integración de $g_V(E)$ por la probabilidad de estado vacío $1 - f_F(E)$. Puesto que ambas concentraciones son idénticas, el área gráfica bajo la curva en la Banda de Conducción es exactamente igual al área representada en la Banda de Valencia.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/Tema2/T2_4_b.PNG}
+    \caption{a) Funciones de densidad de estados $g(E)$, función de probabilidad de Fermi-Dirac $f_F(E)$, y las áreas representan las densidades de electrones y huecos en el caso de que $E_F$ esté cercano a la mitad del gap energético; b) diagrama expandido cerca de la energía de la banda de conducción; y c) diagrama expandido cerca de la energía de la banda de valencia.}
+    \label{fig:T2_4_b}
+\end{figure}
+
 \begin{concepto}[Nivel de Fermi intrínseco en el centro del gap]
 La expresión analítica para la posición del nivel de Fermi intrínseco ($E_{Fi}$) viene dada por:
 \[
@@ -934,22 +1063,23 @@ E_{Fi} = \frac{E_C + E_V}{2} + \frac{1}{2} k_B T \ln\left(\frac{N_v}{N_c}\right)
 \end{itemize}
 \end{concepto}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.7\textwidth]{imagenes/4-1-Semiconductor_intrinseco}
-    \caption{Distribución de la densidad de estados $g(E)$, función de Fermi-Dirac $f_F(E)$ y concentraciones de portadores en un semiconductor intrínseco.}
-    \label{fig:semiconductor_intrinseco}
-\end{figure}
-
+\newpage
 \subsubsection{Semiconductor extrínseco}
 
 Al introducir impurezas dopantes en el semiconductor, la simetría de las concentraciones se rompe manteniendo el producto en equilibrio constante ($n_0 \cdot p_0 = n_i^2$). La incorporación de portadores altera la posición del nivel de Fermi ($E_F$) desplazándolo respecto al nivel intrínseco ($E_{Fi}$):
 
 \begin{itemize}
     \item \textbf{Semiconductor tipo N ($n_0 \gg p_0$):} El exceso de electrones donados desplaza el nivel de Fermi hacia la Banda de Conducción ($E_F > E_{Fi}$). Gráficamente, al acercarse $E_F$ a $E_C$, la función $f_F(E)$ toma valores mayores en la BC, aumentando el área $n_0$ y reduciendo drásticamente el área $p_0$ en la BV.
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.5\textwidth]{imagenes/Tema2/T2_4_c.PNG}
+            \caption{Diagrama de bandas mostrando la redistribución de electrones cuando se añaden donadores.}
+            \label{fig:T2_4_c}
+        \end{figure}
     \item \textbf{Semiconductor tipo P ($p_0 \gg n_0$):} La generación de huecos por impurezas aceptadoras desplaza el nivel de Fermi hacia la Banda de Valencia ($E_F < E_{Fi}$). Al acercarse $E_F$ a $E_V$, la probabilidad $1 - f_F(E)$ aumenta en la BV, incrementando el área $p_0$ y haciendo insignificante el área $n_0$.
 \end{itemize}
 
+\newpage
 \begin{figure}[h!]
     \centering
     \begin{minipage}{0.48\textwidth}
@@ -966,27 +1096,22 @@ Al introducir impurezas dopantes en el semiconductor, la simetría de las concen
     \end{minipage}
 \end{figure}
 
+\newpage
 \subsubsection{Semiconductores no degenerados}
 
 Un semiconductor se clasifica como \textbf{no degenerado} cuando la concentración de impurezas dopantes es moderada. En este régimen:
 \begin{itemize}
-    \item El nivel de Fermi $E_F$ se sitúa dentro de la banda prohibida a una distancia superior a $3 k_B T$ de los bordes de ambas bandas ($E_C - E_F > 3 k_B T$ y $E_F - E_V > 3 k_B T$).
+    \item El nivel de Fermi $E_F$ se sitúa dentro de la banda prohibida (GAP) a una distancia superior a $3 k_B T$ de los bordes de ambas bandas ($E_C - E_F > 3 k_B T$ y $E_F - E_V > 3 k_B T$).
     \item Los estados de la Banda de Conducción están muy poco ocupados por electrones y los de la Banda de Valencia muy poco vacíos de huecos.
     \item Es totalmente válida la aproximación de la estadística de Fermi-Dirac por la de Maxwell-Boltzmann.
 \end{itemize}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.65\textwidth]{imagenes/4-11-Semiconductor_degenerado}
-    \caption{Diagrama de bandas simplificado para semiconductores no degenerados con el nivel de Fermi dentro del gap.}
-    \label{fig:semiconductor_no_degenerado}
+    \includegraphics[width=0.65\textwidth]{imagenes/Tema2/T2_4_e.PNG}
+    \caption{Posición del nivel de Fermi para semiconductores a) tipo-N ($N_d>N_a$) y b) tipo-P ($N_d>N_a$).}
+    \label{fig:T2_4_e}
 \end{figure}
-
-\newpage
-
-$\phantom{a}$
-
-\newpage
 
 \subsubsection{Semiconductores degenerados}
 
@@ -1000,22 +1125,21 @@ Cuando la concentración de dopante es extremadamente elevada ($N_D > N_c$ o $N_
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{imagenes/4-17-Semiconductor_nivel_Fermi}
-    \caption{Posición del nivel de Fermi dentro de las bandas permitidas en semiconductores degenerados.}
-    \label{fig:semiconductor_degenerado}
+    \includegraphics[width=0.65\textwidth]{imagenes/Tema2/T2_4_d.PNG}
+    \caption{Diagramas de bandas para semiconductores degenerados a) tipo-N y b) tipo-P.}
+    \label{fig:T2_4_d}
 \end{figure}
 
 \newpage
 
 \begin{ejemplo}[Cálculo de concentraciones de electrones y huecos a partir del nivel de Fermi]
-Determinar las concentraciones de electrones ($n_0$) y huecos ($p_0$) en equilibrio térmico para una muestra de Silicio a $T = \SI{300}{\kelvin}$.
+Determinar las concentraciones de electrones ($n_0$) y huecos ($p_0$) en equilibrio térmico para una muestra de Silicio a $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.0259}{\eV}$).
 
 \textbf{Datos:}
 \begin{itemize}
     \item Densidades equivalentes de estados a \SI{300}{\kelvin}: $N_c = \SI{2.8e19}{\cm^{-3}}$ y $N_v = \SI{1.04e19}{\cm^{-3}}$.
     \item El nivel de Fermi se sitúa a \SI{0.25}{\eV} por debajo del fondo de la banda de conducción ($E_C - E_F = \SI{0.25}{\eV}$).
     \item La anchura de la banda prohibida del Silicio es $E_g = E_C - E_V = \SI{1.12}{\eV}$, por lo que el nivel de Fermi se encuentra a \SI{0.87}{\eV} por encima de la banda de valencia ($E_F - E_V = \SI{0.87}{\eV}$).
-    \item Energía térmica a \SI{300}{\kelvin}: $k_B T = \SI{0.0259}{\eV}$.
 \end{itemize}
 
 \tcblower
@@ -1024,29 +1148,23 @@ Determinar las concentraciones de electrones ($n_0$) y huecos ($p_0$) en equilib
 
 Utilizando la aproximación de Maxwell-Boltzmann para semiconductores no degenerados:
 \[
-n_0 = N_c \exp\left( -\frac{E_C - E_F}{k_B T} \right)
+n_0 = N_c \exp\left( -\frac{E_C - E_F}{k_B T} \right) = \SI{1.8e15}{\cm^{-3}}
 \]
-
-Sustituyendo los datos numéricos:
-\[
-n_0 = (\SI{2.8e19}{\cm^{-3}}) \exp\left( -\frac{0.25}{0.0259} \right) = \SI{1.8e15}{\cm^{-3}}
-\]
-
 \textbf{2. Concentración de huecos en la banda de valencia ($p_0$)}
 
 De forma análoga, la densidad de huecos en equilibrio es:
 \[
-p_0 = N_v \exp\left( -\frac{E_F - E_V}{k_B T} \right)
+p_0 = N_v \exp\left( -\frac{E_F - E_V}{k_B T} \right) = \SI{2.7e4}{\cm^{-3}}
 \]
-
-Sustituyendo los valores numéricos:
-\[
-p_0 = (\SI{1.04e19}{\cm^{-3}}) \exp\left( -\frac{0.87}{0.0259} \right) = \SI{2.7e4}{\cm^{-3}}
-\]
-
 \textbf{3. Comentario físico}
 
 El desplazamiento del nivel de Fermi unas pocas décimas de electronvoltio respecto a la posición intrínseca modifica la concentración de portadores mayoritarios y minoritarios en varios órdenes de magnitud con respecto a la densidad intrínseca ($n_i \approx \SI{1.5e10}{\cm^{-3}}$).
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{imagenes/tema2/T2_E2.png}
+    \captionof{figure}{Bandas (izquierda), concentraciones (derecha, escala logarítimica)}
+    \label{fig:T2_E2}
+\end{center}
 \end{ejemplo}
 
 \newpage
@@ -1074,6 +1192,14 @@ E_{Fi} = \frac{E_C + E_V}{2} + \frac{k_B T}{2} \ln\left( \frac{N_v}{N_c} \right)
 El nivel de Fermi intrínseco $E_{Fi}$ se sitúa exactamente en el centro geométrico del gap ($E_{Fi} = \frac{E_C + E_V}{2}$) únicamente cuando las densidades equivalentes de estados son idénticas ($N_c = N_v$), lo que equivale a que las masas efectivas de electrones y huecos coincidan ($m_n^* = m_p^*$).
 \end{concepto}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{imagenes/Tema2/T2_4_intrinseco.png}
+    \caption{Diagramas de bandas: $N_c=N_v$ y $E_{Fi}$ en el centro del gap (izquierda); $N_v<N_V$, $E_{Fi}$ por debjo del centro (derecha).}
+    \label{fig:T2_4_intrinseco}
+\end{figure}
+
+\newpage
 \subsubsection{2. Semiconductor extrínseco}
 
 En un semiconductor extrínseco dopado con densidades de impurezas donadoras ($N_D$) y aceptadoras ($N_A$), las concentraciones de portadores en equilibrio no degenerado vienen dadas por:
@@ -1095,7 +1221,15 @@ La posición del nivel de Fermi $E_F$ queda unívocamente determinada por la \te
 p + N_D^+ = n + N_A^-
 \]
 
-\paragraph{Caso 1: Ionización total de impurezas}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{imagenes/Tema2/T2_4_extrinseco.png}
+    \caption{Diagramas de bandas: con impurezas (izquierda); neutralidad de carga (derecha).}
+    \label{fig:T2_4_extrinseco}
+\end{figure}
+
+\newpage
+\subsubsection{3. Semiconductor extrínseco con ionización total de impurezas}
 
 A temperatura ambiente ($T = \SI{300}{\kelvin}$), la energía térmica es suficiente para ionizar la práctica totalidad de las impurezas sustitucionales presentes ($N_D^+ = N_D$ y $N_A^- = N_A$). La condición de neutralidad y la ley de acción de masas forman un sistema de dos ecuaciones algebraicas con dos incógnitas ($n$ y $p$):
 \[
@@ -1131,11 +1265,24 @@ En la mayoría de los casos prácticos con dopado moderado o elevado, la densida
 \end{itemize}
 \end{concepto}
 
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}[c]{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{imagenes/Tema2/T2_4_ioniz_total.png}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[c]{0.35\textwidth}
+        \caption{Gráfico log-log de $n$ y $p$ frente a $N_D-N_A$ con la solución exacta de la cuadrática y, en discontinuas, las aproximaciones $n\approx N_D-N_A$ y $p\approx n_i^2/(N_D-N_A)$, zona sombreada $N_D-N_A\leq n_i$ intrínseca.}
+        \label{fig:T2_4_ioniz_total}
+    \end{minipage}
+\end{figure}
+
 \newpage
 
 \begin{ejemplo}[Concentraciones de portadores en Silicio dopado]
 Determinar las concentraciones de electrones ($n_0$) y huecos ($p_0$) en equilibrio térmico para muestras de Silicio a $T = \SI{300}{\kelvin}$ sometidas a las siguientes concentraciones de dopado:
-\begin{enumerate}
+\begin{enumerate}[label=\alph*)]
     \item $N_D = \SI{1e16}{\cm^{-3}}$ y $N_A = 0$.
     \item $N_D = \SI{5e15}{\cm^{-3}}$ y $N_A = \SI{2e15}{\cm^{-3}}$.
 \end{enumerate}
@@ -1147,11 +1294,9 @@ Determinar las concentraciones de electrones ($n_0$) y huecos ($p_0$) en equilib
 
 \tcblower
 
-\textbf{1. Apartado a)}
-
-Aplicando la expresión general para la concentración de electrones mayoritarios con $N_D - N_A = \SI{1e16}{\cm^{-3}}$ :
+\textbf{a)} Aplicando la expresión general para la concentración de electrones mayoritarios con\\ $N_D - N_A = \SI{1e16}{\cm^{-3}}$ :
 \[
-n_0 = \frac{10^{16}}{2} + \sqrt{\left(\frac{10^{16}}{2}\right)^2 + (\num{1.5e10})^2} \approx \SI{1e16}{\cm^{-3}}
+n_0 = \frac{N_D - N_A}{2} + \sqrt{\left(\frac{N_D - N_A}{2}\right)^2 + n_i^2} \approx N_D = \SI{1e16}{\cm^{-3}}
 \]
 
 La densidad de huecos minoritarios se obtiene mediante la ley de acción de masas:
@@ -1159,11 +1304,9 @@ La densidad de huecos minoritarios se obtiene mediante la ley de acción de masa
 p_0 = \frac{n_i^2}{n_0} = \frac{(\num{1.5e10})^2}{10^{16}} = \SI{2.25e4}{\cm^{-3}}
 \]
 
-\textbf{2. Apartado b)}
-
-Con un dopado neto de $N_D - N_A = \SI{5e15}{\cm^{-3}} - \SI{2e15}{\cm^{-3}} = \SI{3e15}{\cm^{-3}}$:
+\textbf{b)} Con un dopado neto de $N_D - N_A = \SI{5e15}{\cm^{-3}} - \SI{2e15}{\cm^{-3}} = \SI{3e15}{\cm^{-3}}$:
 \[
-n_0 = \frac{\num{3e15}}{2} + \sqrt{\left(\frac{\num{3e15}}{2}\right)^2 + (\num{1.5e10})^2} \approx \SI{3e15}{\cm^{-3}}
+n_0 = \frac{N_D - N_A}{2} + \sqrt{\left(\frac{N_D - N_A}{2}\right)^2 + n_i^2} \approx N_D - N_A = \SI{3e15}{\cm^{-3}}
 \]
 
 La concentración de huecos minoritarios resulta:
@@ -1171,9 +1314,15 @@ La concentración de huecos minoritarios resulta:
 p_0 = \frac{n_i^2}{n_0} = \frac{(\num{1.5e10})^2}{\num{3e15}} = \SI{7.5e4}{\cm^{-3}}
 \]
 
-\textbf{3. Comentario físico}
+\textbf{Comentario físico}
 
 En ambos casos se cumple $N_D - N_A \gg n_i$, por lo que la concentración de portadores mayoritarios en equilibrio es prácticamente igual a la diferencia entre las concentraciones de donadores y aceptadores ($n_0 \approx N_D - N_A$). Asimismo, la densidad de mayoritarios es varios órdenes de magnitud superior a la de minoritarios.
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{imagenes/tema2/T2_E3.png}
+    \captionof{figure}{Pictograma (arriba) cada símbolo vale $10^{15}\mathrm{cm^{-3}}$ y hay una fila por magnitud. Gráfico logarítmico (abajo)}
+    \label{fig:T2_E3}
+\end{center}
 \end{ejemplo}
 
 \newpage
@@ -1207,47 +1356,6 @@ Cuando la concentración de impurezas donadoras no es mucho mayor que la densida
 
 \newpage
 
-\subsection{Densidad de portadores y nivel de Fermi en función de la temperatura}
-
-\subsubsection{1. Semiconductor intrínseco}
-
-En un semiconductor intrínseco, la densidad de portadores generados térmicamente sigue la relación:
-\[
-n = p = n_i = \sqrt{N_c N_v} \exp\left( -\frac{E_g}{2 k_B T} \right)
-\]
-A medida que la temperatura aumenta, la generación térmica domina y la concentración de portadores crece exponencialmente.
-
-\subsubsection{2. Semiconductor extrínseco}
-
-\paragraph{Caso 1: Ionización total de impurezas}
-
-A temperaturas moderadas (como la temperatura ambiente, $T = \SI{300}{\kelvin}$), todas las impurezas introducidas se encuentran totalmente ionizadas ($N_D^+ = N_D$ y $N_A^- = N_A$). El problema de determinar la densidad de portadores se reduce a un sistema de dos ecuaciones con dos incógnitas:
-\[
-\left\{
-\begin{array}{l}
-n \cdot p = n_i^2 \\
-p + N_D = n + N_A
-\end{array}
-\right\} 
-\implies n = \frac{N_D - N_A}{2} + \sqrt{\left(\frac{N_D - N_A}{2}\right)^2 + n_i^2}
-\]
-
-\begin{concepto}[Aproximación para portadores minoritarios despreciables]
-En la mayoría de aplicaciones prácticas donde la densidad de dopado supera ampliamente a la concentración intrínseca ($N_D - N_A \gg n_i$), no es necesario resolver el sistema cuadrático completo:
-\begin{itemize}
-    \item La densidad de portadores mayoritarios queda determinada directamente por la densidad de impurezas ionizadas:
-    \[
-    n \approx N_D - N_A
-    \]
-    \item La densidad de portadores minoritarios resulta insignificante frente al dopado:
-    \[
-    p = \frac{n_i^2}{n} \approx \frac{n_i^2}{N_D - N_A} \ll N_D - N_A
-    \]
-\end{itemize}
-\end{concepto}
-
-\newpage
-
 \subsection{Concentración de portadores en función de la temperatura}
 
 La concentración de portadores libres en un semiconductor extrínseco varía sustancialmente con la temperatura. Analizando el caso de un semiconductor tipo N dopado con una densidad de donadores $N_D$, la curva de concentración de electrones $n_0(T)$ exhibe tres regiones claramente diferenciadas:
@@ -1274,9 +1382,9 @@ La concentración de portadores libres en un semiconductor extrínseco varía su
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.4\textwidth]{imagenes/4-16-Concentracion_vs_temperatura}
+    \includegraphics[width=0.65\textwidth]{imagenes/Tema2/T2_4_f.PNG}
     \caption{Concentración de electrones en función de la temperatura para un semiconductor tipo N, mostrando las regiones de ionización parcial, extrínseca e intrínseca.}
-    \label{fig:concentracion_vs_temperatura}
+    \label{fig:T2_4_f}
 \end{figure}
 
 \newpage
@@ -1473,13 +1581,30 @@ I(x) = I_0 \exp(-\alpha x)
 
 La magnitud inversa $\delta = \frac{1}{\alpha}$ representa la \textbf{longitud o profundidad de absorción}, definida como la distancia requerida para que la intensidad del haz incidente se reduzca al factor $1/e \approx 36.8\%$ de su valor inicial $I_0$.
 
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.65\textwidth]{imagenes/Tema2/T2_5_a.png}
+        \caption{Absorción óptica en un diferencial de longitud.}
+        \label{fig:T2_5_a}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.65\textwidth]{imagenes/Tema2/T2_5_b.png}
+        \caption{Intensidad del fotón vs distancia recorrida para dos coeficientes de absorción.}
+        \label{fig:T2_5_b}
+    \end{minipage}
+\end{figure}
+
 El coeficiente de absorción depende fuertemente de la energía del fotón, definiéndose el \textbf{espectro de absorción} $\alpha(\omega)$ o $\alpha(\lambda)$. Cuando $h\nu \ge E_g$, el coeficiente $\alpha$ experimenta un incremento abrupto de varios órdenes de magnitud.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.4\textwidth]{imagenes/5-2-Coeficiente_absorcion.png}
+    \includegraphics[width=0.4\textwidth]{imagenes/Tema2/T2_5_c.png}
     \caption{Coeficiente de absorción $\alpha$ en función de la longitud de onda $\lambda$ y de la energía del fotón para diversos materiales semiconductores.}
-    \label{fig:coeficiente_absorcion}
+    \label{fig:T2_5_c}
 \end{figure}
 
 \subsubsection{Mecanismos de absorción}
@@ -1677,9 +1802,6 @@ Mantiene gap directo hasta $x \approx 0.45$ ($E_g \approx \SI{1.98}{\eV}$), muy 
 \end{itemize}
 
 \newpage
-\phantom{a}
-
-\newpage
 %=======================================================
 \seccionproblemas
 %-----------------------------------------------------
@@ -1776,6 +1898,9 @@ Al comparar las concentraciones de portadores en equilibrio:
 \[
 n = \SI{1e18}{\cm^{-3}} \gg p = \SI{1e6}{\cm^{-3}}
 \]
+\begin{center}
+    \includegraphics[width=0.65\linewidth]{imagenes/Tema2/T2_P2_a.png}
+\end{center}
 Dado que la densidad de electrones supera ampliamente a la de huecos ($n \gg p$), concluimos que se trata de un \textbf{semiconductor extrínseco tipo N}. Por lo tanto, el dopado se ha realizado mediante \textbf{impurezas donadoras} ($N_D > 0, N_A = 0$).
 
 \textbf{2. Cálculo de la concentración de impurezas donadoras ($N_D$)}
@@ -1794,6 +1919,10 @@ Puesto que $p = \SI{1e6}{\cm^{-3}}$ es completamente insignificante en comparaci
 \[
 N_D \approx n = \SI{1e18}{\cm^{-3}}
 \]
+
+\begin{center}
+    \includegraphics[width=0.65\linewidth]{imagenes/Tema2/T2_P2_b.png}
+\end{center}
 
 \textbf{Resultado final:}
 La muestra ha sido dopada con impurezas de tipo \textbf{donador} (tipo N) en una densidad de $N_D = \SI{1e18}{\cm^{-3}}$.
@@ -2363,3 +2492,397 @@ Este ascenso de $E_F$ incrementa la probabilidad de ocupación por electrones de
 %-----------------------------------------------------
 %-------------- Problema 9 ---------------------------
 %-----------------------------------------------------
+
+\newpage
+\section{Problemas adicionales}
+\setcounter{problemacontador}{1}
+%-----------------------------------------------------
+%-------------- Problema 1 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Densidades de portadores y nivel de Fermi en Silicio dopado tipo P compensado]
+Una muestra de Silicio ($\text{Si}$) a $T = \SI{300}{\kelvin}$ se encuentra dopada simultáneamente con $N_A = \SI{4e16}{\cm^{-3}}$ átomos/cm$^3$ de Boro ($\text{B}$, impureza aceptadora) y $N_D = \SI{1e16}{\cm^{-3}}$ átomos/cm$^3$ de Fósforo ($\text{P}$, impureza donadora). Asumiendo ionización completa de todas las impurezas a temperatura ambiente, se pide:
+\begin{enumerate}[label=\alph*)]
+    \item Determinar el tipo de semiconductor resultante y la concentración neta de dopado.
+    \item Calcular las densidades de portadores (huecos y electrones) mediante la aproximación de portadores minoritarios despreciables y verificar el resultado con la solución cuadrática exacta.
+    \item Obtener la posición del nivel de Fermi respecto al nivel intrínseco ($E_{Fi} - E_F$) y respecto al borde de la banda de valencia ($E_F - E_V$).
+\end{enumerate}
+
+\textbf{Datos a $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.0259}{\eV}$):}
+\begin{itemize}
+    \item Densidad intrínseca del Silicio: $n_i = \SI{1.5e10}{\cm^{-3}}$.
+    \item Densidad equivalente de estados en la banda de valencia: $N_v = \SI{1.04e19}{\cm^{-3}}$.
+\end{itemize}
+
+\tcblower
+
+\textbf{a) Tipo de semiconductor y dopado neto}
+
+Al comparar las densidades de impurezas presentes en la red cristalina:
+\[
+N_A = \SI{4e16}{\cm^{-3}} > N_D = \SI{1e16}{\cm^{-3}}
+\]
+
+Dado que la concentración de aceptadores supera a la de donadores, la muestra está compensada y se comporta globalmente como un \textbf{semiconductor extrínseco tipo P}. La concentración neta efectiva de aceptadores ($N_A^*$) es:
+\[
+N_A^* = N_A - N_D = \SI{4e16}{\cm^{-3}} - \SI{1e16}{\cm^{-3}} = \SI{3e16}{\cm^{-3}}
+\]
+
+\textbf{b) Cálculo de densidades de portadores ($p$ y $n$)}
+
+1. \textit{Planteamiento fundamental:}
+Bajo ionización total ($N_A^- = N_A$ y $N_D^+ = N_D$), la condición de neutralidad eléctrica macroscópica es:
+\[
+p + N_D = n + N_A \implies p - n = N_A - N_D = \SI{3e16}{\cm^{-3}}
+\]
+
+2. \textit{Aproximación de portadores minoritarios:}
+Dado que $N_A - N_D \gg n_i$ ($\SI{3e16}{\cm^{-3}} \gg \SI{1.5e10}{\cm^{-3}}$), la densidad de electrones minoritarios es completamente despreciable frente a la densidad de huecos mayoritarios ($n \ll p$). La condición de neutralidad se simplifica a:
+\[
+p \approx N_A - N_D = \SI{3e16}{\cm^{-3}}
+\]
+
+A partir de la ley de acción de masas ($n \cdot p = n_i^2$), calculamos la densidad de electrones:
+\[
+n = \frac{n_i^2}{p} = \frac{(\num{1.5e10})^2}{\num{3e16}} = \frac{\num{2.25e20}}{\num{3e16}} = \SI{7.50e3}{\cm^{-3}}
+\]
+
+3. \textit{Verificación mediante la solución cuadrática exacta:}
+Sustituyendo $n = \frac{n_i^2}{p}$ en la neutralidad de carga obtenemos la ecuación cuadrática:
+\[
+p^2 - (N_A - N_D) p - n_i^2 = 0
+\]
+Tomando la raíz positiva físicamente válida:
+\[
+\begin{array}{rl}
+    p & \displaystyle = \frac{N_A - N_D}{2} + \sqrt{\left(\frac{N_A - N_D}{2}\right)^2 + n_i^2} \\[16pt]
+    & \displaystyle = \frac{\num{3e16}}{2} + \sqrt{\left(\frac{\num{3e16}}{2}\right)^2 + (\num{1.5e10})^2} = \\[16pt]
+    & \displaystyle = \num{1.5e16} + \sqrt{\num{2.25e32} + \num{2.25e20}} \approx \SI{3e16}{\cm^{-3}}
+\end{array}
+\]
+La diferencia entre el valor aproximado y el exacto es inferior al $10^{-10}\%$, lo que confirma la validez absoluta de la aproximación.
+\begin{center}
+    \includegraphics[width=0.95\textwidth]{imagenes/tema2/T2_Ad1_ab.png}
+\end{center}
+
+\textbf{c) Posición del nivel de Fermi}
+
+1. \textit{Respecto al nivel intrínseco ($E_{Fi} - E_F$):}
+Expresando la concentración de huecos en función del nivel intrínseco:
+\[
+p = n_i \exp\left( \frac{E_{Fi} - E_F}{k_B T} \right) \implies E_{Fi} - E_F = k_B T \ln\left( \frac{p}{n_i} \right)
+\]
+\[
+E_{Fi} - E_F = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{3e16}}{\num{1.5e10}} \right) = (\SI{0.0259}{\eV}) \ln(\num{2e6}) \approx \SI{0.3758}{\eV}
+\]
+El nivel de Fermi se encuentra a \SI{0.3758}{\eV} por debajo del nivel intrínseco $E_{Fi}$.
+
+2. \textit{Respecto al borde de la banda de valencia ($E_F - E_V$):}
+Utilizando la densidad equivalente de estados en la banda de valencia ($N_v$):
+\[
+p = N_v \exp\left( -\frac{E_F - E_V}{k_B T} \right) \implies E_F - E_V = k_B T \ln\left( \frac{N_v}{p} \right)
+\]
+\[
+E_F - E_V = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{1.04e19}}{\num{3e16}} \right) = (\SI{0.0259}{\eV}) \ln(\num{346.67}) \approx \SI{0.1515}{\eV}
+\]
+El nivel de Fermi se ubica a \SI{0.1515}{\eV} por encima del borde superior de la banda de valencia $E_V$.
+
+\begin{center}
+    \includegraphics[width=0.65\textwidth]{imagenes/tema2/T2_Ad1_c.png}
+\end{center}
+
+\textbf{Resultado final:}
+\begin{itemize}
+    \item Semiconductor tipo P con dopado neto $N_A^* = \SI{3e16}{\cm^{-3}}$.
+    \item Densidades de portadores: $p = \SI{3e16}{\cm^{-3}}$ (mayoritarios), $n = \SI{7.50e3}{\cm^{-3}}$ (minoritarios).
+    \item Nivel de Fermi: $E_{Fi} - E_F = \SI{0.3758}{\eV}$ y $E_F - E_V = \SI{0.1515}{\eV}$.
+\end{itemize}
+\end{problema}
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 2 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Parámetros de dopado y temperatura de transición al régimen intrínseco]
+Una barra de Silicio mantenida en equilibrio térmico a $T_0 = \SI{300}{\kelvin}$ presenta una concentración de huecos libres $p = \SI{2e16}{\cm^{-3}}$ y una concentración de electrones $n = \SI{1.125e4}{\cm^{-3}}$. Asumiendo un dopado por un único tipo de impurezas totalmente ionizadas a $T_0$, se pide:
+\begin{enumerate}[label=\alph*)]
+    \item Indicar el tipo de dopado y determinar la densidad de impurezas introducidas.
+    \item Calcular la distancia energética entre el nivel de Fermi y la banda de valencia ($E_F - E_V$) a $T_0 = \SI{300}{\kelvin}$.
+    \item Determinar la temperatura crítica $T_{\text{trans}}$ a la cual la concentración de portadores intrínsecos $n_i(T)$ alcanza el $10\%$ de la densidad de dopado ($n_i(T) = 0.10 \cdot N_A$), marcando el inicio del fallo del régimen extrínseco.
+\end{enumerate}
+
+\textbf{Datos:}
+\begin{itemize}
+    \item A $T_0 = \SI{300}{\kelvin}$: $k_B T_0 = \SI{0.0259}{\eV}$, $N_c(300) = \SI{2.8e19}{\cm^{-3}}$, $N_v(300) = \SI{1.04e19}{\cm^{-3}}$.
+    \item Anchura de la banda prohibida del Silicio (constante): $E_g = \SI{1.12}{\eV}$.
+    \item Dependencia térmica de la densidad equivalente de estados: $N_c(T), N_v(T) \propto T^{3/2}$.
+    \item Constante de Boltzmann: $k_B = \SI{8.6173e-5}{\eV/\kelvin}$.
+\end{itemize}
+
+\tcblower
+
+\textbf{a) Tipo de dopado y concentración de impurezas}
+
+Al comparar las densidades de portadores a $T_0 = \SI{300}{\kelvin}$:
+\[
+p = \SI{2e16}{\cm^{-3}} \gg n = \SI{1.125e4}{\cm^{-3}}
+\]
+Dado que los huecos son los portadores mayoritarios ($p \gg n$), se trata de un \textbf{semiconductor tipo P} dopado con \textbf{impurezas aceptadoras} ($N_A > 0, N_D = 0$).
+
+Por neutralidad eléctrica bajo ionización total ($N_A^- = N_A$):
+\[
+p = n + N_A \implies N_A = p - n = \SI{2e16}{\cm^{-3}} - \SI{1.125e4}{\cm^{-3}} \approx \SI{2e16}{\cm^{-3}}
+\]
+
+\begin{center}
+    \includegraphics[width=0.95\textwidth]{imagenes/tema2/T2_Ad2_ab.png}
+\end{center}
+
+\textbf{b) Posición del nivel de Fermi a $T_0 = \SI{300}{\kelvin}$}
+
+A partir de la ecuación para la densidad de huecos no degenerados:
+\[
+p = N_v(300) \exp\left( -\frac{E_F - E_V}{k_B T_0} \right) \implies E_F - E_V = k_B T_0 \ln\left( \frac{N_v(300)}{p} \right)
+\]
+Sustituyendo los datos numéricos:
+\[
+E_F - E_V = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{1.04e19}}{\num{2e16}} \right) = (\SI{0.0259}{\eV}) \ln(520) \approx \SI{0.1620}{\eV}
+\]
+
+\textbf{c) Temperatura crítica de transición $T_{\text{trans}}$}
+
+1. \textit{Condición requerida:}
+Buscamos la temperatura $T$ para la cual $n_i(T) = 0.10 \cdot N_A = 0.10 \cdot (\SI{2e16}{\cm^{-3}}) = \SI{2e15}{\cm^{-3}}$.
+
+2. \textit{Expresión de $n_i(T)$ en función de la temperatura:}
+\[
+n_i(T) = \sqrt{N_c(T) N_v(T)} \exp\left( -\frac{E_g}{2 k_B T} \right)
+\]
+Como $N_c(T) = N_c(300) \left(\frac{T}{300}\right)^{3/2}$ y $N_v(T) = N_v(300) \left(\frac{T}{300}\right)^{3/2}$:
+\[
+\sqrt{N_c(T) N_v(T)} = \sqrt{N_c(300) N_v(300)} \left( \frac{T}{300} \right)^{3/2}
+\]
+Calculando el término preexponencial a \SI{300}{\kelvin}:
+\[
+\sqrt{N_c(300) N_v(300)} = \sqrt{(\num{2.8e19})(\num{1.04e19})} = \sqrt{\num{2.912e38}} \approx \SI{1.7065e19}{\cm^{-3}}
+\]
+
+3. \textit{Planteamiento de la ecuación trascendente:}
+\[
+(\num{1.7065e19}) \left( \frac{T}{300} \right)^{3/2} \exp\left( -\frac{1.12}{2 \cdot (\num{8.6173e-5}) \cdot T} \right) = \SI{2e15}{\cm^{-3}}
+\]
+Simplificando los coeficientes y el exponente ($E_g / (2 k_B) = 1.12 / (\num{1.7235e-4}) \approx \SI{6498.55}{\kelvin}$):
+\[
+\left( \frac{T}{300} \right)^{3/2} \exp\left( -\frac{6498.55}{T} \right) = \frac{\num{2e15}}{\num{1.7065e19}} = \num{1.172e-4}
+\]
+
+4. \textit{Resolución numérica iterativa:}
+Evaluando el miembro izquierdo $f(T) = \left( \frac{T}{300} \right)^{3/2} \exp\left( -\frac{6498.55}{T} \right)$:
+\begin{itemize}
+    \item Para $T = \SI{600}{\kelvin}$: $f(600) = (2.0)^{1.5} \exp(-10.8309) = \num{5.594e-5} < \num{1.172e-4}$.
+    \item Para $T = \SI{650}{\kelvin}$: $f(650) = (2.1667)^{1.5} \exp(-9.9978) = \num{1.439e-4} > \num{1.172e-4}$.
+    \item Para $T = \SI{638}{\kelvin}$: $f(638) = (2.1267)^{1.5} \exp(-10.1858) = \num{1.169e-4} \approx \num{1.172e-4}$.
+\end{itemize}
+
+Por lo tanto, la solución numérica resulta:
+\[
+T_{\text{trans}} \approx \SI{638.2}{\kelvin} \quad (\approx \SI{365.2}{\celsius})
+\]
+A partir de esta temperatura, los portadores generados térmicamente comienzan a distorsionar significativamente el carácter extrínseco del semiconductor.
+\begin{center}
+    \includegraphics[width=0.95\textwidth]{imagenes/tema2/T2_Ad2_c.png}
+\end{center}
+\end{problema}
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 3 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Ionización parcial de aceptadores a baja temperatura]
+Una muestra de Silicio tipo P está dopada con $N_A = \SI{2e16}{\cm^{-3}}$ átomos de Boro por $\text{cm}^3$. La energía de ionización del Boro en Silicio es $E_A - E_V = \SI{0.045}{\eV}$ y su factor de degeneración es $g_A = 4$.
+
+\begin{enumerate}[label=\alph*)]
+    \item Asumiendo ionización total a $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.0259}{\eV}$, $N_v = \SI{1.04e19}{\cm^{-3}}$), calcular $E_F - E_V$ y verificar la fracción real de aceptadores ionizados $N_A^- / N_A$.
+    \item ¿A qué temperatura $T$ se encontrará ionizado únicamente el $50\%$ de los centros aceptadores ($N_A^- / N_A = 0.50$)?
+\end{enumerate}
+
+\tcblower
+
+\textbf{a) Verificación de la hipótesis de ionización total a $T = \SI{300}{\kelvin}$}
+
+1. \textit{Cálculo de $E_F - E_V$ bajo la hipótesis $p \approx N_A = \SI{2e16}{\cm^{-3}}$:}
+\[
+E_F - E_V = k_B T \ln\left( \frac{N_v}{N_A} \right) = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{1.04e19}}{\num{2e16}} \right) = (\SI{0.0259}{\eV}) \ln(520) = \SI{0.1620}{\eV}
+\]
+
+2. \textit{Evaluación del grado de ionización de aceptadores:}
+La separación energética entre el nivel aceptador y el nivel de Fermi es:
+\[
+E_A - E_F = (E_A - E_V) - (E_F - E_V) = \SI{0.045}{\eV} - \SI{0.1620}{\eV} = \SI{-0.1170}{\eV}
+\]
+
+Empleando la estadística de ocupación aceptadora ($g_A = 4$):
+\[
+\frac{N_A^-}{N_A} = \frac{1}{1 + g_A \exp\left( \frac{E_A - E_F}{k_B T} \right)} = \frac{1}{1 + 4 \exp\left( \frac{-0.1170}{0.0259} \right)} = \frac{1}{1 + 4 \exp(-4.5174)}
+\]
+\[
+\frac{N_A^-}{N_A} = \frac{1}{1 + 4 \cdot (\num{0.01092})} = \frac{1}{1 + \num{0.04368}} \approx 0.958 \quad (95.8\%)
+\]
+El $95.8\%$ de los aceptadores están ionizados a temperatura ambiente, por lo que la hipótesis de ionización casi total es una buena aproximación práctica a $T = \SI{300}{\kelvin}$.
+
+\textbf{b) Temperatura para un $50\%$ de ionización aceptadora}
+
+Buscamos $T$ tal que $\frac{N_A^-}{N_A} = 0.50$, lo que implica $N_A^- = N_A^0 = 0.50 N_A$.
+
+A temperaturas bajas la densidad de huecos minoritarios $n$ e intrínsecos es absolutamente insignificante, de modo que los huecos libres provienen únicamente de los aceptadores ionizados:
+\[
+p = N_A^- = 0.50 N_A = \SI{1e16}{\cm^{-3}}
+\]
+
+1. \textit{Relación de ocupación aceptadora:}
+\[
+\frac{N_A^-}{N_A^0} = \frac{1}{g_A} \exp\left( \frac{E_F - E_A}{k_B T} \right) = 1 \implies \exp\left( \frac{E_F - E_A}{k_B T} \right) = g_A = 4
+\]
+\[
+E_F - E_A = k_B T \ln(4)
+\]
+
+2. \textit{Relación de la densidad de huecos en la banda de valencia:}
+\[
+p = N_v(T) \exp\left( \frac{E_V - E_F}{k_B T} \right) \implies E_V - E_F = k_B T \ln\left( \frac{p}{N_v(T)} \right)
+\]
+
+3. \textit{Combinación de ambas expresiones energéticas:}
+Sumando las ecuaciones se cancela el nivel de Fermi $E_F$:
+\[
+(E_F - E_A) + (E_V - E_F) = E_V - E_A = -(E_A - E_V) = -\SI{0.045}{\eV}
+\]
+\[
+k_B T \ln(4) + k_B T \ln\left( \frac{p}{N_v(T)} \right) = -\SI{0.045}{\eV} \implies k_B T \ln\left( \frac{4 p}{N_v(T)} \right) = -\SI{0.045}{\eV}
+\]
+
+Despejando el término exponencial:
+\[
+\frac{4 p}{N_v(T)} = \exp\left( -\frac{0.045}{k_B T} \right)
+\]
+
+Sustituyendo $p = \SI{1e16}{\cm^{-3}}$, $N_v(T) = N_v^{300} \left(\frac{T}{300}\right)^{3/2} = (\SI{1.04e19}{\cm^{-3}}) \left(\frac{T}{300}\right)^{3/2}$ y $k_B = \SI{8.6173e-5}{\eV/\kelvin}$:
+\[
+\frac{4 \cdot (\num{1e16})}{\num{1.04e19} \left( \frac{T}{300} \right)^{3/2}} = \exp\left( -\frac{0.045}{\num{8.6173e-5} \cdot T} \right) \implies \frac{\num{3.846e-3}}{\left( \frac{T}{300} \right)^{3/2}} = \exp\left( -\frac{522.20}{T} \right)
+\]
+
+4. \textit{Resolución de la ecuación trascendente:}
+Evaluando numéricamente para $T$:
+\begin{itemize}
+    \item Para $T = \SI{110}{\kelvin}$: $\frac{\num{3.846e-3}}{(110/300)^{1.5}} = \num{0.01730} \quad \text{vs} \quad \exp(-4.7473) = \num{0.00868}$.
+    \item Para $T = \SI{125}{\kelvin}$: $\frac{\num{3.846e-3}}{(125/300)^{1.5}} = \num{0.01430} \quad \text{vs} \quad \exp(-4.1776) = \num{0.01533}$.
+    \item Para $T = \SI{123.5}{\kelvin}$: $\frac{\num{3.846e-3}}{(123.5/300)^{1.5}} = \num{0.01456} \quad \text{vs} \quad \exp(-4.2283) = \num{0.01458}$.
+\end{itemize}
+
+Por lo tanto, la temperatura a la cual el $50\%$ de los aceptadores están ionizados es:
+\[
+T \approx \SI{123.5}{\kelvin}
+\]
+\end{problema}
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 4 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Cristalografía de GaAs e ionización de donadores profundos]
+El Arseniuro de Galio ($\text{GaAs}$) cristaliza en la estructura de blenda de cinc (red cúbica centrada en las caras con base de dos átomos: un átomo de $\text{Ga}$ y un átomo de $\text{As}$) con un parámetro de red $a = \SI{5.65}{\text{\AA}}$. Se pide:
+
+\begin{enumerate}[label=\alph*)]
+    \item Calcular la densidad atómica total ($\text{átomos/cm}^3$) y la densidad volumétrica de electrones de valencia del $\text{GaAs}$ puro.
+    \item Suponiendo para el $\text{GaAs}$ a $T = \SI{300}{\kelvin}$ las constantes $N_c = \SI{4.7e17}{\cm^{-3}}$, $N_v = \SI{7.0e18}{\cm^{-3}}$ y $E_g = \SI{1.42}{\eV}$, calcular la concentración intrínseca de portadores $n_i$ y la posición del nivel de Fermi intrínseco respecto a la banda de valencia ($E_{Fi} - E_V$).
+    \item La muestra se dopa con impurezas donadoras profundas en una densidad $N_D = \SI{5e16}{\cm^{-3}}$ con energía de ionización $E_C - E_D = \SI{0.25}{\eV}$ ($g_D = 2$). Calcular mediante la ecuación cuadrática exacta la densidad de donadores ionizados $N_D^+$, la concentración de electrones libres $n$, de huecos $p$, y la posición exacta del nivel de Fermi respecto a la banda de conducción ($E_F - E_C$).
+\end{enumerate}
+
+\tcblower
+
+\textbf{a) Propiedades cristalográficas del Arseniuro de Galio}
+
+1. \textit{Número de átomos por celda unidad:}
+La celda blenda de cinc contiene $4$ átomos de Galio ($\text{Ga}$) y $4$ átomos de Arsénico ($\text{As}$), totalizando $8 \text{ átomos/celda}$.
+
+2. \textit{Electrones de valencia:}
+El $\text{Ga}$ (Grupo III) aporta $3 \text{ e}^-$ de valencia y el $\text{As}$ (Grupo V) aporta $5 \text{ e}^-$. El número total de electrones de valencia por celda es:
+\[
+N_{v,\text{celda}} = 4 \times 3 + 4 \times 5 = 32 \text{ e}^-\text{ valencia/celda}
+\]
+
+3. \textit{Volumen de la celda unidad ($a = \SI{5.65e-8}{\cm}$):}
+\[
+V_{\text{celda}} = a^3 = (\num{5.65e-8})^3 \approx \SI{1.8036e-22}{\cm^3}
+\]
+
+4. \textit{Densidades volumétricas:}
+\[
+\rho_{\text{átomos}} = \frac{8}{V_{\text{celda}}} = \frac{8}{\num{1.8036e-22}} \approx \SI{4.435e22}{\text{átomos/cm}^3}
+\]
+\[
+\rho_v = \frac{32}{V_{\text{celda}}} = \frac{32}{\num{1.8036e-22}} \approx \SI{1.774e23}{\text{e}^-\text{ valencia/cm}^3}
+\]
+
+\textbf{b) Portadores intrínsecos y nivel de Fermi intrínseco ($T = \SI{300}{\kelvin}$)}
+
+1. \textit{Concentración intrínseca ($n_i$ con $k_B T = \SI{0.0259}{\eV}$):}
+\[
+n_i = \sqrt{N_c N_v} \exp\left( -\frac{E_g}{2 k_B T} \right) = \sqrt{(\num{4.7e17})(\num{7.0e18})} \exp\left( -\frac{1.42}{2 \cdot 0.0259} \right)
+\]
+\[
+n_i = (\num{1.8138e18}) \cdot \exp(-27.4131) = (\num{1.8138e18}) \cdot (\num{1.2435e-12}) \approx \SI{2.255e6}{\cm^{-3}}
+\]
+
+2. \textit{Posición del nivel de Fermi intrínseco ($E_{Fi} - E_V$):}
+\[
+E_{Fi} - E_V = \frac{E_g}{2} + \frac{1}{2} k_B T \ln\left( \frac{N_v}{N_c} \right) = \frac{1.42}{2} + \frac{0.0259}{2} \ln\left( \frac{\num{7.0e18}}{\num{4.7e17}} \right)
+\]
+\[
+E_{Fi} - E_V = \SI{0.710}{\eV} + (\SI{0.01295}{\eV}) \ln(14.894) = \SI{0.710}{\eV} + \SI{0.0350}{\eV} = \SI{0.7450}{\eV}
+\]
+Debido a que $N_v > N_c$, el nivel de Fermi intrínseco se ubica a \SI{0.7450}{\eV} por encima de $E_V$ (ligeramente por encima de la mitad del gap, $E_g/2 = \SI{0.710}{\eV}$).
+
+\textbf{c) Dopado con donadores profundos ($N_D = \SI{5e16}{\cm^{-3}}$, $E_C - E_D = \SI{0.25}{\eV}$)}
+
+1. \textit{Invalidez de la hipótesis de ionización total:}
+Si supusiéramos ionización total ($n \approx N_D$), obtendríamos $E_F - E_C = (\SI{0.0259}{\eV}) \ln\left(\frac{\num{5e16}}{\num{4.7e17}}\right) = \SI{-0.0580}{\eV}$, lo que daría $E_F - E_D = \SI{0.1920}{\eV}$. La fracción ionizada resultaría $\frac{N_D^+}{N_D} = \frac{1}{1 + 2 \exp(7.4131)} \approx \num{0.0003} \ll 1$. Por lo tanto, la ionización es extremadamente parcial.
+
+2. \textit{Ecuación cuadrática exacta para $N_D^+$:}
+Manteniendo la hipótesis $p \ll N_D^+$ (de modo que $n = N_D^+$):
+\[
+\frac{(N_D^+)^2 g_D}{N_c (N_D - N_D^+)} = \exp\left( -\frac{E_C - E_D}{k_B T} \right)
+\]
+
+Evaluando la constante del miembro derecho:
+\[
+K = N_c \exp\left( -\frac{E_C - E_D}{k_B T} \right) = (\num{4.7e17}) \exp\left( -\frac{0.25}{0.0259} \right) = (\num{4.7e17}) \exp(-9.6525) \approx \SI{3.020e13}{\cm^{-3}}
+\]
+
+Reorganizando la expresión cuadrática con $g_D = 2$:
+\[
+g_D (N_D^+)^2 + K N_D^+ - K N_D = 0 \implies 2 (N_D^+)^2 + (\num{3.020e13}) N_D^+ - (\num{3.020e13})(\num{5e16}) = 0
+\]
+\[
+2 (N_D^+)^2 + (\num{3.020e13}) N_D^+ - \num{1.510e30} = 0
+\]
+
+Resolviendo para la raíz positiva de $N_D^+$:
+\[
+N_D^+ = \frac{-\num{3.020e13} + \sqrt{(\num{3.020e13})^2 + 4 \cdot 2 \cdot (\num{1.510e30})}}{2 \cdot 2}
+\]
+\[
+N_D^+ = \frac{-\num{3.020e13} + \sqrt{\num{1.2081e31}}}{4} = \frac{-\num{3.020e13} + \num{3.4758e15}}{4} \approx \SI{8.614e14}{\cm^{-3}}
+\]
+
+3. \textit{Concentraciones finales de portadores:}
+\begin{itemize}
+    \item Concentración de electrones libres: $n = N_D^+ = \SI{8.614e14}{\cm^{-3}}$ (únicamente el $1.72\%$ de las impurezas están ionizadas).
+    \item Concentración de huecos minoritarios: $p = \frac{n_i^2}{n} = \frac{(\num{2.255e6})^2}{\num{8.614e14}} \approx \SI{5.90e-3}{\cm^{-3}}$ (se verifica $p \ll N_D^+$).
+\end{itemize}
+
+4. \textit{Posición real del nivel de Fermi:}
+\[
+E_F - E_C = k_B T \ln\left( \frac{n}{N_c} \right) = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{8.614e14}}{\num{4.7e17}} \right) = (\SI{0.0259}{\eV}) \ln(\num{1.8328e-3}) \approx \SI{-0.1632}{\eV}
+\]
+El nivel de Fermi se posiciona a \SI{0.1632}{\eV} por debajo del fondo de la banda de conducción $E_C$.
+\end{problema}
