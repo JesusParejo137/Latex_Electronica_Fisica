@@ -1144,7 +1144,517 @@ I(V) = \frac{e D_p p_{n0} L^2}{L - x_n(V)} \left[ \exp\left(\frac{e V}{k_B T}\ri
 \end{itemize}
 
 \begin{center}
-    \includegraphics[width=0.55\textwidth]{imagenes/tema4/T4_P2_b.png}
+    \includegraphics[width=0.85\textwidth]{imagenes/tema4/T4_P2_b.png}
     \captionof{figure}{Característica $I-V$ en polarización inversa para un diodo corto, mostrando el aumento de la corriente con la tensión y el fenómeno de perforación (punch-through).}
 \end{center}
+\end{problema}
+
+\newpage
+\newpage
+%===================
+% Problema 05: Unión P+-N iluminada (Fotodiodo y celda solar)
+%===================
+\begin{problema}[Unión $P^+-N$ iluminada uniformemente: Fotoconductividad y régimen fotovoltaico]
+Consideremos una unión $P^+-N$ como la representada en la figura, en la que la región neutra del semiconductor tipo N es iluminada uniformemente, de forma que se generan $G$ pares electrón-hueco por unidad de tiempo y volumen.
+
+Supuesto un diodo largo ($W_N \gg L_p$), $P^+$ fuertemente dopado ($N_A \gg N_D$) y conocidas las constantes físicas del semiconductor:
+\begin{enumerate}[label=\alph*)]
+    \item Obtener la expresión analítica de la densidad de corriente total $J$ en la unión en función de la tensión aplicada $V$ y de la tasa de generación $G$.
+    \item Analizar la influencia de la iluminación en las corrientes directa e inversa. ¿En qué condiciones de polarización (directa o inversa) resulta más fácil detectar la presencia de iluminación?
+    \item Determinar la tensión en circuito abierto $V_{oc}$ y la densidad de corriente en cortocircuito $J_{sc}$, comentando la operación del dispositivo como generador de potencia fotovoltaica.
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.60\textwidth]{imagenes/tema4/T4_P5_a.png}
+    \captionof{figure}{Esquema físico de la unión $P^+-N$ bajo iluminación óptica uniforme $G$ en el lado N.}
+    \label{fig:t4_p5_a}
+\end{center}
+
+\tcblower
+\textbf{a) Obtención de la densidad de corriente $J$}
+
+Al ser una unión asimétrica $P^+-N$ ($N_A \gg N_D$), la densidad de electrones minoritarios en el lado $P^+$ en equilibrio es despreciable ($n_{p0} = n_i^2 / N_A \ll p_{n0} = n_i^2 / N_D$). Por tanto, la corriente inyectada de electrones hacia el lado P es totalmente insignificante y la corriente total está dominada por el flujo de difusión de huecos minoritarios en el lado N ($J \approx J_p$).
+
+La ecuación de continuidad estacionaria para el exceso de huecos minoritarios $\delta p_n(x) = p_n(x) - p_{n0}$ en la región neutra N ($x \ge x_n$) bajo iluminación uniforme $G$ es:
+\[
+D_p \frac{d^2(\delta p_n)}{dx^2} - \frac{\delta p_n}{\tau_p} + G = 0 \implies \frac{d^2(\delta p_n)}{dx^2} - \frac{\delta p_n}{L_p^2} + \frac{G}{D_p} = 0
+\]
+donde $L_p = \sqrt{D_p \tau_p}$ es la longitud de difusión de huecos.
+
+La solución general de esta ecuación diferencial ordinaria no homogénea es:
+\[
+\delta p_n(x) = G \tau_p + A \exp\left(-\frac{x - x_n}{L_p}\right) + B \exp\left(\frac{x - x_n}{L_p}\right)
+\]
+
+Aplicamos las condiciones de contorno físicas:
+\begin{enumerate}
+    \item \textbf{Diodo largo ($x \to \infty$):} A distancias muy alejadas de la unión, el exceso de portadores alcanza el nivel de equilibrio fotogenerado constante $\delta p_n(\infty) = G \tau_p$, lo que exige $B = 0$.
+    \item \textbf{Borde de la Z.C.E. ($x = x_n$):} Se satisfacen las condiciones de contorno de Shockley bajo tensión aplicada $V$:
+    \[
+    p_n(x_n) = p_{n0} \exp\left(\frac{e V}{k_B T}\right) \implies \delta p_n(x_n) = p_{n0} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right]
+    \]
+    Sustituyendo $x = x_n$ en la solución general:
+    \[
+    G \tau_p + A = p_{n0} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] \implies A = p_{n0} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] - G \tau_p
+    \]
+\end{enumerate}
+
+Por tanto, la distribución del exceso de huecos en la región N ($x \ge x_n$) es:
+\[
+\delta p_n(x) = G \tau_p + \left\{ p_{n0} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] - G \tau_p \right\} \exp\left(-\frac{x - x_n}{L_p}\right)
+\]
+
+Evaluamos la densidad de corriente de difusión de huecos en la frontera de la Z.C.E. ($x = x_n$):
+\[
+J \approx J_p(x_n) = -e D_p \left. \frac{d(\delta p_n)}{dx} \right|_{x=x_n} = \frac{e D_p}{L_p} \left\{ p_{n0} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] - G \tau_p \right\}
+\]
+
+Puesto que $\frac{e D_p \tau_p G}{L_p} = e G \frac{D_p \tau_p}{L_p} = e L_p G$, definimos la \textbf{fotocorriente} $J_L = e L_p G$ y la \textbf{corriente inversa de saturación en oscuridad} $J_0 = \frac{e D_p p_{n0}}{L_p}$. La densidad de corriente total adopta la forma:
+\[
+J = J_0 \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] - J_L = J_0 \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] - e L_p G
+\]
+
+\textbf{b) Análisis de la influencia de la iluminación y detectabilidad}
+
+\begin{itemize}
+    \item \textbf{En polarización directa ($V > 0$):} La corriente total $J_{\text{directa}} \approx J_0 \exp\left(\frac{e V}{k_B T}\right) - J_L$ está dominada por el término exponencial inyectado, el cual crece aceleradamente. Salvo para niveles de iluminación extremadamente elevados, la fotocorriente constante $J_L$ representa una pequeña fracción insignificante de la corriente total de oscuridad.
+    \item \textbf{En polarización inversa ($V < 0$):} El término exponencial se anula ($\exp(e V / k_B T) \approx 0$), reduciéndose la corriente a $J_{\text{inversa}} \approx -(J_0 + J_L)$. Puesto que la corriente en oscuridad $J_0$ es sumamente reducida (del orden de $10^{-11}\,\text{A/cm}^2$), la adición de la fotocorriente $J_L$ incrementa la corriente en inversa en varios órdenes de magnitud.
+\end{itemize}
+
+\textbf{Conclusión de detectabilidad:} Es infinitamente más fácil y preciso detectar la radiación luminosa en \textbf{polarización inversa} (modo fotodiodo), ya que el cambio relativo en la corriente $\frac{\Delta J}{J_{\text{oscuridad}}} = \frac{J_L}{J_0} \gg 1$ es enorme.
+
+\textbf{c) Parámetros característicos y modo de generación fotovoltaica}
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{imagenes/tema4/T4_P5_a.png}
+    \captionof{figure}{Característica $J-V$ de la unión $P^+-N$ en oscuridad e iluminación, destacando el cuarto cuadrante de generación de potencia ($P = J \cdot V < 0$).}
+    \label{fig:t4_p5_b}
+\end{center}
+
+Analizando los puntos singulares de la característica $J-V$ bajo iluminación:
+\begin{enumerate}
+    \item \textbf{Densidad de corriente en cortocircuito ($V = 0$):}
+    \[
+    J_{sc} = -J_L = -e L_p G
+    \]
+    \item \textbf{Tensión en circuito abierto ($J = 0$):}
+    \[
+    0 = J_0 \left[ \exp\left(\frac{e V_{oc}}{k_B T}\right) - 1 \right] - J_L \implies V_{oc} = \frac{k_B T}{e} \ln\left(1 + \frac{J_L}{J_0}\right) = \frac{k_B T}{e} \ln\left(1 + \frac{G \tau_p}{p_{n0}}\right) > 0
+    \]
+\end{enumerate}
+
+\textbf{Operación en el cuarto cuadrante (Celda solar / Fotopila):}
+En el intervalo de tensión $0 < V < V_{oc}$, la tensión aplicada es positiva ($V > 0$) mientras que la corriente resulta negativa ($J < 0$). En esta región, la potencia por unidad de área es negativa:
+\[
+P = J \cdot V < 0
+\]
+Esto indica que el dispositivo no consume energía, sino que actúa como un **generador pasivo capaz de entregar potencia eléctrica a una carga externa** convirtiendo directamente la energía fotónica absorbida.
+\end{problema}
+
+\newpage
+\newpage
+%===================
+% Problema 06: Campo eléctrico máximo, ruptura por avalancha y capacidad
+%===================
+\begin{problema}[Campo eléctrico máximo, ruptura por avalancha y capacidad de transición en unión $P^+-N$]
+Se considera una unión $P^+-N$ abrupta de silicio a $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.026}{\eV}$) con las siguientes características:
+\[
+N_A \gg N_D = \SI{2e15}{\cm^{-3}}, \quad V_B = \SI{0.85}{\V}, \quad \epsilon = \SI{1.05e-12}{\farad\per\cm}
+\]
+Se conoce además que el campo eléctrico crítico de ruptura por avalancha del silicio es $E_{\text{crit}} = \SI{3e5}{\V\per\cm}$.
+
+\begin{enumerate}[label=\alph*)]
+    \item Determinar la expresión del campo eléctrico máximo $E_{\max}$ en función de la tensión de polarización aplicada $V$ y evaluar su valor para $V = \SI{-10}{\V}$.
+    \item Calcular la tensión de ruptura por avalancha $V_{BR}$ de la unión.
+    \item Calcular la capacidad de transición por unidad de área $C'$ a $V = \SI{-10}{\V}$ y justo en el punto de ruptura $V = V_{BR}$.
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{imagenes/tema4/T4_P6_a.png}
+    \captionof{figure}{Distribución lineal del campo eléctrico $E(x)$ en la Z.C.E. de una unión asimétrica $P^+-N$, destacando el valor máximo $E_{\max}$ en la junta ($x = 0$).}
+    \label{fig:t4_p6_a}
+\end{center}
+
+\tcblower
+\textbf{a) Campo eléctrico máximo en función de $V$}
+
+Por la ley de Gauss en la aproximación de vaciamiento total para una unión asimétrica $P^+-N$ ($x_p \approx 0, W \approx x_n$), el campo eléctrico disminuye linealmente desde la junta $x = 0$ hasta el borde $x = x_n$:
+\[
+E(x) = -\frac{e N_D}{\epsilon} (x_n - x) \implies E_{\max} = |E(0)| = \frac{e N_D x_n}{\epsilon}
+\]
+
+Sustituyendo la anchura de deplesión $x_n = \sqrt{\frac{2\epsilon (V_B - V)}{e N_D}}$:
+\[
+E_{\max}(V) = \sqrt{\frac{2 e N_D (V_B - V)}{\epsilon}}
+\]
+
+Para $V = \SI{-10}{\V}$ (polarización inversa, $V_B - V = 0.85 - (-10) = \SI{10.85}{\V}$):
+\[
+E_{\max}(\SI{-10}{\V}) = \sqrt{\frac{2 \times (\num{1.6e-19}\,\text{C}) \times (\num{2e15}\,\text{cm}^{-3}) \times 10.85\,\text{V}}{\num{1.05e-12}\,\text{F/cm}}} = \SI{8.13e4}{\V\per\cm}
+\]
+
+\textbf{b) Tensión de ruptura por avalancha $V_{BR}$}
+
+La ruptura por avalancha ocurre cuando el campo eléctrico máximo alcanza el campo crítico $E_{\max} = E_{\text{crit}} = \SI{3e5}{\V\per\cm}$:
+\[
+E_{\text{crit}}^2 = \frac{2 e N_D (V_B - V_{BR})}{\epsilon} \implies V_B - V_{BR} = \frac{\epsilon E_{\text{crit}}^2}{2 e N_D}
+\]
+\[
+V_B - V_{BR} = \frac{(\num{1.05e-12}\,\text{F/cm}) \times (\num{3e5}\,\text{V/cm})^2}{2 \times (\num{1.6e-19}\,\text{C}) \times (\num{2e15}\,\text{cm}^{-3})} = \frac{\num{9.45e-2}}{\num{6.4e-4}} = \SI{147.66}{\V}
+\]
+\[
+V_{BR} = V_B - \SI{147.66}{\V} = \SI{0.85}{\V} - \SI{147.66}{\V} = \SI{-146.81}{\V}
+\]
+
+\textbf{c) Capacidad de transición por unidad de área $C'$}
+
+La capacidad de transición por unidad de superficie es $C' = \frac{\epsilon}{x_n(V)}$.
+
+\begin{itemize}
+    \item \textbf{Para $V = \SI{-10}{\V}$:}
+    \[
+    x_n(\SI{-10}{\V}) = \sqrt{\frac{2 \times (\num{1.05e-12}) \times 10.85}{\num{1.6e-19} \times \num{2e15}}} = \SI{2.668e-4}{\cm} = \SI{2.67}{\um}
+    \]
+    \[
+    C'(\SI{-10}{\V}) = \frac{\num{1.05e-12}\,\text{F/cm}}{\num{2.668e-4}\,\text{cm}} = \SI{3.935e-9}{\farad\per\cm^2} = \SI{3.94}{\nano\farad\per\cm^2}
+    \]
+
+    \item \textbf{En el punto de ruptura ($V = V_{BR} = \SI{-146.81}{\V}$):}
+    \[
+    x_n(V_{BR}) = \sqrt{\frac{2 \times (\num{1.05e-12}) \times 147.66}{\num{1.6e-19} \times \num{2e15}}} = \SI{9.844e-4}{\cm} = \SI{9.84}{\um}
+    \]
+    \[
+    C'(V_{BR}) = \frac{\num{1.05e-12}\,\text{F/cm}}{\num{9.844e-4}\,\text{cm}} = \SI{1.067e-9}{\farad\per\cm^2} = \SI{1.07}{\nano\farad\per\cm^2}
+    \]
+\end{itemize}
+\end{problema}
+
+\newpage
+%===================
+% Problema 07: Modelo de pequeña señal y admitancia
+%===================
+\begin{problema}[Admitancia y modelo de pequeña señal en unión $P^+-N$ en polarización directa]
+Se dispone de un diodo largo $p^+-n$ de silicio a $T = 300\text{ K}$ ($k_B T = 0.026\text{ eV}$, $n_i = 1.5 \times 10^{10}\text{ cm}^{-3}$) de área $A = 0.1\text{ mm}^2 = 10^{-3}\text{ cm}^2$. Los parámetros de la región tipo N son:
+\[
+N_D = \SI{1e16}{\cm^{-3}}, \quad \tau_p = \SI{1}{\us}, \quad \mu_p = \SI{450}{\cm^2/\V\second}
+\]
+
+\begin{enumerate}[label=\alph*)]
+    \item Calcular la corriente de saturación inversa $I_0$ del diodo.
+    \item Para una polarización continua en directa $V_0 = \SI{0.60}{\V}$, calcular la corriente continua $I_0'$, la resistencia de difusión de pequeña señal $R_d$ y la capacidad de difusión $C_d$ en baja frecuencia.
+    \item Evaluar el módulo de la admitancia de pequeña señal $Y(\omega)$ para una señal de prueba de frecuencia $f = \SI{100}{\kilo\hertz}$.
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{imagenes/tema4/T4_P7_a.png}
+    \captionof{figure}{Circuito equivalente de pequeña señal de la unión PN polarizada en directa formado por la resistencia de difusión $R_d$ en paralelo con la capacidad de difusión $C_d$.}
+    \label{fig:t4_p7_a}
+\end{center}
+
+\tcblower
+\textbf{a) Cálculo de la corriente de saturación inversa $I_0$}
+
+En el lado N, determinamos los parámetros de transporte de huecos minoritarios:
+\[
+D_p = \frac{k_B T}{e} \mu_p = (\SI{0.026}{\V}) \times (\SI{450}{\cm^2/\V\second}) = \SI{11.7}{\cm^2/\second}
+\]
+\[
+L_p = \sqrt{D_p \tau_p} = \sqrt{(\SI{11.7}{\cm^2/\second}) \times (\num{1e-6}\,\text{s})} = \SI{3.421e-3}{\cm} = \SI{34.21}{\um}
+\]
+\[
+p_{n0} = \frac{n_i^2}{N_D} = \frac{(\num{1.5e10})^2}{\num{1e16}} = \SI{2.25e4}{\cm^{-3}}
+\]
+
+La densidad de corriente de saturación en oscuridad es:
+\[
+J_0 = \frac{e D_p p_{n0}}{L_p} = \frac{(\num{1.6e-19}\,\text{C}) \times (\SI{11.7}{\cm^2/\second}) \times (\num{2.25e4}\,\text{cm}^{-3})}{\num{3.421e-3}\,\text{cm}} = \SI{1.231e-11}{\A\per\cm^2}
+\]
+
+Multiplicando por el área $A = \SI{1e-3}{\cm^2}$:
+\[
+I_0 = J_0 \cdot A = (\SI{1.231e-11}{\A\per\cm^2}) \times (\SI{1e-3}{\cm^2}) = \SI{1.231e-14}{\A}
+\]
+
+\textbf{b) Punto de operación continua y parámetros de pequeña señal ($V_0 = \SI{0.60}{\V}$)}
+
+La corriente continua en directa $I_0'$ es:
+\[
+I_0' \approx I_0 \exp\left(\frac{e V_0}{k_B T}\right) = (\num{1.231e-14}\,\text{A}) \times \exp\left(\frac{0.60}{0.026}\right) = (\num{1.231e-14}) \times (\num{1.0524e10}) = \SI{1.296e-4}{\A} = \SI{0.130}{\mA}
+\]
+
+La resistencia de difusión de pequeña señal $R_d$ resulta:
+\[
+R_d = \frac{k_B T}{e I_0'} = \frac{\SI{0.026}{\V}}{\num{1.296e-4}\,\text{A}} \approx \SI{200.6}{\Omega}
+\]
+
+La capacidad de difusión de pequeña señal $C_d$ en baja frecuencia es:
+\[
+C_d = \frac{e I_0' \tau_p}{2 k_B T} = \frac{I_0' \tau_p}{2 (k_B T / e)} = \frac{(\num{1.296e-4}\,\text{A}) \times (\num{1e-6}\,\text{s})}{2 \times \SI{0.026}{\V}} = \SI{2.492e-9}{\farad} = \SI{2.492}{\nano\farad}
+\]
+
+\textbf{c) Admitancia de pequeña señal a $f = \SI{100}{\kilo\hertz}$}
+
+La frecuencia angular es $\omega = 2\pi f = 2\pi \times 100 \times 10^3 = 6.283 \times 10^5\text{ rad/s}$.
+
+Verificamos la condición de baja frecuencia:
+\[
+\omega \tau_p = (\num{6.283e5}\,\text{rad/s}) \times (\num{1e-6}\,\text{s}) = 0.628 < 1
+\]
+
+Por tanto, el modelo de componentes en paralelo $R_d - C_d$ es aplicable:
+\[
+Y(\omega) = G_d + j \omega C_d = \frac{1}{R_d} + j \omega C_d
+\]
+\[
+G_d = \frac{1}{\SI{200.6}{\Omega}} = \SI{4.985e-3}{\siemens}
+\]
+\[
+\omega C_d = (\num{6.283e5}\,\text{rad/s}) \times (\num{2.492e-9}\,\text{F}) = \SI{1.566e-3}{\siemens}
+\]
+
+El módulo de la admitancia compleja $|Y|$ es:
+\[
+|Y| = \sqrt{G_d^2 + (\omega C_d)^2} = \sqrt{(\num{4.985e-3})^2 + (\num{1.566e-3})^2} = \sqrt{\num{2.485e-5} + \num{2.452e-6}} = \SI{5.22e-3}{\siemens} = \SI{5.22}{\milli\siemens}
+\]
+\end{problema}
+
+\newpage
+%===================
+% Problema 08: Fotodiodo de base corta
+%===================
+\begin{problema}[Fotodiodo de base corta: Perfil de minoritarios y recolección de fotocorriente]
+Un fotodiodo $P^+-N$ de base corta tiene una región tipo N de longitud física $W_N = \SI{4}{\um}$. Al polarizarse en inversa, la zona de carga espacial penetra $x_n = \SI{1}{\um}$, dejando una región neutra efectiva de longitud $W_N' = W_N - x_n = \SI{3}{\um}$.
+
+La región neutra N se ilumina mediante un láser que produce una tasa de generación óptica uniforme $G_0 = \SI{1e21}{\cm^{-3}\second^{-1}}$. En el contacto posterior $x = W_N$ existe un contacto óhmico ideal ($s \to \infty$).
+
+\textbf{Datos:} Área $A = \SI{1e-4}{\cm^2}$, $D_p = \SI{12}{\cm^2/\second}$.
+
+\begin{enumerate}[label=\alph*)]
+    \item Obtener la expresión del exceso de huecos $\delta p_n(x)$ en la región neutra N en polarización inversa.
+    \item Calcular la fotocorriente $I_L$ recolectada por la unión.
+    \item Discutir la eficiencia de recolección en comparación con un fotodiodo de base larga.
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.70\textwidth]{imagenes/tema4/T4_P8_a.png}
+    \captionof{figure}{Fotodiodo $P^+-N$ de base corta iluminado uniformemente con $G_0$, indicando el perfil parabólico de generación y la recolección en $x = x_n$.}
+    \label{fig:t4_p8_a}
+\end{center}
+
+\tcblower
+\textbf{a) Obtención del perfil de portadores minoritarios $\delta p_n(x)$}
+
+Al ser un diodo corto ($W_N' \ll L_p$), se desprecia la recombinación volumétrica. La ecuación de continuidad estacionaria en la región neutra N ($x_n \le x \le W_N$) bajo generación uniforme $G_0$ es:
+\[
+D_p \frac{d^2(\delta p_n)}{dx^2} + G_0 = 0 \implies \frac{d^2(\delta p_n)}{dx^2} = -\frac{G_0}{D_p}
+\]
+
+Integrando dos veces consecutivas:
+\[
+\delta p_n(x) = -\frac{G_0}{2 D_p} (x - x_n)^2 + C_1 (x - x_n) + C_2
+\]
+
+Aplicamos las condiciones de contorno:
+\begin{enumerate}
+    \item \textbf{En el borde de la Z.C.E. ($x = x_n$):} En polarización inversa ($V \ll 0$), la concentración cae a cero:
+    \[
+    \delta p_n(x_n) = 0 \implies C_2 = 0
+    \]
+    \item \textbf{En el contacto óhmico ($x = W_N$):} Sumidero perfecto ($s \to \infty$):
+    \[
+    \delta p_n(W_N) = 0 \implies 0 = -\frac{G_0}{2 D_p} (W_N')^2 + C_1 W_N' \implies C_1 = \frac{G_0 W_N'}{2 D_p}
+    \]
+\end{enumerate}
+
+Sustituyendo la constante $C_1$, la distribución adoptada es un perfil parabólico:
+\[
+\delta p_n(x) = \frac{G_0}{2 D_p} (x - x_n) \left[ W_N' - (x - x_n) \right]
+\]
+
+\textbf{b) Cálculo de la fotocorriente $I_L$}
+
+La densidad de corriente de difusión de huecos recolectada en la unión ($x = x_n$) es:
+\[
+J_L = -e D_p \left. \frac{d(\delta p_n)}{dx} \right|_{x=x_n} = -e D_p \left[ C_1 \right] = -e D_p \left( \frac{G_0 W_N'}{2 D_p} \right) = -\frac{e G_0 W_N'}{2}
+\]
+
+Evaluando numéricamente para $W_N' = \SI{3e-4}{\cm}$:
+\[
+|J_L| = \frac{(\num{1.6e-19}\,\text{C}) \times (\num{1e21}\,\text{cm}^{-3}\text{s}^{-1}) \times (\num{3e-4}\,\text{cm})}{2} = \SI{2.40e-2}{\A\per\cm^2} = \SI{24.0}{\mA\per\cm^2}
+\]
+
+Multiplicando por el área $A = \SI{1e-4}{\cm^2}$:
+\[
+I_L = |J_L| \cdot A = (\SI{2.40e-2}{\A\per\cm^2}) \times (\SI{1e-4}{\cm^2}) = \SI{2.40e-6}{\A} = \SI{2.40}{\micro\A}
+\]
+
+\textbf{c) Discusión sobre la eficiencia de recolección}
+
+En un diodo largo ($W_N \gg L_p$), la totalidad de los fotones absorbidos en una longitud $L_p$ contribuyen a la fotocorriente ($J_{L,\text{largo}} = e G_0 L_p$). 
+
+En este fotodiodo de base corta con contacto óhmico ideal, exactamente la mitad de los pares fotogenerados ($50\%$) difunden hacia la unión en $x = x_n$ y se recolectan como corriente útil, mientras que la otra mitad ($50\%$) difunde hacia el contacto posterior $x = W_N$ y se pierde por recombinación en el metal.
+\end{problema}
+
+\newpage
+%===================
+% Problema 09: Recombinación superficial finita
+%===================
+\begin{problema}[Unión $N^+-P$ de base estrecha con velocidad de recombinación superficial $s_n$]
+Se construye una unión asimétrica $N^+-P$ en silicio a $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.026}{\eV}, n_i = \SI{1.5e10}{\cm^{-3}}$). La región tipo P tiene un dopado $N_A = \SI{5e16}{\cm^{-3}}$, longitud física $W_P = \SI{6}{\um}$ y una longitud neutra efectiva $W_P' = W_P - |x_p| = \SI{5}{\um}$.
+
+Los parámetros de transporte en el lado P son $D_n = \SI{30}{\cm^2/\second}$ y $L_n = \SI{50}{\um}$. En el contacto posterior $x = -W_P$ existe un acabado caracterizado por una velocidad de recombinación superficial $s_n$.
+
+\begin{enumerate}[label=\alph*)]
+    \item Deducir la expresión de la densidad de corriente de electrones $J_n$ en polarización directa $V$.
+    \item Evaluar el valor numérico de $J_n$ para $V = \SI{0.55}{\V}$ en dos casos límite: contacto óhmico ideal ($s_n \to \infty$) y superficie perfectamente pasivada ($s_n = 0$).
+    \item Explicar el efecto físico de la pasivación posterior en celdas solares y diodos.
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{imagenes/tema4/T4_P9_a.png}
+    \captionof{figure}{Unión $N^+-P$ con región neutra P de longitud $W_P'$ y recombinación superficial $s_n$ en la frontera posterior.}
+    \label{fig:t4_p9_a}
+\end{center}
+
+\tcblower
+
+\textbf{a) Deducción analítica de $J_n$}
+
+Al cumplirse $W_P' = \SI{5}{\um} \ll L_n = \SI{50}{\um}$, el exceso de electrones minoritarios satisface la distribución lineal $\delta n_p(x) = a (x + W_P) + b$ en el intervalo $-W_P \le x \le -|x_p|$.
+
+Las condiciones de contorno son:
+\begin{enumerate}
+    \item \textbf{En el contacto posterior ($x = -W_P$):} La corriente de difusión iguala a la recombinación superficial:
+    \[
+    e D_n \left. \frac{d(\delta n_p)}{dx} \right|_{x=-W_P} = e s_n \delta n_p(-W_P) \implies D_n a = s_n b \implies b = \frac{D_n}{s_n} a
+    \]
+    \item \textbf{En el borde de la Z.C.E. ($x = -|x_p|$):} Condición de Shockley:
+    \[
+    \delta n_p(-|x_p|) = n_{p0} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right]
+    \]
+    Sustituyendo la coordenada en la recta:
+    \[
+    a (W_P - |x_p|) + b = a W_P' + \frac{D_n}{s_n} a = a \left( W_P' + \frac{D_n}{s_n} \right) = n_{p0} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right]
+    \]
+\end{enumerate}
+
+Despejando la pendiente constante $a$:
+\[
+a = \frac{n_{p0} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right]}{W_P' + \frac{D_n}{s_n}}
+\]
+
+La densidad de corriente de difusión de electrones resulta:
+\[
+J_n = e D_n \frac{d(\delta n_p)}{dx} = e D_n a = \frac{e D_n n_{p0}}{W_P' + \frac{D_n}{s_n}} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right]
+\]
+
+\textbf{b) Evaluación numérica para $V = \SI{0.55}{\V}$}
+
+Calculamos $n_{p0} = \frac{n_i^2}{N_A} = \frac{(\num{1.5e10})^2}{\num{5e16}} = \SI{4.50e4}{\cm^{-3}}$.
+
+\begin{itemize}
+    \item \textbf{Caso 1: Contacto óhmico ideal ($s_n \to \infty \implies D_n / s_n \to 0$):}
+    \[
+    J_n = \frac{e D_n n_{p0}}{W_P'} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] = \frac{(\num{1.6e-19}) \times 30 \times (\num{4.50e4})}{\num{5e-4}} \left[ \exp\left(\frac{0.55}{0.026}\right) - 1 \right]
+    \]
+    \[
+    J_n = (\num{4.32e-10}) \times (\num{1.538e9}) \approx \SI{0.665}{\A\per\cm^2}
+    \]
+
+    \item \textbf{Caso 2: Superficie pasivada ($s_n = 0 \implies D_n / s_n \to \infty$):}
+    Al anularse el denominador por la presencia de la barrera dieléctrica de pasivación:
+    \[
+    J_n = \SI{0}{\A\per\cm^2}
+    \]
+\end{itemize}
+
+\textbf{c) Importancia física de la pasivación posterior}
+
+En celdas solares y dispositivos ópticos, la pasivación posterior ($s_n \to 0$) bloquea la recombinación parásita de los portadores minoritarios en la superficie metálica. Esto permite reflejar los portadores hacia la unión para su recolección y reduce drásticamente la corriente de saturación oscura $J_0$, aumentando significativamente la tensión en circuito abierto $V_{oc}$.
+\end{problema}
+
+\newpage
+%===================
+% Problema 10: Unión gradual lineal y caracterización C-V
+%===================
+\begin{problema}[Unión gradual lineal: Caracterización $C-V$, potencial de contacto y campo máximo]
+En una unión gradual lineal de silicio ($T = \SI{300}{\kelvin}, \epsilon = \SI{1.05e-12}{\farad\per\cm}$) de área $A = \SI{1e-3}{\cm^2}$, la densidad de dopado varía como $N_D(x) - N_A(x) = a x$. 
+
+Para este tipo de unión, la capacidad de transición $C(V)$ satisface la ley analítica:
+\[
+C(V) = A \left[ \frac{e a \epsilon^2}{12 (V_B - V)} \right]^{1/3}
+\]
+
+Sobre la muestra se obtienen las siguientes medidas de capacidad en polarización inversa:
+\begin{center}
+\begin{tabular}{cc}
+\hline
+\textbf{Tensión aplicada $V$ (\si{\V})} & \textbf{Capacidad $C$ (\si{\pico\farad})} \\ \hline
+$-1$ & $12.00$ \\
+$-5$ & $9.24$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Demostrar que $1/C^3$ varía linealmente con $V$ y determinar el potencial de contacto $V_B$ y el gradiente de dopado $a$.
+    \item Calcular la anchura de deplesión $W$ y el campo eléctrico máximo $E_{\max}$ a $V = \SI{-5}{\V}$.
+    \item Determinar la anchura de deplesión a tensión nula ($V = 0$).
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{imagenes/tema4/T4_P10_a.png}
+    \captionof{figure}{Representación gráfica de $1/C^3$ frente a la tensión inversa $-V$ para determinar $V_B$ por extrapolación.}
+    \label{fig:t4_p10_a}
+\end{center}
+
+\tcblower
+\textbf{a) Demostración lineal y cálculo de $V_B$ y $a$}
+
+Elevando al cubo la expresión de la capacidad:
+\[
+C^3 = A^3 \frac{e a \epsilon^2}{12 (V_B - V)} \implies \frac{1}{C^3} = \frac{12}{A^3 e a \epsilon^2} (V_B - V) = K (V_B - V)
+\]
+
+Calculamos $1/C^3$ para cada punto medido:
+\begin{itemize}
+    \item Para $V_1 = \SI{-1}{\V}$: $1/C_1^3 = \frac{1}{(\num{12e-12}\,\text{F})^3} = \SI{5.787e32}{\farad^{-3}}$.
+    \item Para $V_2 = \SI{-5}{\V}$: $1/C_2^3 = \frac{1}{(\num{9.24e-12}\,\text{F})^3} = \SI{1.268e33}{\farad^{-3}}$.
+\end{itemize}
+
+Determinamos la pendiente $K = -\frac{\Delta (1/C^3)}{\Delta V}$:
+\[
+K = \frac{\num{1.268e33} - \num{5.787e32}}{5 - 1} = \frac{\num{6.89e32}}{4} = \SI{1.722e32}{\farad^{-3}\V^{-1}}
+\]
+
+Extrapolando la recta $1/C^3 = 0 \implies V = V_B$:
+\[
+\frac{1}{C_1^3} = K (V_B - V_1) \implies V_B = V_1 + \frac{1/C_1^3}{K} = -1 + \frac{\num{5.787e32}}{\num{1.722e32}} = -1 + 3.36 = \SI{2.36}{\V}
+\]
+
+Despejando el parámetro de degradado $a$ a partir de $K = \frac{12}{A^3 e a \epsilon^2}$:
+\[
+a = \frac{12}{A^3 e \epsilon^2 K} = \frac{12}{(\num{1e-3})^3 \times (\num{1.6e-19}) \times (\num{1.05e-12})^2 \times (\num{1.722e32})}
+\]
+\[
+a = \frac{12}{\num{3.039e-20}} \approx \SI{3.95e20}{\cm^{-4}}
+\]
+
+\textbf{b) Anchura $W$ y campo máximo $E_{\max}$ a $V = \SI{-5}{\V}$}
+
+Para uniones graduales lineales, la anchura de la Z.C.E. es $W = \left[ \frac{12 \epsilon (V_B - V)}{e a} \right]^{1/3}$:
+\[
+W(\SI{-5}{\V}) = \left[ \frac{12 \times (\num{1.05e-12}) \times (2.36 - (-5))}{(\num{1.6e-19}) \times (\num{3.95e20})} \right]^{1/3} = \left[ \frac{\num{9.274e-11}}{\num{6.32e2}} \right]^{1/3} = \SI{1.136e-4}{\cm} = \SI{1.14}{\um}
+\]
+
+En una unión gradual lineal, la distribución de campo es parabólica y el campo máximo en el centro se relaciona mediante $E_{\max} = \frac{3}{2} \frac{V_B - V}{W}$:
+\[
+E_{\max}(\SI{-5}{\V}) = \frac{3}{2} \times \frac{\SI{7.36}{\V}}{\num{1.136e-4}\,\text{cm}} \approx \SI{9.72e4}{\V\per\cm}
+\]
+
+\textbf{c) Anchura de deplesión a tensión nula ($V = 0$)}
+
+Evaluando la expresión para $V = 0$:
+\[
+W(0) = \left[ \frac{12 \times (\num{1.05e-12}) \times 2.36}{(\num{1.6e-19}) \times (\num{3.95e20})} \right]^{1/3} = \left[ \frac{\num{2.974e-11}}{\num{6.32e2}} \right]^{1/3} = \SI{7.78e-5}{\cm} = \SI{0.78}{\um}
+\]
 \end{problema}

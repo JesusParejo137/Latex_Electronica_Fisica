@@ -1930,7 +1930,7 @@ La muestra ha sido dopada con impurezas de tipo \textbf{donador} (tipo N) en una
 
 \newpage
 %-----------------------------------------------------
-%-------------- Problema 3 ---------------------------
+%-------------- Problema 3 (Corregido) ---------------
 %-----------------------------------------------------
 \begin{problema}[Nivel de Fermi e ionización parcial de donadores]
 Una barra de semiconductor tipo N posee las siguientes propiedades a $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.026}{\eV}$): $N_c = \SI{2e19}{\cm^{-3}}$, $n_i = \SI{2e10}{\cm^{-3}}$, y contiene $N_D = \SI{1e15}{\cm^{-3}}$ átomos de impurezas donadoras por $\text{cm}^3$ con una energía de ionización $E_C - E_D = \SI{0.03}{\eV}$ y factor de degeneración $g_D = 2$.
@@ -1947,7 +1947,7 @@ Para este tipo de problemas seguimos la metodología estándar: \textbf{Plantear
 \textbf{a) Determinación de $E_F - E_{Fi}$ a $T = \SI{300}{\kelvin}$}
 
 \textit{Paso 1: Planteamiento bajo la hipótesis de ionización total.}
-Asumimos inicialmente que la totalidad de los donadores están ionizados ($N_D^+ = N_D$). Dado que $N_D \gg n_i$, la concentración de electrones libres es:
+Asumimos inicialmente que la totalidad de los donadores están ionizados ($N_D^+ = N_D$). Dado que $N_D \gg n_i$, la concentración de electrones libres en la banda de conducción es:
 \[
 n \approx N_D = \SI{1e15}{\cm^{-3}}
 \]
@@ -1957,9 +1957,9 @@ La densidad de electrones en la banda de conducción se expresa como:
 \[
 n = N_c \exp\left( \frac{E_F - E_C}{k_B T} \right) \implies E_F - E_C = k_B T \ln\left( \frac{N_D}{N_c} \right)
 \]
-Sustituyendo valores numéricos:
+Sustituyendo los valores numéricos del enunciado ($k_B T = \SI{0.026}{\eV}$):
 \[
-E_F - E_C = (\SI{0.026}{\eV}) \ln\left( \frac{\num{1e15}}{\num{2e19}} \right) = (\SI{0.026}{\eV}) \ln(\num{5e-5}) = \SI{-0.2565}{\eV}
+E_F - E_C = (\SI{0.026}{\eV}) \ln\left( \frac{\num{1e15}}{\num{2e19}} \right) = (\SI{0.026}{\eV}) \ln(\num{5e-5}) = \SI{-0.2575}{\eV}
 \]
 
 Por otro lado, relacionando la densidad intrínseca $n_i$ con el nivel intrínseco $E_{Fi}$:
@@ -1967,26 +1967,39 @@ Por otro lado, relacionando la densidad intrínseca $n_i$ con el nivel intrínse
 n_i = N_c \exp\left( \frac{E_{Fi} - E_C}{k_B T} \right) \implies E_{Fi} - E_C = k_B T \ln\left( \frac{n_i}{N_c} \right)
 \]
 \[
-E_{Fi} - E_C = (\SI{0.026}{\eV}) \ln\left( \frac{\num{2e10}}{\num{2e19}} \right) = (\SI{0.026}{\eV}) \ln(\num{1e-9}) = \SI{-0.3367}{\eV}
+E_{Fi} - E_C = (\SI{0.026}{\eV}) \ln\left( \frac{\num{2e10}}{\num{2e19}} \right) = (\SI{0.026}{\eV}) \ln(\num{1e-9}) = \SI{-0.5388}{\eV}
 \]
 
-Restando ambas ecuaciones obtenemos la posición de $E_F$ respecto a $E_{Fi}$:
+Restando ambas ecuaciones obtenemos la posición relativa de $E_F$ respecto a $E_{Fi}$:
 \[
-E_F - E_{Fi} = (E_F - E_C) - (E_{Fi} - E_C) = \SI{-0.2565}{\eV} - (\SI{-0.3367}{\eV}) = \SI{0.2802}{\eV}
+E_F - E_{Fi} = (E_F - E_C) - (E_{Fi} - E_C) = \SI{-0.2575}{\eV} - (\SI{-0.5388}{\eV}) = \SI{0.2813}{\eV}
 \]
 
-\textit{Nota alternativa directa:} La relación se puede obtener en un solo paso dividiendo las expresiones $n/n_i$:
+\textit{Nota alternativa directa:} La relación se puede obtener directamente dividiendo las expresiones $n/n_i$:
 \[
-\frac{n}{n_i} = \exp\left( \frac{E_F - E_{Fi}}{k_B T} \right) \implies 
-\]
-\[
-\implies E_F - E_{Fi} = k_B T \ln\left( \frac{n}{n_i} \right) = (\SI{0.026}{\eV}) \ln\left( \frac{\num{1e15}}{\num{2e10}} \right) = \SI{0.2813}{\eV}
+\frac{n}{n_i} = \exp\left( \frac{E_F - E_{Fi}}{k_B T} \right) \implies E_F - E_{Fi} = k_B T \ln\left( \frac{n}{n_i} \right) = (\SI{0.026}{\eV}) \ln\left( \frac{\num{1e15}}{\num{2e10}} \right) = \SI{0.2813}{\eV}
 \]
 
 \begin{center}
-    \includegraphics[width=0.6\textwidth]{imagenes/tema2/T2P3.png}
-    \captionof{figure}{Diagrama de niveles de energía mostrando la posición relativa de $E_F$ respecto a $E_{Fi}$, $E_C$ y $E_D$.}
-    \label{fig:problema_3_diagrama}
+    % =========================================================================
+    % INSTRUCCIONES PARA EL DIAGRAMA DE BANDAS DE ENERGÍA (FIGURA 1)
+    % =========================================================================
+    % Representar un diagrama vertical de niveles de energía del semiconductor:
+    % 1. Línia horizontal superior: Borde de la banda de conducción E_C.
+    % 2. Línea discontinua muy próxima a E_C (a 0.03 eV por debajo): Nivel donador E_D.
+    % 3. Línea discontinua por debajo de E_C (a 0.2575 eV por debajo): Nivel de Fermi E_F.
+    % 4. Línea discontinua central (a 0.5388 eV por debajo de E_C): Nivel intrínseco E_{Fi}.
+    % 5. Cotas dobles con sus valores numéricos:
+    %    - Entre E_C y E_D: 0.03 eV.
+    %    - Entre E_C y E_F: 0.2575 eV.
+    %    - Entre E_{Fi} y E_F: 0.2813 eV.
+    %    - Entre E_C y E_{Fi}: 0.5388 eV.
+    % =========================================================================
+    \rule{0.8\textwidth}{0.4pt} \\[2ex]
+    \textit{[Insertar aquí Figura 1: Diagrama de niveles de energía que muestre la posición relativa de $E_C$, $E_D$, $E_F$ y $E_{Fi}$ con las cotas numéricas de $E_F - E_D = \SI{-0.2275}{\eV}$ y $E_F - E_{Fi} = \SI{0.2813}{\eV}$]} \\[2ex]
+    \rule{0.8\textwidth}{0.4pt}
+    \captionof{figure}{Diagrama de niveles de energía mostrando la posición relativa de $E_F$ respecto a $E_{Fi}$, $E_C$ y $E_D$ a $T = \SI{300}{\kelvin}$.}
+    \label{fig:problema_3_diagrama_bandas}
 \end{center}
 
 \textit{Paso 3: Verificación de la hipótesis de ionización total.}
@@ -1996,21 +2009,21 @@ Calculamos la fracción real de donadores ionizados mediante la estadística de 
 \]
 Donde la separación $E_F - E_D$ es:
 \[
-E_F - E_D = (E_F - E_C) + (E_C - E_D) = \SI{-0.2565}{\eV} + \SI{0.03}{\eV} = \SI{-0.2265}{\eV}
+E_F - E_D = (E_F - E_C) + (E_C - E_D) = \SI{-0.2575}{\eV} + \SI{0.03}{\eV} = \SI{-0.2275}{\eV}
 \]
 Sustituyendo en la fracción de ionización:
 \[
-\frac{N_D^+}{N_D} = \frac{1}{1 + 2 \exp\left( \frac{-0.2265}{0.026} \right)} = \frac{1}{1 + 2 \exp(-8.7115)} = \frac{1}{1 + \num{0.000329}} \approx 0.9997
+\frac{N_D^+}{N_D} = \frac{1}{1 + 2 \exp\left( \frac{-0.2275}{0.026} \right)} = \frac{1}{1 + 2 \exp(-8.750)} = \frac{1}{1 + \num{0.000319}} \approx 0.9997
 \]
-Puesto que el $99.97\%$ ($\approx 0.9991$) de las impurezas están ionizadas, la hipótesis planteada es \textbf{completamente válida} y la solución queda aceptada.
+Puesto que el $99.97\%$ de las impurezas están ionizadas, la hipótesis planteada es \textbf{completamente válida} y la solución queda aceptada.
 
 \textbf{b) Temperatura para un $25\%$ de ionización donadora}
 
 Buscamos la temperatura $T$ tal que la fracción ionizada sea $\frac{N_D^+}{N_D} = 0.25$, lo que implica que los donadores neutros (no ionizados) representan el $75\%$ ($\frac{N_D^0}{N_D} = 0.75$).
 
-Al haber menor ionización, la temperatura será sustancialmente inferior a \SI{300}{\kelvin}. A bajas temperaturas la densidad intrínseca $n_i$ es aún más insignificante, por lo que podemos mantener la aproximación de que los electrones libres provienen únicamente de donadores ionizados ($n = N_D^+ = 0.25 N_D$).
+Al haber menor ionización, la temperatura será sustancialmente inferior a \SI{300}{\kelvin}. A bajas temperaturas la densidad intrínseca $n_i$ es insignificante, por lo que los electrones libres provienen únicamente de donadores ionizados ($n = N_D^+ = 0.25 N_D$).
 
-Relacionamos la proporción de donadores ionizados e hidrogenoides neutros:
+Relacionamos la proporción de donadores ionizados y neutros:
 \[
 \frac{N_D^+}{N_D^0} = \frac{1}{g_D} \exp\left( \frac{E_D - E_F}{k_B T} \right)
 \]
@@ -2042,6 +2055,26 @@ Resolviendo numéricamente esta ecuación trascendente para $T$, se obtiene:
 \[
 T \approx \SI{40.05}{\kelvin}
 \]
+
+\begin{center}
+    % =========================================================================
+    % INSTRUCCIONES PARA LA GRÁFICA DE IONIZACIÓN VS TEMPERATURA (FIGURA 2)
+    % =========================================================================
+    % Representar una gráfica cartesiana:
+    % 1. Eje X: Temperatura T en Kelvin (de 0 K a 300 K).
+    % 2. Eje Y: Fracción de donadores ionizados N_D^+ / N_D (de 0 a 1.0 / 0% a 100%).
+    % 3. Curva sigmoide suave que crece desde 0 a T = 0 K hasta alcanzar la saturación 
+    %    (~1.0) antes de los 100 K.
+    % 4. Puntos singulares marcados sobre la curva:
+    %    - Punto 1: (40.05 K, 0.25) indicando la zona de congelamiento de portadores ("freeze-out").
+    %    - Punto 2: (300 K, 0.9997) indicando la zona de ionización completa/extrínsica.
+    % =========================================================================
+    \rule{0.8\textwidth}{0.4pt} \\[2ex]
+    \textit{[Insertar aquí Figura 2: Gráfica de la fracción de ionización $N_D^+/N_D$ frente a la temperatura $T$, marcando los puntos de operación a \SI{40.05}{\kelvin} ($25\%$) y \SI{300}{\kelvin} ($99.97\%$)]} \\[2ex]
+    \rule{0.8\textwidth}{0.4pt}
+    \captionof{figure}{Fracción de ionización de impurezas donadoras en función de la temperatura, mostrando la transición entre el régimen de congelamiento de portadores y el régimen extrínseco.}
+    \label{fig:problema_3_grafica_ionizacion}
+\end{center}
 \end{problema}
 
 \newpage
@@ -2711,7 +2744,7 @@ Una muestra de Silicio tipo P está dopada con $N_A = \SI{2e16}{\cm^{-3}}$ átom
 
 1. \textit{Cálculo de $E_F - E_V$ bajo la hipótesis $p \approx N_A = \SI{2e16}{\cm^{-3}}$:}
 \[
-E_F - E_V = k_B T \ln\left( \frac{N_v}{N_A} \right) = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{1.04e19}}{\num{2e16}} \right) = (\SI{0.0259}{\eV}) \ln(520) = \SI{0.1620}{\eV}
+E_F - E_V = k_B T \ln\left( \frac{N_v}{N_A} \right) = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{1.04e19}}{\num{2e16}} \right)= \SI{0.1620}{\eV}
 \]
 
 2. \textit{Evaluación del grado de ionización de aceptadores:}
@@ -2722,10 +2755,7 @@ E_A - E_F = (E_A - E_V) - (E_F - E_V) = \SI{0.045}{\eV} - \SI{0.1620}{\eV} = \SI
 
 Empleando la estadística de ocupación aceptadora ($g_A = 4$):
 \[
-\frac{N_A^-}{N_A} = \frac{1}{1 + g_A \exp\left( \frac{E_A - E_F}{k_B T} \right)} = \frac{1}{1 + 4 \exp\left( \frac{-0.1170}{0.0259} \right)} = \frac{1}{1 + 4 \exp(-4.5174)}
-\]
-\[
-\frac{N_A^-}{N_A} = \frac{1}{1 + 4 \cdot (\num{0.01092})} = \frac{1}{1 + \num{0.04368}} \approx 0.958 \quad (95.8\%)
+\frac{N_A^-}{N_A} = \frac{1}{1 + g_A \exp\left( \frac{E_A - E_F}{k_B T} \right)} = \frac{1}{1 + 4 \exp\left( \frac{-0.1170}{0.0259} \right)} = \frac{1}{1 + 4 \exp(-4.5174)} \approx 0.958
 \]
 El $95.8\%$ de los aceptadores están ionizados a temperatura ambiente, por lo que la hipótesis de ionización casi total es una buena aproximación práctica a $T = \SI{300}{\kelvin}$.
 
@@ -2827,18 +2857,18 @@ V_{\text{celda}} = a^3 = (\num{5.65e-8})^3 \approx \SI{1.8036e-22}{\cm^3}
 
 1. \textit{Concentración intrínseca ($n_i$ con $k_B T = \SI{0.0259}{\eV}$):}
 \[
-n_i = \sqrt{N_c N_v} \exp\left( -\frac{E_g}{2 k_B T} \right) = \sqrt{(\num{4.7e17})(\num{7.0e18})} \exp\left( -\frac{1.42}{2 \cdot 0.0259} \right)
-\]
-\[
-n_i = (\num{1.8138e18}) \cdot \exp(-27.4131) = (\num{1.8138e18}) \cdot (\num{1.2435e-12}) \approx \SI{2.255e6}{\cm^{-3}}
+\begin{array}{rl}
+    n_i & \displaystyle = \sqrt{N_c N_v} \exp\left( -\frac{E_g}{2 k_B T} \right) = \sqrt{(\num{4.7e17})(\num{7.0e18})} \exp\left( -\frac{1.42}{2 \cdot 0.0259} \right) \\[16pt]
+    & \displaystyle = (\num{1.8138e18}) \cdot \exp(-27.4131) \approx \SI{2.255e6}{\cm^{-3}}
+\end{array}
 \]
 
 2. \textit{Posición del nivel de Fermi intrínseco ($E_{Fi} - E_V$):}
 \[
-E_{Fi} - E_V = \frac{E_g}{2} + \frac{1}{2} k_B T \ln\left( \frac{N_v}{N_c} \right) = \frac{1.42}{2} + \frac{0.0259}{2} \ln\left( \frac{\num{7.0e18}}{\num{4.7e17}} \right)
-\]
-\[
-E_{Fi} - E_V = \SI{0.710}{\eV} + (\SI{0.01295}{\eV}) \ln(14.894) = \SI{0.710}{\eV} + \SI{0.0350}{\eV} = \SI{0.7450}{\eV}
+\begin{array}{rl}
+    E_{Fi} - E_V & \displaystyle = \frac{E_g}{2} + \frac{1}{2} k_B T \ln\left( \frac{N_v}{N_c} \right) = \frac{1.42}{2} + \frac{0.0259}{2} \ln\left( \frac{\num{7.0e18}}{\num{4.7e17}} \right) \\[16pt]
+    & \displaystyle = \SI{0.710}{\eV} + (\SI{0.01295}{\eV}) \ln(14.894) = \SI{0.7450}{\eV}
+\end{array}
 \]
 Debido a que $N_v > N_c$, el nivel de Fermi intrínseco se ubica a \SI{0.7450}{\eV} por encima de $E_V$ (ligeramente por encima de la mitad del gap, $E_g/2 = \SI{0.710}{\eV}$).
 
