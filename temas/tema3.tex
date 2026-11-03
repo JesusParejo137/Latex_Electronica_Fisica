@@ -23,7 +23,7 @@ Un semiconductor en equilibrio termodinámico y de composición homogénea se ca
 
 En el seno de un semiconductor, el movimiento de los portadores de carga ($q = \pm e$) se halla gobernado por dos interacciones fundamentales:
 \begin{enumerate}
-    \item \textbf{Potencial periódico de la red cristalina:} Permite describir el comportamiento dinámico de electrones y huecos como el de partículas "cuasilibres" caracterizadas por una \textbf{masa efectiva} ($m^*$).
+    \item \textbf{Potencial periódico de la red cristalina:} Permite describir el comportamiento dinámico de electrones y huecos como el de partículas ``cuasilibres'' caracterizadas por una \textbf{masa efectiva} ($m^*$).
     \item \textbf{Mecanismos de dispersión (\textit{scattering}):} Interacciones aperiódicas colisionales debidas a vibraciones de la red (fonones) o impurezas ionizadas. Estas colisiones modifican aleatoriamente la dirección del movimiento de los portadores tras un intervalo temporal medio denominado \textbf{tiempo de relajación del momento} ($\tau \approx \SI{1e-13}{\second}$).
 \end{enumerate}
 
@@ -90,7 +90,7 @@ donde se definen las \textbf{conductividades} parciales de electrones ($\sigma_n
 \]
 
 \begin{concepto}[Sentido relativo de las corrientes de electrones y huecos]
-A pesar de que los electrones ($q = -e$) y los huecos ($q = +e$) se desplazan en sentidos opuestos en presencia de un mismo campo eléctrico $\vec{E}$, sus contribuciones a la corriente de arrastre se suman vectorialmente en el **mismo sentido** (el del campo eléctrico $\vec{E}$). Esto se debe al signo negativo combinado de la carga del electrón con su sentido opuesto de velocidad.
+A pesar de que los electrones ($q = -e$) y los huecos ($q = +e$) se desplazan en sentidos opuestos en presencia de un mismo campo eléctrico $\vec{E}$, sus contribuciones a la corriente de arrastre se suman vectorialmente en el \textbf{mismo sentido} (el del campo eléctrico $\vec{E}$). Esto se debe al signo negativo combinado de la carga del electrón con su sentido opuesto de velocidad.
 \end{concepto}
 
 La \textbf{densidad de corriente de arrastre total} ($\vec{J}_a$) resulta de la suma de ambas contribuciones:
@@ -182,7 +182,7 @@ donde $\rho = \frac{1}{\sigma}$ es la \textbf{resistividad} del material ($\Omeg
 
 \subsection{Efectos de campo eléctrico elevado y movilidad diferencial negativa}
 
-A medida que el campo eléctrico aplicado aumenta por encima de $\SI{1e3}{\volt\per\cm}$, la velocidad de arrastre de los portadores deja de ser proporcional al campo. Los electrones adquieren una energía cinética media muy superior a la energía térmica de la red ($k_B T$), convirtiéndose en electrones "calientes" (\textit{hot carriers}).
+A medida que el campo eléctrico aplicado aumenta por encima de $\SI{1e3}{\volt\per\cm}$, la velocidad de arrastre de los portadores deja de ser proporcional al campo. Los electrones adquieren una energía cinética media muy superior a la energía térmica de la red ($k_B T$), convirtiéndose en electrones ``calientes'' (\textit{hot carriers}).
 
 \begin{figure}[h!]
     \centering
@@ -199,7 +199,7 @@ En semiconductores con una estructura de bandas compleja como el Arseniuro de Ga
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{imagenes/Tema3/T3_4.png}
+    \includegraphics[width=0.5\textwidth]{imagenes/Tema3/T3_4.png}
     \caption{Estructura de la banda de conducción del $\text{GaAs}$ con el mínimo central $\Gamma$ de masa efectiva pequeña y los valles satélite $L$ de elevada masa efectiva, origen del mecanismo de transferencia electrónica (Efecto Gunn).}
     \label{fig:efecto_gunn}
 \end{figure}
@@ -213,6 +213,7 @@ En semiconductores con una estructura de bandas compleja como el Arseniuro de Ga
     Esta propiedad de \textbf{resistencia diferencial negativa} es la base del funcionamiento de los \textbf{diodos Gunn}, empleados en la generación de oscilaciones de alta frecuencia en microondas.
 \end{enumerate}
 
+\newpage
 \subsection{Dependencia de la movilidad con la concentración de impurezas}
 
 La movilidad de los portadores está determinada por la frecuencia de las colisiones que sufren en la red cristalina. Los dos mecanismos de dispersión principales son:
@@ -228,7 +229,7 @@ Aplicando la \textbf{Regla de Matthiessen}, la tasa total de colisiones es la su
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{imagenes/Tema3/T3_5.png}
+    \includegraphics[width=0.5\textwidth]{imagenes/Tema3/T3_5.png}
     \caption{Variación de la movilidad de electrones y huecos en el Silicio en función de la concentración total de impurezas ionizadas ($N_d + N_a$) a $T = \SI{300}{\kelvin}$.}
     \label{fig:movilidad_impurificacion}
 \end{figure}
@@ -359,7 +360,7 @@ Puesto que en equilibrio termodinámico la densidad de corriente neta de cada ti
 \[
 \frac{dE_F(x)}{dx} = 0 \implies E_F = \text{constante}
 \]
-
+\newpage
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{imagenes/Tema3/T3_8.png}
@@ -402,11 +403,12 @@ n = n_0 + \Delta n, \qquad p = p_0 + \Delta p
 \]
 En estas condiciones, $n \cdot p \neq n_i^2$, por lo que un único nivel de Fermi deja de ser válido para describir simultáneamente ambas poblaciones.
 
-Para formalizar estadísticamente las concentraciones fuera del equilibrio conservando las expresiones de tipo Boltzmann, se definen dos **cuasiniveles de Fermi** independientes: $E_{Fn}$ para los electrones y $E_{Fp}$ para los huecos:
+Para formalizar estadísticamente las concentraciones fuera del equilibrio conservando las expresiones de tipo Boltzmann, se definen dos \textbf{cuasiniveles de Fermi} independientes: $E_{Fn}$ para los electrones y $E_{Fp}$ para los huecos:
 \[
 n = N_C \exp\left( \frac{E_{Fn} - E_C}{k_B T} \right), \qquad p = N_V \exp\left( \frac{E_V - E_{Fp}}{k_B T} \right)
 \]
 
+\newpage
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{imagenes/Tema3/T3_10.png}
@@ -484,6 +486,13 @@ Los procesos de generación y recombinación (g-r) son los mecanismos físicos q
     \item \textbf{Recombinación:} Es el proceso inverso de desexcitación. Un electrón de la banda de conducción con exceso de energía transita hacia un estado vacío en la banda de valencia, aniquilando el par electrón-hueco y cediendo su energía a la red cristalina (en forma de calor o fonones) o emitiendo un fotón.
 \end{itemize}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.75\textwidth]{imagenes/Tema3/T3_2_a.png}
+    \caption{Generación y recombinación de un par electrón-hueco.}
+    \label{fig:T3_2_a}
+\end{figure}
+
 \subsection*{Formalismo macroscópico}
 
 A nivel macroscópico, la variación temporal de la densidad de electrones debido exclusivamente a los procesos de generación y recombinación se modela mediante la siguiente ecuación diferencial:
@@ -513,6 +522,23 @@ Podemos analizar la dinámica del semiconductor en dos regímenes principales:
     donde el término $G_{ext} \tau_n$ representa la concentración inicial máxima $\delta n(0)$ justo en el momento en que cesa la excitación.
 \end{enumerate}
 
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.45\textwidth}
+        \centering
+        \includegraphics[width=0.95\linewidth]{imagenes/Tema3/T3_2_b.PNG}
+        \caption{Creación de un exceso en la concentración de electrones y huecos por radiación electromagnética incidente.}
+        \label{fig:T3_2_b.PNG}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.95\linewidth]{imagenes/Tema3/T3_2_c.PNG}
+        \caption{Recombinación del exceso de portadores reestableciendo el equilibrio térmico.}
+        \label{fig:T3_2_c.PNG}
+    \end{minipage}
+\end{figure}
+
 \begin{concepto}[Tiempo de vida media total]
 La vida media ($\tau$) representa el tiempo promedio que un portador permanece libre en su banda de energía antes de recombinarse. En un semiconductor real operan varios mecanismos de recombinación de forma simultánea. La vida media equivalente o efectiva se obtiene sumando las inversas de las vidas medias de cada proceso individual ($\tau_i$):
 \[
@@ -536,17 +562,7 @@ Los procesos banda a banda consisten en transiciones directas de portadores entr
     \]
 \end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.7\textwidth]{imagenes/Tema3/T3_11.png}
-    \caption{Esquema representativo de los procesos de generación (absorción de fotones $h\nu$) y recombinación (emisión radiativa o no radiativa) de pares electrón-hueco mediante transiciones directas banda a banda.}
-    \label{fig:procesos_banda_banda}
-\end{figure}
-
 \newpage
-
-% !TEX root = ../main.tex
-
 \subsection{Modelo analítico de la recombinación banda a banda}
 
 Para formular cuantitativamente la variación temporal de la concentración de portadores debido a transiciones directas entre la banda de conducción y la de valencia, se plantea el balance entre la tasa de generación y la de recombinación:
@@ -606,7 +622,6 @@ Dependiendo del tipo de impurificación dominante, el tiempo de vida media del e
     \]
 \end{itemize}
 
-\newpage
 %========================================================
 %======= SUBSECCIÓN. PROCESOS A TRAVÉS DE CENTROS =======
 %========================================================
@@ -728,7 +743,7 @@ Esta corriente establece la \textbf{condición de contorno} necesaria para resol
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.65\textwidth]{imagenes/Tema3/T3_15.png}
+    \includegraphics[width=0.35\textwidth]{imagenes/Tema3/T3_15.png}
     \caption{Balance de corrientes en la frontera: la corriente de difusión proveniente del seno del semiconductor alimenta la corriente de recombinación en la superficie.}
     \label{fig:condicion_contorno_superficial}
 \end{figure}
@@ -986,16 +1001,16 @@ Bajo la condición de \textbf{débil inyección} y por la \textbf{hipótesis de 
 \newpage
 
 \begin{center}
-    \includegraphics[width=0.55\linewidth]{imagenes/Tema3/T3_22.png}
+    \includegraphics[width=0.75\linewidth]{imagenes/Tema3/T3_22.png}
 \end{center}
 
 \textbf{Interpretación física:} Tras el cese de la excitación externa, el exceso de portadores decae exponencialmente hasta anularse, devolviendo el semiconductor a sus concentraciones de equilibrio térmico ($n_0, p_0$). La constante de tiempo que gobierna esta relajación es la vida media de los portadores minoritarios ($\tau_{p0}$).
 \end{ejemplo}
 
 \begin{ejemplo}[Determinar la dependencia espacial estacionaria del exceso de concentración de portadores]
-Considera un semiconductor tipo p homogéneo y de extensión infinita en una dimensión. Suponer campo eléctrico aplicado nulo ($E = 0$). El exceso de portadores es generado localmente en $x = 0$. Dichos portadores comenzarán a difundirse en las direcciones $x$ positiva y negativa. Calcular la distribución espacial del exceso de concentración de portadores $\delta n(x)$ en régimen estacionario.
+Considera un semiconductor tipo P homogéneo y de extensión infinita en una dimensión. Suponer campo eléctrico aplicado nulo ($E = 0$). El exceso de portadores es generado localmente en $x = 0$. Dichos portadores comenzarán a difundirse en las direcciones $x$ positiva y negativa. Calcular la distribución espacial del exceso de concentración de portadores $\delta n(x)$ en régimen estacionario.
 \tcblower
-Para un semiconductor tipo p, planteamos la ecuación de transporte ambipolar para la densidad de electrones minoritarios en exceso ($\delta n$):
+Para un semiconductor tipo P, planteamos la ecuación de transporte ambipolar para la densidad de electrones minoritarios en exceso ($\delta n$):
 \[
 D_n \frac{\partial^2 (\delta n)}{\partial x^2} + \mu_n E \frac{\partial (\delta n)}{\partial x} + g' - \frac{\delta n}{\tau_{n0}} = \frac{\partial (\delta n)}{\partial t}
 \]
@@ -1047,7 +1062,7 @@ Unificando ambas regiones mediante la función valor absoluto, obtenemos el perf
 Por la condición de cuasi-neutralidad eléctrica ($\delta p(x) \approx \delta n(x)$), el exceso de huecos mayoritarios presenta exactamente la misma distribución perfilada.
 
 \begin{center}
-    \includegraphics[width=0.55\linewidth]{imagenes/Tema3/T3_23.png}
+    \includegraphics[width=0.85\linewidth]{imagenes/Tema3/T3_23.png}
 \end{center}
 
 \textbf{Interpretación física:} La concentración de portadores en exceso alcanza su valor máximo $\delta n(0)$ en el plano de generación y disminuye exponencialmente a medida que los portadores se difunden hacia las regiones adyacentes mientras se recombinan. La longitud de difusión $L_n$ representa la distancia media que se desplaza un portador minoritario por difusión antes de recombinarse con un portador mayoritario.
@@ -1264,7 +1279,7 @@ Determinar:
 % ==========================================
 \section{Soluciones de la ecuación de continuidad}
 
-En el estudio de dispositivos semiconductores, el análisis dinámico se simplifica frecuentemente considerando el \textbf{régimen estacionario} ($\frac{\partial \delta n}{\partial t} = 0$) y **despreciando el término de arrastre** por campo eléctrico ($\vec{E} \approx 0$). Bajo estas hipótesis, la ecuación de continuidad unidimensional para el exceso de portadores minoritarios (por ejemplo, electrones $\delta n$) adopta la forma diferencial simplificada:
+En el estudio de dispositivos semiconductores, el análisis dinámico se simplifica frecuentemente considerando el \textbf{régimen estacionario} ($\frac{\partial \delta n}{\partial t} = 0$) y \textbf{despreciando el término de arrastre} por campo eléctrico ($\vec{E} \approx 0$). Bajo estas hipótesis, la ecuación de continuidad unidimensional para el exceso de portadores minoritarios (por ejemplo, electrones $\delta n$) adopta la forma diferencial simplificada:
 \[
 D_n \frac{d^2 \delta n}{dx^2} - \frac{\delta n}{\tau_n} + G = 0
 \]
@@ -1339,7 +1354,7 @@ Salvo en discontinuidades o fuentes puntuales ideales, la función del exceso de
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{imagenes/Tema3/T3_30_a.png}
+    \includegraphics[width=0.9\textwidth]{imagenes/Tema3/T3_30_a.png}
 \end{figure}
 
 \paragraph{3. Recombinación superficial}
@@ -1495,11 +1510,9 @@ En el caso ideal de una superficie perfectamente pasivada o una frontera pasiva 
     \end{itemize}
 \end{enumerate}
 
-\newpage
-
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{imagenes/Tema3/T3_30_b.png}
+    \includegraphics[width=0.95\textwidth]{imagenes/Tema3/T3_30_b.png}
 \end{figure}
 
 \newpage
@@ -1507,15 +1520,21 @@ En el caso ideal de una superficie perfectamente pasivada o una frontera pasiva 
 %====== SECCIÓN. PROBLEMAS RESUELTOS ===========
 %===============================================
 \seccionproblemas
-%===============================================
-%================= PROBLEMA 1 ==================
-%===============================================
-\begin{problema}[Campo eléctrico y tensión en una barra de Silicio intrínseco]
-Una barra de Si intrínseco homogéneo tiene las dimensiones de la figura ($50\,\mu\text{m} \times 100\,\mu\text{m} \times 3\,\text{mm}$). Determinar el campo eléctrico en la barra y la tensión que es preciso aplicar entre sus extremos para que por ella circule una corriente de $1\,\mu\text{A}$.
+\begin{problema}[Conductividad y tensión aplicada en una barra de Silicio intrínseco y extrínseco]
+Se dispone de una barra de Silicio de dimensiones $50\,\mu\text{m} \times 100\,\mu\text{m} \times 3\,\text{mm}$. Se desea determinar la diferencia de potencial que es preciso aplicar entre sus extremos para que por ella circule una corriente de $1\,\mu\text{A}$ en los siguientes dos casos:
+
+\begin{enumerate}[label=\alph*)]
+    \item La muestra es de Silicio intrínseco homogéneo. Determinar también el campo eléctrico en el interior de la barra.
+    \item La muestra se dopa uniformemente con impurezas donadoras ionizadas en una densidad $N_d = 10^{15}\,\text{cm}^{-3}$ (Silicio extrínseco tipo N).
+\end{enumerate}
 
 \textbf{Datos:} $n_i = 1,45 \times 10^{10}\,\text{cm}^{-3}$, $\mu_n = 1500\,\text{cm}^2/(\text{V}\cdot\text{s})$, $\mu_p = 475\,\text{cm}^2/(\text{V}\cdot\text{s})$.
+
+\begin{center}
+    \includegraphics[width=0.55\linewidth]{imagenes/Tema3/T3_P1_a.png}
+\end{center}
 \tcblower
-A partir de la geometría dada, calculamos la sección transversal $A$ y la longitud $L$ en centímetros:
+A partir de las dimensiones geométricas de la barra, calculamos la sección transversal $A$ y la longitud $L$ en centímetros:
 \[
 A = (50 \times 10^{-4}\,\text{cm}) \times (100 \times 10^{-4}\,\text{cm}) = 5 \times 10^{-5}\,\text{cm}^2
 \]
@@ -1523,64 +1542,54 @@ A = (50 \times 10^{-4}\,\text{cm}) \times (100 \times 10^{-4}\,\text{cm}) = 5 \t
 L = 3\,\text{mm} = 0,3\,\text{cm}
 \]
 
-\paragraph{1. Conductividad intrínseca ($\sigma_i$)}
-La conductividad del silicio intrínseco responde a las contribuciones de electrones y huecos:
+\paragraph{a) Silicio intrínseco}
+
+1. \textbf{Conductividad intrínseca ($\sigma_i$):}
+La conductividad del silicio puro incluye las contribuciones de electrones y huecos generados térmicamente:
 \[
 \sigma_i = e n_i (\mu_n + \mu_p)
 \]
-Sustituyendo los valores numéricos:
+Sustituyendo los valores numéricos ($e = 1,6 \times 10^{-19}\,\text{C}$):
 \[
 \sigma_i = (1,6 \times 10^{-19}\,\text{C}) \times (1,45 \times 10^{10}\,\text{cm}^{-3}) \times (1500 + 475)\,\text{cm}^2/(\text{V}\cdot\text{s}) = 4,582 \times 10^{-6}\,(\Omega\cdot\text{cm})^{-1}
 \]
 
-\paragraph{2. Densidad de corriente y campo eléctrico}
-Para una corriente $I = 1\,\mu\text{A} = 10^{-6}\,\text{A}$, la densidad de corriente $J$ es:
+2. \textbf{Densidad de corriente y campo eléctrico ($E$):}
+Para establecer una corriente $I = 1\,\mu\text{A} = 10^{-6}\,\text{A}$, la densidad de corriente $J$ necesaria es:
 \[
 J = \frac{I}{A} = \frac{10^{-6}\,\text{A}}{5 \times 10^{-5}\,\text{cm}^2} = 0,02\,\text{A/cm}^2
 \]
 
-A partir de la forma local de la ley de Ohm ($J = \sigma_i E$), despejamos el campo eléctrico $E$:
+A partir de la ley de Ohm microscópica ($J = \sigma_i E$), despejamos el campo eléctrico $E$:
 \[
 E = \frac{J}{\sigma_i} = \frac{0,02\,\text{A/cm}^2}{4,582 \times 10^{-6}\,(\Omega\cdot\text{cm})^{-1}} \approx 4365\,\text{V/cm} = 4,365\,\text{kV/cm}
 \]
 
-\paragraph{3. Tensión aplicada y resistencia}
-Considerando un campo eléctrico uniforme a lo largo del cristal, la diferencia de potencial $V$ entre los extremos de la barra resulta:
+3. \textbf{Tensión aplicada y resistencia equivalente:}
+Considerando un campo eléctrico uniforme a lo largo del cristal, la diferencia de potencial $V$ resulta:
 \[
-V = E \cdot L = 4365\,\text{V/cm} \times 0,3\,\text{cm} \approx 1309,5\,\text{V} \quad (\approx 1308\,\text{V con redondeos intermedios})
+V = E \cdot L = (4365\,\text{V/cm}) \times 0,3\,\text{cm} \approx 1309,5\,\text{V} \quad (\approx 1308\,\text{V con redondeos intermedios})
 \]
 
-La resistencia eléctrica equivalente de la muestra es:
+La resistencia eléctrica macroscópica de la barra es:
 \[
-R = \frac{V}{I} = \frac{1309,5\,\text{V}}{10^{-6}\,\text{A}} \approx 1309,5\,\text{M}\Omega
+R_i = \frac{V}{I} = \frac{1309,5\,\text{V}}{10^{-6}\,\text{A}} \approx 1309,5\,\text{M}\Omega
 \]
 
-Debido a la baja concentración natural de portadores libres en el silicio puro a temperatura ambiente, el material presenta una elevada resistencia, requiriéndose una diferencia de potencial superior a $1,3\,\text{kV}$ para establecer una corriente tan pequeña como $1\,\mu\text{A}$.
-
+Debido a la baja concentración natural de portadores libres en el silicio puro a temperatura ambiente, la muestra presenta una elevada resistencia, requiriéndose una diferencia de potencial superior a $1,3\,\text{kV}$ para establecer una corriente tan pequeña como $1\,\mu\text{A}$.
 \begin{center}
-    \includegraphics[width=0.55\linewidth]{imagenes/Tema3/T3_P1.png}
+    \includegraphics[width=0.85\linewidth]{imagenes/Tema3/T3_P1.png}
 \end{center}
 
-\end{problema}
+\paragraph{b) Silicio extrínseco tipo N ($N_d = 10^{15}\,\text{cm}^{-3}$)}
 
-\newpage
-%===============================================
-%================= PROBLEMA 2 ==================
-%===============================================
-\begin{problema}[Tensión aplicada en una barra de Silicio extrínseco]
-Se dispone de una barra de Si extrínseco con una concentración de impurezas donadoras ionizadas de $10^{15}\,\text{cm}^{-3}$ y unas dimensiones como las del problema anterior ($50\,\mu\text{m} \times 100\,\mu\text{m} \times 3\,\text{mm}$). Determinar la diferencia de potencial a aplicar entre los extremos de la muestra semiconductora para que circule por ella una corriente de $1\,\mu\text{A}$.
-
-\textbf{Datos:} $n_i = 1,45 \times 10^{10}\,\text{cm}^{-3}$, $\mu_n = 1500\,\text{cm}^2/(\text{V}\cdot\text{s})$, $\mu_p = 475\,\text{cm}^2/(\text{V}\cdot\text{s})$.
-\tcblower
-A partir de la geometría de la barra del problema anterior, se tienen una sección transversal $A = 5 \times 10^{-5}\,\text{cm}^2$ y una longitud $L = 0,3\,\text{cm}$.
-
-\paragraph{1. Densidad de electrones y conductividad extrínseca ($\sigma$)}
-Puesto que la densidad de impurezas donadoras ionizadas $N_d = 10^{15}\,\text{cm}^{-3}$ es mucho mayor que la concentración intrínseca ($N_d \gg n_i$), el semiconductor es fuertemente extrínseco de tipo N y la densidad de electrones mayoritarios coincide prácticamente con el dopado:
+1. \textbf{Densidad de portadores y conductividad extrínseca ($\sigma$):}
+Puesto que la densidad de donadores ionizados $N_d = 10^{15}\,\text{cm}^{-3}$ supera ampliamente a la concentración intrínseca ($N_d \gg n_i$), el semiconductor es fuertemente extrínseco y la densidad de electrones mayoritarios coincide prácticamente con el dopado:
 \[
 n \approx N_d = 10^{15}\,\text{cm}^{-3}
 \]
 
-La concentración de huecos minoritarios $p = n_i^2 / n \approx 2,10 \times 10^5\,\text{cm}^{-3}$ es despreciable frente a $n$. Por lo tanto, la conductividad eléctrica de la muestra se simplifica a:
+La concentración de huecos minoritarios $p = n_i^2 / n \approx 2,10 \times 10^5\,\text{cm}^{-3}$ es despreciable frente a $n$. La conductividad eléctrica se simplifica a:
 \[
 \sigma = e (n \mu_n + p \mu_p) \approx e N_d \mu_n
 \]
@@ -1588,31 +1597,29 @@ La concentración de huecos minoritarios $p = n_i^2 / n \approx 2,10 \times 10^5
 \sigma = (1,6 \times 10^{-19}\,\text{C}) \times (10^{15}\,\text{cm}^{-3}) \times 1500\,\text{cm}^2/(\text{V}\cdot\text{s}) = 0,24\,(\Omega\cdot\text{cm})^{-1}
 \]
 
-\paragraph{2. Campo eléctrico y tensión aplicada}
-Para establecer una corriente de $I = 1\,\mu\text{A}$, la densidad de corriente es $J = \frac{I}{A} = 0,02\,\text{A/cm}^2$. Utilizando la ley de Ohm microscópica ($J = \sigma E$), el campo eléctrico necesario resulta:
+2. \textbf{Campo eléctrico y tensión aplicada:}
+Con la misma densidad de corriente $J = 0,02\,\text{A/cm}^2$, el campo eléctrico necesario resulta:
 \[
 E = \frac{J}{\sigma} = \frac{0,02\,\text{A/cm}^2}{0,24\,(\Omega\cdot\text{cm})^{-1}} \approx 8,33 \times 10^{-2}\,\text{V/cm}
 \]
 
-La diferencia de potencial $V$ que debe aplicarse entre los extremos de la muestra de longitud $L = 0,3\,\text{cm}$ es:
+La diferencia de potencial a aplicar entre los extremos de la muestra es:
 \[
 V = E \cdot L = (8,33 \times 10^{-2}\,\text{V/cm}) \times 0,3\,\text{cm} = 0,025\,\text{V} = 25\,\text{mV}
 \]
 
-\paragraph{3. Resistencia eléctrica equivalente}
-La resistencia macroscópica de la barra semiconductora pasa a ser:
+3. \textbf{Resistencia eléctrica y comparación con el caso intrínseco:}
+La resistencia macroscópica del semiconductor dopado pasa a ser:
 \[
-R = \frac{V}{I} = \frac{0,025\,\text{V}}{10^{-6}\,\text{A}} = 25\,\text{k}\Omega
+R_e = \frac{V}{I} = \frac{0,025\,\text{V}}{10^{-6}\,\text{A}} = 25\,\text{k}\Omega
 \]
 
-Al impurificar el silicio con donadores, la conductividad aumenta drásticamente y la resistencia eléctrica disminuye notablemente con respecto al caso intrínseco (pasando de $1309,5\,\text{M}\Omega$ a tan solo $25\,\text{k}\Omega$). Esto permite establecer la misma corriente de $1\,\mu\text{A}$ aplicando una tensión de apenas $25\,\text{mV}$, frente a los $1,31\,\text{kV}$ que se requerían en el material puro.
+Al impurificar el silicio con donadores, la conductividad eléctrica aumenta drásticamente y la resistencia disminuye en más de cuatro órdenes de magnitud (pasando de $1309,5\,\text{M}\Omega$ a tan solo $25\,\text{k}\Omega$). Esto permite establecer la misma corriente de $1\,\mu\text{A}$ aplicando una tensión de apenas $25\,\text{mV}$, frente a los $1,31\,\text{kV}$ requeridos en el material puro.
 
 \begin{center}
-    \includegraphics[width=0.55\linewidth]{imagenes/Tema3/T3_P2.png}
+    \includegraphics[width=0.85\linewidth]{imagenes/Tema3/T3_P2.png}
 \end{center}
-
 \end{problema}
-
 \newpage
 %===============================================
 %================= PROBLEMA 3 ==================
@@ -1697,7 +1704,7 @@ N_A = 1,00 \times 10^{15}\,\text{cm}^{-3}
 \]
 
 \begin{center}
-    \includegraphics[width=0.75\linewidth]{imagenes/Tema3/T3_P3.png}
+    \includegraphics[width=\linewidth]{imagenes/Tema3/T3_P3.png}
 \end{center}
 \end{problema}
 \newpage
@@ -1733,10 +1740,7 @@ n = p = n_i + \Delta n = 1,80 \times 10^6\,\text{cm}^{-3} + 10^8\,\text{cm}^{-3}
 \paragraph{3. Conductividad bajo iluminación ($\sigma$)}
 La nueva conductividad del semiconductor iluminado es:
 \[
-\sigma = e (n \mu_n + p \mu_p) = e (n_i + \Delta n)(\mu_n + \mu_p)
-\]
-\[
-\sigma = (1,6 \times 10^{-19}\,\text{C}) \times (1,018 \times 10^8\,\text{cm}^{-3}) \times 8400\,\text{cm}^2/(\text{V}\cdot\text{s}) \approx 1,37 \times 10^{-7}\,(\Omega\cdot\text{cm})^{-1}
+\sigma = e (n \mu_n + p \mu_p) = e (n_i + \Delta n)(\mu_n + \mu_p) \approx 1,37 \times 10^{-7}\,(\Omega\cdot\text{cm})^{-1}
 \]
 
 \paragraph{4. Discusión física sobre el valor de la conductividad}
@@ -1745,7 +1749,7 @@ Aunque la concentración de portadores ha aumentado casi dos órdenes de magnitu
 La razón física de este comportamiento radica en que la intensidad de la radiación incidente es extremadamente débil. En aplicaciones prácticas (como la radiación solar estándar), la tasa de generación óptica $G$ es del orden de $10^{21}\,\text{cm}^{-3}\text{s}^{-1}$, lo que produce un exceso de portadores de $\Delta n \approx 10^{14}\text{--}10^{15}\,\text{cm}^{-3}$ y un incremento de conductividad de varios órdenes de magnitud superior al observado en este caso.
 
 \begin{center}
-    \includegraphics[width=0.75\linewidth]{imagenes/Tema3/T3_P4.png}
+    \includegraphics[width=0.8\linewidth]{imagenes/Tema3/T3_P4.png}
 \end{center}
 \end{problema}
 \newpage
@@ -1757,8 +1761,8 @@ De un semiconductor se conoce su gap ($E_g = \text{GAP} = 0,4\,\text{eV}$) y sus
 
 En dicho semiconductor se introduce una impureza donadora en una densidad de $N_D = 5 \times 10^{15}\,\text{cm}^{-3}$. A temperatura ambiente ($k_B T = 0,026\,\text{eV}$) la conductividad del semiconductor y la movilidad de los electrones y los huecos son $\sigma = 1\,(\Omega\cdot\text{cm})^{-1}$, $\mu_n = 2500\,\text{cm}^2/(\text{V}\cdot\text{s})$ y $\mu_p = 1500\,\text{cm}^2/(\text{V}\cdot\text{s})$, respectivamente. Obtener para dicho semiconductor, a temperatura ambiente, su densidad de electrones libres y la energía de activación de las impurezas donadoras introducidas.
 \tcblower
-\paragraph{1. Concentración intrínseca ($n_i$)}
-Dado que el gap energético es estrecho ($E_g = 0,4\,\text{eV}$), calculamos en primer lugar la densidad intrínseca de portadores a $T = 300\,\text{K}$:
+\subsubsection*{1. Concentración intrínseca ($n_i$)}
+Calculamos en primer lugar la densidad intrínseca de portadores a $T = 300\,\text{K}$:
 \[
 n_i = \sqrt{N_c N_v} \exp\left(-\frac{E_g}{2 k_B T}\right) = (1,5 \times 10^{18}\,\text{cm}^{-3}) \exp\left(-\frac{0,4}{2 \times 0,026}\right) \approx 6,85 \times 10^{14}\,\text{cm}^{-3}
 \]
@@ -1767,7 +1771,7 @@ n_i^2 \approx 4,69 \times 10^{29}\,\text{cm}^{-6}
 \]
 Dado que $n_i$ posee un valor elevado en comparación con la densidad de dopado ($N_D = 5 \times 10^{15}\,\text{cm}^{-3}$), no se puede asumir ionización completa de partida ni despreciar la concentración de portadores minoritarios.
 
-\paragraph{2. Densidad de electrones libres ($n$) y huecos ($p$)}
+\subsubsection*{2. Densidad de electrones libres ($n$) y huecos ($p$)}
 A partir de la conductividad $\sigma = e (\mu_n n + \mu_p p)$ y aplicando la ley de acción de masas $n = n_i^2 / p$, planteamos la ecuación de segundo grado para $p$:
 \[
 \sigma = e \mu_n \frac{n_i^2}{p} + e \mu_p p \implies p^2 - \frac{\sigma}{e \mu_p} p + \frac{\mu_n}{\mu_p} n_i^2 = 0
@@ -1783,8 +1787,14 @@ Sustituyendo los valores numéricos ($e = 1,6 \times 10^{-19}\,\text{C}$):
 
 Resolviendo la ecuación cuadrática $p^2 - (4,17 \times 10^{15}) p + 7,81 \times 10^{29} = 0$:
 \begin{itemize}
-    \item Raíz $p_1 \approx 3,97 \times 10^{15}\,\text{cm}^{-3} \implies n_1 \approx 1,18 \times 10^{14}\,\text{cm}^{-3} \quad (p > n, \text{comportamiento tipo P})$
-    \item Raíz $p_2 \approx 1,97 \times 10^{14}\,\text{cm}^{-3} \implies n_2 \approx 2,38 \times 10^{15}\,\text{cm}^{-3} \quad (n > p, \text{comportamiento tipo N})$
+    \item Raíz + $(p > n, \text{comportamiento tipo P})$:
+    \[
+    p_1 \approx 3,97 \times 10^{15}\,\text{cm}^{-3},\qquad n_1 \approx 1,18 \times 10^{14}\,\text{cm}^{-3}
+    \]
+    \item Raíz - $(n > p, \text{comportamiento tipo N})$:
+    \[
+    p_2 \approx 1,97 \times 10^{14}\,\text{cm}^{-3},\qquad n_2 \approx 2,38 \times 10^{15}\,\text{cm}^{-3}
+    \]
 \end{itemize}
 
 Dado que las impurezas introducidas son donadoras, el semiconductor es de tipo N ($n > p$). Por consiguiente, la solución física válida para la densidad de electrones libres es:
@@ -1792,7 +1802,7 @@ Dado que las impurezas introducidas son donadoras, el semiconductor es de tipo N
 n = 2,38 \times 10^{15}\,\text{cm}^{-3} \qquad (p = 1,97 \times 10^{14}\,\text{cm}^{-3})
 \]
 
-\paragraph{3. Concentración de donadores ionizados y neutros}
+\subsubsection*{3. Concentración de donadores ionizados y neutros}
 Aplicando la condición de neutralidad eléctrica ($n = p + N_D^+$):
 \[
 N_D^+ = n - p = 2,38 \times 10^{15}\,\text{cm}^{-3} - 1,97 \times 10^{14}\,\text{cm}^{-3} = 2,18 \times 10^{15}\,\text{cm}^{-3}
@@ -1803,7 +1813,7 @@ La concentración de impurezas donadoras que permanecen neutras (no ionizadas) e
 N_D^0 = N_D - N_D^+ = 5,00 \times 10^{15}\,\text{cm}^{-3} - 2,18 \times 10^{15}\,\text{cm}^{-3} = 2,82 \times 10^{15}\,\text{cm}^{-3}
 \]
 
-\paragraph{4. Energía de activación de las impurezas donadoras ($E_c - E_d$)}
+\subsubsection*{4. Energía de activación de las impurezas donadoras ($E_c - E_d$)}
 Relacionamos la densidad de electrones en la banda de conducción con la probabilidad de ocupación de los niveles donadores (con factor de degeneración $g_d = 2$):
 \[
 n = N_c \exp\left(\frac{E_F - E_c}{k_B T}\right), \qquad \frac{N_D^+}{N_D^0} = \frac{1}{g_d} \exp\left(\frac{E_d - E_F}{k_B T}\right)
@@ -1825,7 +1835,7 @@ E_c - E_d = 0,156\,\text{eV}
 \]
 
 \begin{center}
-    \includegraphics[width=0.75\linewidth]{imagenes/Tema3/T3_P5.png}
+    \includegraphics[width=\linewidth]{imagenes/Tema3/T3_P5.png}
 \end{center}
 \end{problema}
 \newpage
@@ -1932,7 +1942,7 @@ En condiciones estacionarias determinar, en función del número de pares electr
 
 \tcblower
 
-\paragraph{1. Distribución espacial del exceso de portadores $\delta p(x)$}
+\subsubsection*{1. Distribución espacial del exceso de portadores $\delta p(x)$}
 Al tratarse de un semiconductor de tipo N bajo débil nivel de inyección, la dinámica del exceso de portadores viene gobernada por la ecuación de continuidad de los portadores minoritarios (huecos), con $L_p = \sqrt{D_p \tau_p}$.
 
 Dividimos la muestra en dos regiones a lo largo del eje $x$:
@@ -1956,7 +1966,7 @@ Dividimos la muestra en dos regiones a lo largo del eje $x$:
     \]
 \end{itemize}
 
-\paragraph{2. Condiciones de contorno e interfaz}
+\subsubsection*{2. Condiciones de contorno e interfaz}
 \begin{enumerate}
     \item \textbf{Superficie ideal en $x = -A$ ($s = 0$):} La corriente de difusión en la frontera exterior izquierda es nula:
     \[
@@ -1997,7 +2007,7 @@ Sustituyendo $C_1$ en $\delta p_{\text{II}}(x)$ y reordenando el argumento de la
 \delta p_{\text{II}}(x) = G \tau_p \frac{\sinh\left(\frac{A}{L_p}\right)}{\cosh\left(\frac{2A}{L_p}\right)} \sinh\left(\frac{A-x}{L_p}\right) \qquad (0 \le x \le A)
 \]
 
-\paragraph{3. Perfil de conductividad y cálculo de la resistencia equivalente}
+\subsubsection*{3. Perfil de conductividad y cálculo de la resistencia equivalente}
 La conductividad local $\sigma(x)$ en la Región II bajo débil nivel de inyección ($\delta n(x) \approx \delta p_{\text{II}}(x)$) es:
 \[
 \sigma(x) = e \mu_n n(x) + e \mu_p p(x) = \sigma_0 + e (\mu_n + \mu_p) \delta p_{\text{II}}(x)
@@ -2034,115 +2044,288 @@ Invirtiendo la expresión, la resistencia eléctrica total $R$ del bloque semico
 R = \frac{B}{C \left[ \sigma_0 A + e (\mu_n + \mu_p) G \tau_p L_p \frac{\sinh\left(\frac{A}{L_p}\right) \left( \cosh\left(\frac{A}{L_p}\right) - 1 \right)}{\cosh\left(\frac{2A}{L_p}\right)} \right]}
 \]
 
-\paragraph{Discusión física}
+\subsubsection*{Discusión física}
 En ausencia de iluminación ($G = 0$), la resistencia se reduce a $R_0 = \frac{B}{\sigma_0 A C}$, que corresponde a la resistencia geométrica estándar en oscuridad. La presencia de fotogeneración ($G > 0$) reduce la resistencia global del dispositivo en una cantidad proporcional a la vida media y longitud de difusión de los portadores minoritarios.
 
 \begin{center}
-    \includegraphics[width=0.55\textwidth]{imagenes/Tema3/T3_P7_b.png}
+    \includegraphics[width=0.65\textwidth]{imagenes/Tema3/T3_P7_b.png}
 \end{center}
 
 \end{problema}
 \newpage
-%===============================================
-%================= PROBLEMA 8 ==================
-%===============================================
-\begin{problema}[Perfil de portadores y corriente de difusión en una muestra corta con recombinación en un plano intermedio]
-Considerar una barra semiconductora de tipo N de longitud $w$ muy corta frente a la longitud de difusión ($w \ll L_p$), sometida a un débil nivel de inyección. En la frontera $x = 0$ se mantiene un exceso constante de portadores $\delta p(0) = \delta p_0$, mientras que en $x = w$ se dispone de un contacto óhmico ideal ($s \to \infty$). En la posición intermedia $x = w/2$ existe una interfaz con velocidad de recombinación superficial $s_p$.
+\begin{problema}[Resistencia equivalente de un bloque semiconductor bajo iluminación no uniforme]
+Se dispone de un semiconductor homogéneo tipo N, como el mostrado en la figura, caracterizado por unas densidades de portadores en equilibrio $n_0$ y $p_0$, así como por su movilidad y vida media (con suposición de débil nivel de inyección), todas ellas conocidas.
+
+Para $x \le 0$ se generan uniformemente $G$ pares electrón-hueco (por iluminación) por unidad de volumen y de tiempo. La superficie $x = -A$ es ideal. En la superficie $x = A$ se establece un contacto metálico (su comportamiento es tal que puede considerarse como un sumidero perfecto del exceso de portadores).
+
+En condiciones estacionarias determinar, en función del número de pares electrón-hueco generados, $G$, la resistencia que presenta entre las caras $y = 0$ e $y = B$ el semiconductor comprendido entre las caras $x = 0$ y $x = A$.
 
 \begin{center}
-    \includegraphics[width=0.5\linewidth]{imagenes/Tema3/T3_P8_a.png}
+    \includegraphics[width=0.55\textwidth]{imagenes/Tema3/T3_P7_a.png}
+\end{center}
+
+\tcblower
+
+\paragraph{1. Distribución espacial del exceso de portadores $\delta p(x)$ mediante exponenciales}
+Al tratarse de un semiconductor de tipo N bajo débil nivel de inyección, la dinámica del exceso de portadores viene gobernada por la ecuación de continuidad de los portadores minoritarios (huecos), con $L_p = \sqrt{D_p \tau_p}$.
+
+Dividimos la muestra en dos regiones a lo largo del eje $x$:
+\begin{itemize}
+    \item \textbf{Región I ($-A \le x \le 0$):} Iluminada con generación constante $G$.
+    \[
+    D_p \frac{d^2(\delta p_{\text{I}})}{dx^2} - \frac{\delta p_{\text{I}}}{\tau_p} + G = 0 \implies \frac{d^2(\delta p_{\text{I}})}{dx^2} - \frac{\delta p_{\text{I}}}{L_p^2} + \frac{G}{D_p} = 0
+    \]
+    La solución general expresada en función de exponenciales simples es:
+    \[
+    \delta p_{\text{I}}(x) = G \tau_p + a e^{x/L_p} + b e^{-x/L_p}
+    \]
+
+    \item \textbf{Región II ($0 \le x \le A$):} En la oscuridad ($G = 0$).
+    \[
+    D_p \frac{d^2(\delta p_{\text{II}})}{dx^2} - \frac{\delta p_{\text{II}}}{\tau_p} = 0 \implies \frac{d^2(\delta p_{\text{II}})}{dx^2} - \frac{\delta p_{\text{II}}}{L_p^2} = 0
+    \]
+    La solución general expresada en función de exponenciales simples es:
+    \[
+    \delta p_{\text{II}}(x) = c e^{x/L_p} + d e^{-x/L_p}
+    \]
+\end{itemize}
+
+\paragraph{2. Aplicación de condiciones de contorno e interfaz}
+\begin{enumerate}
+    \item \textbf{Superficie ideal en $x = -A$ ($s = 0$):} La corriente de difusión en la frontera exterior izquierda es nula:
+    \[
+    \left. \frac{d(\delta p_{\text{I}})}{dx} \right|_{x=-A} = 0 \implies \frac{a}{L_p} e^{-A/L_p} - \frac{b}{L_p} e^{A/L_p} = 0 \implies b = a e^{-2A/L_p}
+    \]
+    Sustituyendo $b$, la solución en la Región I resulta:
+    \[
+    \delta p_{\text{I}}(x) = G \tau_p + a \left( e^{x/L_p} + e^{-(x+2A)/L_p} \right)
+    \]
+
+    \item \textbf{Contacto óhmico en $x = A$ (sumidero perfecto):} El exceso de portadores se anula en la frontera metálica:
+    \[
+    \delta p_{\text{II}}(A) = 0 \implies c e^{A/L_p} + d e^{-A/L_p} = 0 \implies d = -c e^{2A/L_p}
+    \]
+    Sustituyendo $d$, la solución en la Región II resulta:
+    \[
+    \delta p_{\text{II}}(x) = c \left( e^{x/L_p} - e^{(2A-x)/L_p} \right)
+    \]
+
+    \item \textbf{Continuidad del exceso en $x = 0$:}
+    \[
+    \delta p_{\text{I}}(0) = \delta p_{\text{II}}(0) \implies G \tau_p + a \left( 1 + e^{-2A/L_p} \right) = c \left( 1 - e^{2A/L_p} \right)
+    \]
+
+    \item \textbf{Continuidad del flujo de difusión en $x = 0$:}
+    \[
+    \left. \frac{d(\delta p_{\text{I}})}{dx} \right|_{x=0} = \left. \frac{d(\delta p_{\text{II}})}{dx} \right|_{x=0} \implies a \left( 1 - e^{-2A/L_p} \right) = c \left( 1 + e^{2A/L_p} \right)
+    \]
+\end{enumerate}
+
+Despejando la constante $a$ en función de $c$ a partir de la continuidad del flujo:
+\[
+a = c \frac{1 + e^{2A/L_p}}{1 - e^{-2A/L_p}} = c \frac{e^{2A/L_p} \left(e^{2A/L_p} + 1\right)}{e^{2A/L_p} - 1}
+\]
+
+Sustituyendo $a$ en la ecuación de continuidad del exceso:
+\[
+G \tau_p + c \frac{e^{2A/L_p} \left(e^{2A/L_p} + 1\right)}{e^{2A/L_p} - 1} \left( 1 + e^{-2A/L_p} \right) = c \left( 1 - e^{2A/L_p} \right)
+\]
+Notando que $e^{2A/L_p} \left(1 + e^{-2A/L_p}\right) = e^{2A/L_p} + 1$:
+\[
+G \tau_p + c \frac{\left(e^{2A/L_p} + 1\right)^2}{e^{2A/L_p} - 1} = c \left( 1 - e^{2A/L_p} \right)
+\]
+\[
+G \tau_p = c \left[ \left(1 - e^{2A/L_p}\right) - \frac{\left(e^{2A/L_p} + 1\right)^2}{e^{2A/L_p} - 1} \right] = c \left[ -\frac{\left(e^{2A/L_p} - 1\right)^2 + \left(e^{2A/L_p} + 1\right)^2}{e^{2A/L_p} - 1} \right]
+\]
+\[
+G \tau_p = -c \frac{2 \left(e^{4A/L_p} + 1\right)}{e^{2A/L_p} - 1}
+\]
+
+Despejando los coeficientes $c$ y $d$:
+\[
+c = -G \tau_p \frac{e^{2A/L_p} - 1}{2 \left(e^{4A/L_p} + 1\right)}, \qquad d = G \tau_p \frac{e^{2A/L_p}\left(e^{2A/L_p} - 1\right)}{2 \left(e^{4A/L_p} + 1\right)}
+\]
+
+Sustituyendo en $\delta p_{\text{II}}(x)$, la distribución de portadores en exceso en la Región II se expresa como:
+\[
+\delta p_{\text{II}}(x) = G \tau_p \frac{e^{2A/L_p} - 1}{2 \left(e^{4A/L_p} + 1\right)} \left( e^{(2A-x)/L_p} - e^{x/L_p} \right) \qquad (0 \le x \le A)
+\]
+
+\paragraph{3. Perfil de conductividad y cálculo de la resistencia equivalente}
+La conductividad local $\sigma(x)$ en la Región II bajo débil nivel de inyección ($\delta n(x) \approx \delta p_{\text{II}}(x)$) es:
+\[
+\sigma(x) = e \mu_n n(x) + e \mu_p p(x) = \sigma_0 + e (\mu_n + \mu_p) \delta p_{\text{II}}(x)
+\]
+donde $\sigma_0 = e (\mu_n n_0 + \mu_p p_0)$ es la conductividad en la oscuridad.
+
+Dado que la corriente circula en la dirección del eje $y$ (entre las caras $y = 0$ e $y = B$), los elementos diferenciales de volumen de anchura $dx$ comprendidos entre $x = 0$ y $x = A$ se encuentran conectados en \textbf{paralelo}.
+
+La conductancia elemental de una rebanada de grosor $dx$, longitud $B$ y sección transversal $C \cdot dx$ es:
+\[
+dG_y = \sigma(x) \frac{C \cdot dx}{B}
+\]
+
+La conductancia total $1/R$ entre $x = 0$ y $x = A$ se obtiene integrando todas las contribuciones en paralelo:
+\[
+\frac{1}{R} = \int_0^A \sigma(x) \frac{C}{B} dx = \sigma_0 \frac{A C}{B} + \frac{C}{B} e (\mu_n + \mu_p) \int_0^A \delta p_{\text{II}}(x) dx
+\]
+
+Calculamos la integral del exceso de portadores evaluando directamente las funciones exponenciales:
+\[
+\int_0^A \left( e^{(2A-x)/L_p} - e^{x/L_p} \right) dx = \left[ -L_p e^{(2A-x)/L_p} - L_p e^{x/L_p} \right]_0^A = L_p \left( e^{2A/L_p} - 2 e^{A/L_p} + 1 \right) = L_p \left( e^{A/L_p} - 1 \right)^2
+\]
+
+Sustituyendo el valor de la integral:
+\[
+\int_0^A \delta p_{\text{II}}(x) dx = G \tau_p L_p \frac{\left(e^{2A/L_p} - 1\right)\left(e^{A/L_p} - 1\right)^2}{2 \left(e^{4A/L_p} + 1\right)}
+\]
+
+Sustituyendo la integral en la expresión de la conductancia total:
+\[
+\frac{1}{R} = \frac{C}{B} \left[ \sigma_0 A + e (\mu_n + \mu_p) G \tau_p L_p \frac{\left(e^{2A/L_p} - 1\right)\left(e^{A/L_p} - 1\right)^2}{2 \left(e^{4A/L_p} + 1\right)} \right]
+\]
+
+Invirtiendo la expresión, la resistencia eléctrica total $R$ del bloque semiconductor entre las caras $y = 0$ e $y = B$ expresada mediante exponenciales resulta:
+\[
+R = \frac{B}{C \left[ \sigma_0 A + e (\mu_n + \mu_p) G \tau_p L_p \frac{\left(e^{2A/L_p} - 1\right)\left(e^{A/L_p} - 1\right)^2}{2 \left(e^{4A/L_p} + 1\right)} \right]}
+\]
+
+\paragraph{Discusión física}
+En ausencia de iluminación ($G = 0$), la resistencia se reduce a $R_0 = \frac{B}{\sigma_0 A C}$, que corresponde a la resistencia geométrica estándar en oscuridad. La presencia de fotogeneración ($G > 0$) reduce la resistencia global del dispositivo en una cantidad proporcional a la vida media y longitud de difusión de los portadores minoritarios.
+
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{imagenes/Tema3/T3_P7_b.png}
+\end{center}
+
+\end{problema}
+\newpage
+%===================
+% Problema 08: Perfil de portadores y corriente de difusión en barra tipo N corta
+%===================
+\begin{problema}[Perfil de portadores y corriente de difusión en una muestra corta con recombinación en un plano intermedio]
+En la figura se representa esquemáticamente un semiconductor tipo N de longitud $W$ ($W \ll L_p$) y sección transversal $A$, en cuyo plano medio $x = W/2$ existen imperfecciones que pueden representarse mediante una velocidad de recombinación superficial del exceso de huecos $s_p$. El semiconductor posee en equilibrio unas densidades de portadores $n_0$ y $p_0$, uniformes y conocidas. También son conocidas las constantes de difusión de electrones y de huecos, $D_n$ y $D_p$.
+
+La superficie $x = W$ se caracteriza por una velocidad de recombinación superficial infinita (contacto metálico), mientras que todo el volumen se caracteriza por una recombinación despreciable (vida media prácticamente infinita).
+
+El semiconductor se saca de equilibrio (con débil nivel de inyección) manteniendo en la superficie $x = 0$ un exceso de portadores minoritarios $\delta p(0) = \delta p_0 = \delta n_0$.
+
+\begin{center}
+    \includegraphics[width=0.4\linewidth]{imagenes/Tema3/T3_P8_a.png}
+    \captionof{figure}{Muestra semiconductora de tipo N con interfaz de recombinación superficial en $x = W/2$ y contacto metálico en $x = W$.}
+    \label{fig:t3_p8_a}
 \end{center}
 
 \begin{enumerate}[label=\alph*)]
-    \item Obtener la distribución espacial del exceso de portadores $\delta p(x)$ en las regiones I ($0 < x < w/2$) y II ($w/2 < x < w$), analizando los casos límite $s_p = 0$ y $s_p \to \infty$.
-    \item Calcular la densidad de corriente de difusión total en $x = 0$, considerando la contribución tanto de portadores minoritarios como mayoritarios.
+    \item Indicar las ecuaciones diferenciales y las condiciones de contorno que han de satisfacer las concentraciones en exceso de portadores en las zonas 1 y 2 del semiconductor.
+    \item Determinar, en función de $s_p$, el exceso de portadores minoritarios en el plano $x = W/2$ y la densidad de corriente de difusión en $x = 0$.
+    \item Expresar analíticamente y representar gráficamente los perfiles de portadores minoritarios en las zonas 1 y 2 en un caso general (para cualquier valor de $s_p$) y en los casos particulares de $s_p = 0$ y $s_p = \infty$.
 \end{enumerate}
-\tcblower
-\paragraph{1. a) Distribución espacial del exceso de portadores $\delta p(x)$}
-Al tratarse de una muestra corta ($w \ll L_p$), la recombinación en volumen es despreciable ($\tau_p \to \infty$) y no hay generación volumétrica ($G = 0$). La ecuación de continuidad en régimen estacionario y sin campo eléctrico se reduce a:
-\[
-D_p \frac{d^2(\delta p)}{dx^2} = 0 \implies \delta p(x) \text{ es una función lineal por tramos}
-\]
 
-Planteamos las soluciones para cada región:
+\tcblower
+
+\subsubsection*{a) Ecuaciones diferenciales y condiciones de contorno}
+
+Al tratarse de una muestra semiconductora corta ($W \ll L_p$), la recombinación en volumen es totalmente despreciable frente al transporte difusivo ($\tau_p \to \infty$). Al no existir generación volumétrica ($G = 0$) ni campo eléctrico aplicado ($E = 0$), las ecuaciones de continuidad en régimen estacionario para el exceso de portadores minoritarios en cada región se simplifican a:
 \begin{itemize}
-    \item \textbf{Región I ($0 < x < w/2$):} $\delta p_{\text{I}}(x) = A x + B$. Imponiendo la condición en $x = 0$ ($\delta p_{\text{I}}(0) = \delta p_0$), resulta $B = \delta p_0$:
+    \item \textbf{Zona 1 ($0 < x < W/2$):}
     \[
-    \delta p_{\text{I}}(x) = A x + \delta p_0
+    \frac{d^2(\delta p_{\text{I}})}{dx^2} = 0 \implies \delta p_{\text{I}}(x) = A x + B
     \]
-    \item \textbf{Región II ($w/2 < x < w$):} $\delta p_{\text{II}}(x) = C x + D$. Imponiendo la condición de contacto óhmico en $x = w$ ($\delta p_{\text{II}}(w) = 0$), se obtiene $D = -C w$:
+    \item \textbf{Zona 2 ($W/2 < x < W$):}
     \[
-    \delta p_{\text{II}}(x) = C(x - w)
+    \frac{d^2(\delta p_{\text{II}})}{dx^2} = 0 \implies \delta p_{\text{II}}(x) = C x + D
     \]
 \end{itemize}
 
-Aplicamos las condiciones de interfaz en $x = w/2$:
+Las \textbf{condiciones de contorno e interfaz} que determinan las constantes de integración son:
 \begin{enumerate}
-    \item \textbf{Continuidad del exceso de portadores:}
+    \item \textbf{Inyección fija en la frontera izquierda ($x = 0$):}
     \[
-    \delta p_{\text{I}}\left(\frac{w}{2}\right) = \delta p_{\text{II}}\left(\frac{w}{2}\right) \implies A \frac{w}{2} + \delta p_0 = C \left(-\frac{w}{2}\right) \implies C = -A - \frac{2\delta p_0}{w}
+    \delta p_{\text{I}}(0) = \delta p_0 \implies B = \delta p_0
     \]
-    \item \textbf{Balance de corriente por recombinación superficial:}
+    \item \textbf{Contacto óhmico ideal en la frontera derecha ($x = W$, $s \to \infty$):}
     \[
-    J_{dp,\text{I}}\left(\frac{w}{2}\right) - J_{dp,\text{II}}\left(\frac{w}{2}\right) = e s_p \delta p\left(\frac{w}{2}\right)
+    \delta p_{\text{II}}(W) = 0 \implies C W + D = 0 \implies D = -C W
+    \]
+    \item \textbf{Continuidad del exceso en el plano medio ($x = W/2$):}
+    \[
+    \delta p_{\text{I}}\left(\frac{W}{2}\right) = \delta p_{\text{II}}\left(\frac{W}{2}\right) \equiv \delta p\left(\frac{W}{2}\right)
+    \]
+    \item \textbf{Balance de corriente por recombinación en la interfaz ($x = W/2$):}
+    \[
+    J_{dp,\text{I}}\left(\frac{W}{2}\right) - J_{dp,\text{II}}\left(\frac{W}{2}\right) = e s_p \delta p\left(\frac{W}{2}\right)
     \]
     Sustituyendo $J_{dp} = -e D_p \frac{d(\delta p)}{dx}$:
     \[
-    -e D_p A - (-e D_p C) = e s_p \left(A \frac{w}{2} + \delta p_0\right) \implies D_p (C - A) = s_p \left(A \frac{w}{2} + \delta p_0\right)
+    D_p \left( \left.\frac{d(\delta p_{\text{II}})}{dx}\right|_{W/2} - \left.\frac{d(\delta p_{\text{I}})}{dx}\right|_{W/2} \right) = s_p \delta p\left(\frac{W}{2}\right) \implies D_p (C - A) = s_p \delta p\left(\frac{W}{2}\right)
     \]
 \end{enumerate}
 
-Sustituyendo $C = -A - \frac{2\delta p_0}{w}$ en la ecuación de balance de corriente:
+\subsubsection*{b) Exceso en $x = W/2$ y densidad de corriente de difusión en $x = 0$}
+
+Expresando las distribuciones en función del valor en el centro $\delta p(W/2)$:
+\begin{itemize}
+    \item De la Zona 1: $\delta p_{\text{I}}(W/2) = A \frac{W}{2} + \delta p_0 = \delta p(W/2) \implies A = \frac{\delta p(W/2) - \delta p_0}{W/2}$
+    \item De la Zona 2: $\delta p_{\text{II}}(W/2) = C \left(\frac{W}{2} - W\right) = -C \frac{W}{2} = \delta p(W/2) \implies C = -\frac{\delta p(W/2)}{W/2}$
+\end{itemize}
+
+Sustituyendo las pendientes $A$ y $C$ en la condición de balance de corriente en $x = W/2$:
 \[
-D_p \left(-2A - \frac{2\delta p_0}{w}\right) = s_p \left(A \frac{w}{2} + \delta p_0\right) \implies A \left(2 + \frac{w s_p}{2 D_p}\right) = -\frac{2\delta p_0}{w} \left(1 + \frac{w s_p}{2 D_p}\right)
+D_p \left( -\frac{\delta p(W/2)}{W/2} - \frac{\delta p(W/2) - \delta p_0}{W/2} \right) = s_p \delta p\left(\frac{W}{2}\right)
+\]
+\[
+\frac{2 D_p}{W} \left( \delta p_0 - 2 \delta p\left(\frac{W}{2}\right) \right) = s_p \delta p\left(\frac{W}{2}\right) \implies \frac{2 D_p \delta p_0}{W} = \delta p\left(\frac{W}{2}\right) \left( s_p + \frac{4 D_p}{W} \right)
 \]
 
-Despejando la pendiente $A$:
+Despejando el exceso en el plano medio $\delta p(W/2)$:
 \[
-A = -\frac{2\delta p_0}{w} \frac{1 + \frac{w s_p}{2 D_p}}{2 + \frac{w s_p}{2 D_p}}
+\delta p\left(\frac{W}{2}\right) = \frac{\delta p_0}{2 + \frac{W s_p}{2 D_p}}
 \]
 
-Por consiguiente, la pendiente $C$ en la Región II es:
+\textbf{Densidad de corriente de difusión total en $x = 0$:}
+
+La pendiente de la Zona 1 resulta:
 \[
-C = -A - \frac{2\delta p_0}{w} = -\frac{2\delta p_0}{w} \frac{1}{2 + \frac{w s_p}{2 D_p}}
+A = \frac{\delta p(W/2) - \delta p_0}{W/2} = -\frac{2 \delta p_0}{W} \left( \frac{1 + \frac{W s_p}{2 D_p}}{2 + \frac{W s_p}{2 D_p}} \right)
 \]
 
-Las expresiones definitivas para el exceso de portadores en cada región son:
+Por la hipótesis de cuasi-neutralidad ($\delta n(x) \approx \delta p(x)$), se cumple $\frac{d(\delta n_{\text{I}})}{dx} = \frac{d(\delta p_{\text{I}})}{dx} = A$. La corriente de difusión total incluye las contribuciones de huecos y electrones:
 \[
-\delta p_{\text{I}}(x) = \delta p_0 \left[ 1 - \frac{1 + \frac{w s_p}{2 D_p}}{2 + \frac{w s_p}{2 D_p}} \left(\frac{2x}{w}\right) \right] \qquad \left(0 \le x \le \frac{w}{2}\right)
+J_d(0) = J_{dp}(0) + J_{dn}(0) = -e D_p \left.\frac{d(\delta p_{\text{I}})}{dx}\right|_{x=0} + e D_n \left.\frac{d(\delta n_{\text{I}})}{dx}\right|_{x=0} = e (D_n - D_p) A
 \]
 \[
-\delta p_{\text{II}}(x) = \frac{2\delta p_0}{2 + \frac{w s_p}{2 D_p}} \left(1 - \frac{x}{w}\right) \qquad \left(\frac{w}{2} \le x \le w\right)
+J_d(0) = e (D_p - D_n) \frac{2 \delta p_0}{W} \left( \frac{1 + \frac{W s_p}{2 D_p}}{2 + \frac{W s_p}{2 D_p}} \right)
 \]
 
-\paragraph{Análisis de los casos límite}
+\subsubsection*{c) Expresiones analíticas de los perfiles y casos límite}
+
+Sustituyendo el valor de las pendientes $A$ y $C$, las expresiones generales para el exceso de portadores son:
+\[
+\delta p_{\text{I}}(x) = \delta p_0 \left[ 1 - \frac{1 + \frac{W s_p}{2 D_p}}{2 + \frac{W s_p}{2 D_p}} \left(\frac{2x}{W}\right) \right] \qquad \left(0 \le x \le \frac{W}{2}\right)
+\]
+\[
+\delta p_{\text{II}}(x) = \frac{2 \delta p_0}{2 + \frac{W s_p}{2 D_p}} \left(1 - \frac{x}{W}\right) \qquad \left(\frac{W}{2} \le x \le W\right)
+\]
+
+\textbf{Casos límite:}
 \begin{itemize}
     \item \textbf{Sin recombinación en el plano intermedio ($s_p = 0$):}
-    Las ecuaciones se reducen a una única recta continua desde $x = 0$ hasta $x = w$:
+    $\delta p(W/2) = \frac{\delta p_0}{2}$. Las ecuaciones se reducen a una única recta continua en toda la barra:
     \[
-    \delta p_{\text{I}}(x) = \delta p_{\text{II}}(x) = \delta p_0 \left(1 - \frac{x}{w}\right)
+    \delta p_{\text{I}}(x) = \delta p_{\text{II}}(x) = \delta p_0 \left( 1 - \frac{x}{W} \right)
     \]
     \item \textbf{Recombinación infinita en el plano intermedio ($s_p \to \infty$):}
-    El plano $x = w/2$ actúa como un contacto óhmico interno ($\delta p(w/2) = 0$). La distribución cae linealmente a cero en la Región I y se anula en la Región II:
+    El plano $x = W/2$ actúa como un sumidero perfecto ($\delta p(W/2) = 0$). El exceso cae linealmente en la Zona 1 y se anula completamente en la Zona 2:
     \[
-    \delta p_{\text{I}}(x) = \delta p_0 \left(1 - \frac{2x}{w}\right), \qquad \delta p_{\text{II}}(x) = 0
+    \delta p_{\text{I}}(x) = \delta p_0 \left( 1 - \frac{2x}{W} \right), \qquad \delta p_{\text{II}}(x) = 0
     \]
 \end{itemize}
 
 \begin{center}
-    \includegraphics[width=0.5\linewidth]{imagenes/Tema3/T3_P8_b.png}
+    \includegraphics[width=0.85\linewidth]{imagenes/Tema3/T3_P8_b.png}
+    \captionof{figure}{Perfiles de concentración del exceso de portadores $\delta p(x)$ para $s_p = 0$, $s_p$ finito y $s_p \to \infty$.}
+    \label{fig:t3_p8_b}
 \end{center}
-
-\paragraph{2. b) Densidad de corriente de difusión total en $x = 0$}
-La densidad de corriente de difusión total incluye las contribuciones de huecos ($J_{dp}$) y electrones ($J_{dn}$). Por la hipótesis de cuasi-neutralidad eléctrica ($\delta n(x) \approx \delta p(x)$), se cumple que $\frac{d(\delta n)}{dx} = \frac{d(\delta p)}{dx}$:
-\[
-J_d(0) = J_{dp}(0) + J_{dn}(0) = -e D_p \left.\frac{d(\delta p_{\text{I}})}{dx}\right|_{x=0} + e D_n \left.\frac{d(\delta n_{\text{I}})}{dx}\right|_{x=0} = e (D_n - D_p) A
-\]
-
-Sustituyendo el valor obtenido para la pendiente $A$:
-\[
-J_d(0) = e (D_p - D_n) \frac{2\delta p_0}{w} \left( \frac{1 + \frac{w s_p}{2 D_p}}{2 + \frac{w s_p}{2 D_p}} \right)
-\]
 \end{problema}
 
 \newpage
@@ -2193,7 +2376,7 @@ E_C - E_F = k_B T \ln\left(\frac{N_c}{n}\right)
 Sustituyendo $N_c = 2,83 \times 10^{19}\,\text{cm}^{-3}$ y $k_B T = 0,026\,\text{eV}$:
 \[
 E_C - E_F = (0,026\,\text{eV}) \ln\left(\frac{2,83 \times 10^{19}\,\text{cm}^{-3}}{3,125 \times 10^{14}\,\text{cm}^{-3}}\right) = (0,026\,\text{eV}) \ln(90560) \approx 0,297\,\text{eV}
-\]
+\]zº
 
 Por tanto, el nivel de Fermi se encuentra a $0,297\,\text{eV}$ por debajo del fondo de la banda de conducción ($E_C - E_F = 0,297\,\text{eV}$).
 
@@ -2214,6 +2397,699 @@ N_D \approx n = 3,125 \times 10^{14}\,\text{cm}^{-3}
 \]
 
 \begin{center}
-    \includegraphics[width=0.75\linewidth]{imagenes/Tema3/T3_P9_b.png}
+    \includegraphics[width=\linewidth]{imagenes/Tema3/T3_P9_b.png}
 \end{center}
+\end{problema}
+
+
+
+\newpage
+%=========================================================================
+% SECCIÓN: PROBLEMAS ADICIONALES
+%=========================================================================
+\section{Problemas adicionales}
+\setcounter{problemacontador}{1}
+%-----------------------------------------------------
+%-------------- Problema 1 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Densidades de portadores y nivel de Fermi en Silicio compensado tipo P]
+Una muestra de Silicio ($\text{Si}$) mantenida en equilibrio térmico a $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.0259}{\eV}$) se encuentra dopada simultáneamente con $N_A = \SI{5e16}{\cm^{-3}}$ átomos/cm$^3$ de Boro ($\text{B}$, impureza aceptadora, $E_A - E_V = \SI{0.045}{\eV}$, $g_a = 4$) y $N_D = \SI{2e16}{\cm^{-3}}$ átomos/cm$^3$ de Fósforo ($\text{P}$, impureza donadora totalmente ionizada). Se pide:
+
+\begin{enumerate}[label=\alph*)]
+    \item Determinar el tipo de semiconductor resultante y la concentración neta efectiva de dopado $N_A^*$.
+    \item Asumiendo la hipótesis inicial de ionización total de aceptadores, calcular las concentraciones de portadores ($p$ y $n$) y la posición del nivel de Fermi respecto al techo de la banda de valencia ($E_F - E_V$) y respecto al nivel intrínseco ($E_{Fi} - E_F$).
+    \item Evaluar cuantitativamente la fracción real de aceptadores ionizados ($N_A^- / N_A$) mediante la estadística de impurezas para comprobar la validez de la hipótesis de ionización total.
+\end{enumerate}
+
+\textbf{Datos a $T = \SI{300}{\kelvin}$:}
+\begin{itemize}
+    \item Densidad intrínseca del Silicio: $n_i = \SI{1.5e10}{\cm^{-3}}$.
+    \item Densidad equivalente de estados en la banda de valencia: $N_v = \SI{1.04e19}{\cm^{-3}}$.
+\end{itemize}
+
+\tcblower
+
+\subsubsection*{a) Tipo de semiconductor y dopado neto efectivo}
+
+Al comparar las concentraciones de impurezas introducidas en el cristal:
+\[
+N_A = \SI{5e16}{\cm^{-3}} > N_D = \SI{2e16}{\cm^{-3}}
+\]
+
+Dado que la concentración de aceptadores supera a la de donadores, la muestra está parcialmente compensada y se comporta macroscópicamente como un \textbf{semiconductor extrínseco tipo P}. La concentración neta efectiva de aceptadores ($N_A^*$) bajo la hipótesis de ionización completa es:
+\[
+N_A^* = N_A - N_D = \SI{5e16}{\cm^{-3}} - \SI{2e16}{\cm^{-3}} = \SI{3e16}{\cm^{-3}}
+\]
+
+\subsubsection*{b) Cálculo de densidades de portadores y nivel de Fermi}
+
+1. \textit{Concentración de huecos ($p$) y electrones ($n$):}
+Aplicando la condición de neutralidad de carga eléctrica con $N_D^+ = N_D = \SI{2e16}{\cm^{-3}}$ y $N_A^- \approx N_A = \SI{5e16}{\cm^{-3}}$:
+\[
+p + N_D = n + N_A \implies p - n = N_A - N_D = \SI{3e16}{\cm^{-3}}
+\]
+
+Puesto que $N_A - N_D \gg n_i$ ($\SI{3e16}{\cm^{-3}} \gg \SI{1.5e10}{\cm^{-3}}$), la densidad de electrones minoritarios es completamente insignificante frente a la de huecos mayoritarios ($n \ll p$), simplificándose a:
+\[
+p \approx N_A - N_D = \SI{3e16}{\cm^{-3}}
+\]
+
+Por la ley de acción de masas ($n \cdot p = n_i^2$):
+\[
+n = \frac{n_i^2}{p} = \frac{(\num{1.5e10})^2}{\num{3e16}} = \SI{7.50e3}{\cm^{-3}}
+\]
+
+2. \textit{Posición del nivel de Fermi respecto a la banda de valencia ($E_F - E_V$):}
+\[
+p = N_v \exp\left( -\frac{E_F - E_V}{k_B T} \right) \implies E_F - E_V = k_B T \ln\left( \frac{N_v}{p} \right) \approx \SI{0.1515}{\eV}
+\]
+
+3. \textit{Posición del nivel de Fermi respecto al nivel intrínseco ($E_{Fi} - E_F$):}
+\[
+p = n_i \exp\left( \frac{E_{Fi} - E_F}{k_B T} \right) \implies E_{Fi} - E_F = k_B T \ln\left( \frac{p}{n_i} \right) \approx \SI{0.3758}{\eV}
+\]
+
+\subsubsection*{c) Verificación de la hipótesis de ionización de aceptadores}
+
+Para verificar la validez de la hipótesis $N_A^- \approx N_A$, evaluamos la separación energética entre el nivel aceptador $E_A$ y el nivel de Fermi $E_F$:
+\[
+E_A - E_F = (E_A - E_V) - (E_F - E_V) = \SI{0.045}{\eV} - \SI{0.1515}{\eV} = \SI{-0.1065}{\eV}
+\]
+
+Utilizando la función de ocupación para aceptadores ($g_a = 4$):
+\[
+\frac{N_A^-}{N_A} = \frac{1}{1 + g_a \exp\left( \frac{E_A - E_F}{k_B T} \right)} = \frac{1}{1 + 4 \exp\left( \frac{-0.1065}{0.0259} \right)} \approx 0.9385
+\]
+
+\subsubsection*{Conclusión:} El $93.85\%$ de los átomos aceptadores de Boro se encuentran ionizados. Aunque el valor está muy próximo a $1$, la ligera desionización ($6.15\%$ neutros) se debe a que la compensación por donadores aproxima el nivel de Fermi hacia el centro del gap, aumentando ligeramente la probabilidad de ocupación neutra $N_A^0$.
+\end{problema}
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 2 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Conductividad, resistencia y temperatura de transición al régimen intrínseco]
+Se dispone de una barra de Silicio tipo P de dimensiones $100\,\mu\text{m} \times 100\,\mu\text{m} \times 2\,\text{mm}$ impurificada uniformemente con $N_A = \SI{2e15}{\cm^{-3}}$ átomos de Boro por $\text{cm}^3$.
+
+\begin{enumerate}[label=\alph*)]
+    \item A $T = \SI{300}{\kelvin}$, calcular la conductividad eléctrica del material ($\sigma$), la resistencia macroscópica de la barra ($R$) y la diferencia de potencial $V$ que debe aplicarse entre sus extremos para que circule una corriente de $2\,\mu\text{A}$.
+    \item Determinar la posición del nivel de Fermi respecto al nivel intrínseco ($E_{Fi} - E_F$) a $T = \SI{300}{\kelvin}$.
+    \item Definimos la temperatura crítica de transición $T_{\text{trans}}$ como aquella a la cual la concentración de portadores intrínsecos alcanza el $20\%$ de la densidad de dopado ($n_i(T_{\text{trans}}) = 0.20 \cdot N_A$). Determinar analíticamente dicha temperatura $T_{\text{trans}}$.
+\end{enumerate}
+
+\textbf{Datos:}
+\begin{itemize}
+    \item A $T = \SI{300}{\kelvin}$: $n_i = \SI{1.5e10}{\cm^{-3}}$, $\mu_p = \SI{450}{\cm^2/\V\second}$, $\mu_n = \SI{1400}{\cm^2/\V\second}$, $k_B T = \SI{0.0259}{\eV}$.
+    \item Pre-factor intrínseco a \SI{300}{\kelvin}: $\sqrt{N_c(300) N_v(300)} = \SI{1.7065e19}{\cm^{-3}}$.
+    \item Banda prohibida del Silicio: $E_g = \SI{1.12}{\eV}$ (asumida independiente de $T$).
+    \item Constante de Boltzmann: $k_B = \SI{8.6173e-5}{\eV/\kelvin}$.
+\end{itemize}
+
+\tcblower
+
+\subsubsection*{a) Conductividad, resistencia y tensión aplicada a $T = \SI{300}{\kelvin}$}
+
+1. \textit{Geometría de la barra en centímetros:}\\
+Sección transversal: $A = (100 \times 10^{-4}\,\text{cm}) \times (100 \times 10^{-4}\,\text{cm}) = \SI{1e-4}{\cm^2}$.\\
+Longitud: $L = 2\,\text{mm} = \SI{0.2}{\cm}$.
+
+2. \textit{Conductividad ($\sigma$):}\\
+Al estar dopado tipo P ($N_A = \SI{2e15}{\cm^{-3}} \gg n_i$), las densidades de portadores son $p \approx N_A = \SI{2e15}{\cm^{-3}}$ y $n = n_i^2 / p = \SI{1.125e5}{\cm^{-3}} \ll p$.\\
+La conductividad viene dominada por los huecos:
+\[
+\sigma = e (p \mu_p + n \mu_n) \approx e N_A \mu_p = \SI{0.144}{(\Omega\cdot\text{cm})^{-1}}
+\]
+
+3. \textit{Resistencia ($R$) y Tensión aplicada ($V$):}\\
+\[
+R = \frac{L}{\sigma A} = \frac{\SI{0.2}{\cm}}{(\SI{0.144}{(\Omega\cdot\text{cm})^{-1}}) \times (\SI{1e-4}{\cm^2})} \approx \SI{13.89e3}{\Omega} = \SI{13.89}{\kilo\ohm}
+\]
+Para una corriente de $I = 2\,\mu\text{A} = \SI{2e-6}{\A}$:
+\[
+V = I \cdot R = (\num{2e-6}\,\text{A}) \times (\num{13.89e3}\,\Omega) \approx \SI{0.02778}{\V} = \SI{27.78}{\mV}
+\]
+
+\subsubsection*{b) Posición del nivel de Fermi a $T = \SI{300}{\kelvin}$}
+
+Referenciando respecto al nivel intrínseco $E_{Fi}$:
+\[
+p = n_i \exp\left( \frac{E_{Fi} - E_F}{k_B T} \right) \implies E_{Fi} - E_F = k_B T \ln\left( \frac{p}{n_i} \right) \approx \SI{0.3056}{\eV}
+\]
+
+\subsubsection*{c) Temperatura de transición $T_{\text{trans}}$}
+
+1. \textit{Condición analítica:}
+Buscamos $T$ tal que $n_i(T) = 0.20 \cdot N_A = 0.20 \times (\SI{2e15}{\cm^{-3}}) = \SI{4e14}{\cm^{-3}}$.
+
+2. \textit{Ecuación dependiente de la temperatura:}
+\[
+n_i(T) = \sqrt{N_c(300) N_v(300)} \left( \frac{T}{300} \right)^{3/2} \exp\left( -\frac{E_g}{2 k_B T} \right)
+\]
+Sustituyendo las constantes conocidas:
+\[
+(\num{1.7065e19}) \left( \frac{T}{300} \right)^{3/2} \exp\left( -\frac{1.12}{2 \cdot (\num{8.6173e-5}) \cdot T} \right) = \SI{4e14}{\cm^{-3}}
+\]
+\[
+\left( \frac{T}{300} \right)^{3/2} \exp\left( -\frac{6498.55}{T} \right) = \frac{\num{4e14}}{\num{1.7065e19}} = \num{2.344e-5}
+\]
+
+3. \textit{Resolución por evaluación numérica:}
+Definiendo $f(T) = \left( \frac{T}{300} \right)^{3/2} \exp\left( -\frac{6498.55}{T} \right)$:
+\begin{itemize}
+    \item Para $T = \SI{500}{\kelvin}$: $f(500) = (1.6667)^{1.5} \exp(-12.9971) = \num{4.88e-6} < \num{2.344e-5}$.
+    \item Para $T = \SI{550}{\kelvin}$: $f(550) = (1.8333)^{1.5} \exp(-11.8155) = \num{1.838e-5} < \num{2.344e-5}$.
+    \item Para $T = \SI{560.3}{\kelvin}$: $f(560.3) = (1.8677)^{1.5} \exp(-11.5983) = \num{2.344e-5}$.
+\end{itemize}
+
+Por lo tanto, la temperatura de transición resulta:
+\[
+T_{\text{trans}} \approx \SI{560.3}{\kelvin} \quad (\approx \SI{287.3}{\celsius})
+\]
+A esta temperatura, los portadores generados térmicamente empiezan a degradar la respuesta extrínseca del semiconductor.
+\end{problema}
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 3 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Cristalografía de GaAs e ionización parcial de donadores profundos]
+El Arseniuro de Galio ($\text{GaAs}$) posee una estructura de blenda de cinc con parámetro de red $a = \SI{5.65}{\text{\AA}}$. A $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.0259}{\eV}$), las densidades equivalentes de estados son $N_c = \SI{4.7e17}{\cm^{-3}}$, $N_v = \SI{7.0e18}{\cm^{-3}}$ y el ancho de banda prohibida es $E_g = \SI{1.42}{\eV}$.
+
+\begin{enumerate}[label=\alph*)]
+    \item Calcular la densidad atómica volumétrica total ($\text{átomos/cm}^3$) y la densidad volumétrica de electrones de valencia en el $\text{GaAs}$ puro.
+    \item Calcular la concentración intrínseca de portadores $n_i$ y la posición del nivel de Fermi intrínseco respecto a la banda de valencia ($E_{Fi} - E_V$).
+    \item La muestra se dopa con $N_D = \SI{2e16}{\cm^{-3}}$ átomos de una impureza donadora profunda con energía de ionización $E_C - E_D = \SI{0.28}{\eV}$ ($g_d = 2$). Demostrar cuantitativamente que la hipótesis de ionización total es inválida y calcular mediante la ecuación cuadrática exacta la concentración real de electrones libres ($n$), el porcentaje de ionización ($N_D^+ / N_D$) y la posición del nivel de Fermi ($E_F - E_C$).
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a) Propiedades cristalográficas del GaAs}
+
+1. \textit{Geometría de la celda unidad:}
+La celda unidad contiene $4$ átomos de Galio y $4$ átomos de Arsénico ($8\text{ átomos/celda}$).
+El volumen de la celda para $a = \SI{5.65e-8}{\cm}$ es:
+\[
+V_{\text{celda}} = a^3 = (\num{5.65e-8})^3 \approx \SI{1.8036e-22}{\cm^3}
+\]
+
+2. \textit{Densidad atómica volumétrica:}
+\[
+\rho_{\text{átomos}} = \frac{8}{V_{\text{celda}}} = \frac{8}{\num{1.8036e-22}} \approx \SI{4.435e22}{\text{átomos/cm}^3}
+\]
+
+3. \textit{Densidad de electrones de valencia:}
+El Galio (Grupo III) aporta $3\text{ e}^-$ y el Arsénico (Grupo V) aporta $5\text{ e}^-$, dando $4 \times 3 + 4 \times 5 = 32\text{ e}^-\text{ valencia/celda}$:
+\[
+\rho_v = \frac{32}{V_{\text{celda}}} = \frac{32}{\num{1.8036e-22}} \approx \SI{1.774e23}{\text{e}^-\text{ valencia/cm}^3}
+\]
+
+\subsubsection*{b) Concentración intrínseca y nivel de Fermi intrínseco}
+
+1. \textit{Concentración intrínseca ($n_i$):}
+\[
+n_i = \sqrt{N_c N_v} \exp\left( -\frac{E_g}{2 k_B T} \right) = \sqrt{(\num{4.7e17})(\num{7.0e18})} \exp\left( -\frac{1.42}{2 \cdot 0.0259} \right)
+\]
+\[
+n_i = (\num{1.8138e18}) \cdot \exp(-27.4131) \approx \SI{2.255e6}{\cm^{-3}}
+\]
+
+2. \textit{Posición de $E_{Fi}$ respecto a $E_V$:}
+\[
+E_{Fi} - E_V = \frac{E_g}{2} + \frac{1}{2} k_B T \ln\left( \frac{N_v}{N_c} \right) = \frac{1.42}{2} + \frac{0.0259}{2} \ln\left( \frac{\num{7.0e18}}{\num{4.7e17}} \right)
+\]
+\[
+E_{Fi} - E_V = \SI{0.710}{\eV} + (\SI{0.01295}{\eV}) \ln(14.894) = \SI{0.710}{\eV} + \SI{0.0350}{\eV} = \SI{0.7450}{\eV}
+\]
+
+\subsubsection*{c) Ionización parcial de donadores profundos ($E_C - E_D = \SI{0.28}{\eV}$)}
+
+1. \textit{Demostración de invalidez de ionización total:}
+Si supusiéramos $n \approx N_D = \SI{2e16}{\cm^{-3}}$:
+\[
+E_F - E_C = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{2e16}}{\num{4.7e17}} \right) = \SI{-0.0818}{\eV}
+\]
+Esto daría $E_F - E_D = \SI{-0.0818}{\eV} + \SI{0.280}{\eV} = \SI{+0.1982}{\eV}$. La fracción ionizada resultaría:
+\[
+\frac{N_D^+}{N_D} = \frac{1}{1 + 2 \exp\left( \frac{0.1982}{0.0259} \right)} = \frac{1}{1 + 2 \exp(7.6525)} \approx \num{0.000238} \ll 1
+\]
+La hipótesis de ionización total falla por completo ($0.024\%$ ionizados).
+
+2. \textit{Resolución cuadrática exacta para $N_D^+$:}
+Manteniendo la hipótesis $p \ll N_D^+$ (de modo que $n = N_D^+$):
+\[
+\frac{(N_D^+)^2 g_d}{N_c (N_D - N_D^+)} = \exp\left( -\frac{E_C - E_D}{k_B T} \right)
+\]
+Evaluando la constante preexponencial $K$:
+\[
+K = N_c \exp\left( -\frac{0.28}{0.0259} \right) = (\num{4.7e17}) \exp(-10.8108) \approx \SI{9.533e12}{\cm^{-3}}
+\]
+Sustituyendo en la ecuación cuadrática con $g_d = 2$:
+\[
+2 (N_D^+)^2 + (\num{9.533e12}) N_D^+ - (\num{9.533e12})(\num{2e16}) = 0
+\]
+\[
+2 (N_D^+)^2 + (\num{9.533e12}) N_D^+ - \num{1.9066e29} = 0
+\]
+Tomando la raíz positiva físicamente válida:
+\[
+N_D^+ = \frac{-\num{9.533e12} + \sqrt{(\num{9.533e12})^2 + 4 \cdot 2 \cdot (\num{1.9066e29})}}{4} \approx \SI{3.064e14}{\cm^{-3}}
+\]
+
+3. \textit{Resultados finales:}
+\begin{itemize}
+    \item Concentración de electrones libres: $n = N_D^+ = \SI{3.064e14}{\cm^{-3}}$.
+    \item Porcentaje de ionización: $\frac{N_D^+}{N_D} = \frac{\num{3.064e14}}{\num{2e16}} = 0.0153 \quad (1.53\%)$.
+    \item Concentración de huecos: $p = \frac{n_i^2}{n} = \frac{(\num{2.255e6})^2}{\num{3.064e14}} \approx \SI{1.66e-2}{\cm^{-3}}$ (se verifica $p \ll N_D^+$).
+    \item Posición real del nivel de Fermi:
+    \[
+    E_F - E_C = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{3.064e14}}{\num{4.7e17}} \right) \approx \SI{-0.1900}{\eV}
+    \]
+\end{itemize}
+\end{problema}
+
+\newpage
+%-----------------------------------------------------
+%-------------- Problema 4 ---------------------------
+%-----------------------------------------------------
+\begin{problema}[Ionización de aceptadores a bajas temperaturas e inmovilización de portadores]
+Una barra de Silicio tipo P está impurificada con $N_A = \SI{1e16}{\cm^{-3}}$ átomos de Boro por $\text{cm}^3$ ($E_A - E_V = \SI{0.045}{\eV}$, $g_a = 4$).
+
+\begin{enumerate}[label=\alph*)]
+    \item A $T = \SI{300}{\kelvin}$ ($k_B T = \SI{0.0259}{\eV}$, $N_v = \SI{1.04e19}{\cm^{-3}}$), verificar la fracción de aceptadores ionizados $N_A^- / N_A$ y la posición del nivel de Fermi $E_F - E_V$.
+    \item Al enfriar la muestra, la agitación térmica disminuye y los portadores quedan inmovilizados (*freeze-out*). Determinar la temperatura $T$ a la cual únicamente el $30\%$ de los aceptadores permanecen ionizados ($N_A^- / N_A = 0.30$).
+    \item Calcular la concentración de huecos libres $p$ y la posición del nivel de Fermi $E_F - E_V$ a dicha temperatura baja $T$.
+\end{enumerate}
+
+\textbf{Datos adicionales:}
+\begin{itemize}
+    \item Dependencia térmica de la densidad equivalente de estados: $N_v(T) = N_v(300) \left( \frac{T}{300} \right)^{3/2}$.
+    \item Constante de Boltzmann: $k_B = \SI{8.6173e-5}{\eV/\kelvin}$.
+\end{itemize}
+
+\tcblower
+
+\subsubsection*{a) Verificación a $T = \SI{300}{\kelvin}$}
+
+1. \textit{Posición de $E_F - E_V$ bajo la hipótesis $p \approx N_A = \SI{1e16}{\cm^{-3}}$:}
+\[
+E_F - E_V = k_B T \ln\left( \frac{N_v}{N_A} \right) = (\SI{0.0259}{\eV}) \ln\left( \frac{\num{1.04e19}}{\num{1e16}} \right) = (\SI{0.0259}{\eV}) \ln(1040) \approx \SI{0.1799}{\eV}
+\]
+
+2. \textit{Evaluación del grado de ionización:}
+\[
+E_A - E_F = (E_A - E_V) - (E_F - E_V) = \SI{0.045}{\eV} - \SI{0.1799}{\eV} = \SI{-0.1349}{\eV}
+\]
+\[
+\frac{N_A^-}{N_A} = \frac{1}{1 + g_a \exp\left( \frac{E_A - E_F}{k_B T} \right)} = \frac{1}{1 + 4 \exp\left( \frac{-0.1349}{0.0259} \right)} = \frac{1}{1 + 4 \exp(-5.2085)} \approx 0.9786
+\]
+A temperatura ambiente el $97.86\%$ de las impurezas están ionizadas.
+
+\subsubsection*{b) Temperatura para un $30\%$ de ionización aceptadora}
+
+Si $\frac{N_A^-}{N_A} = 0.30$, los aceptadores neutros corresponden al $70\%$ ($N_A^0 / N_A = 0.70$).
+Como $n \ll p$, la densidad de huecos libres es producida únicamente por la ionización de aceptadores:
+\[
+p = N_A^- = 0.30 N_A = \SI{3e15}{\cm^{-3}}
+\]
+
+1. \textit{Relación de ocupación estadística de aceptadores:}
+\[
+\frac{N_A^-}{N_A^0} = \frac{0.30 N_A}{0.70 N_A} = \frac{3}{7} = \frac{1}{g_a} \exp\left( \frac{E_F - E_A}{k_B T} \right) \implies \exp\left( \frac{E_F - E_A}{k_B T} \right) = \frac{12}{7} \approx 1.7143
+\]
+\[
+E_F - E_A = k_B T \ln\left( \frac{12}{7} \right)
+\]
+
+2. \textit{Relación para la banda de valencia:}
+\[
+p = N_v(T) \exp\left( \frac{E_V - E_F}{k_B T} \right) \implies E_V - E_F = k_B T \ln\left( \frac{p}{N_v(T)} \right)
+\]
+
+3. \textit{Combinación para eliminar $E_F$:}
+Sumando ambas expresiones energéticas se cancela $E_F$:
+\[
+(E_F - E_A) + (E_V - E_F) = E_V - E_A = -(E_A - E_V) = -\SI{0.045}{\eV}
+\]
+\[
+k_B T \ln\left( \frac{12}{7} \right) + k_B T \ln\left( \frac{p}{N_v(T)} \right) = -\SI{0.045}{\eV} \implies k_B T \ln\left( \frac{12 p}{7 N_v(T)} \right) = -\SI{0.045}{\eV}
+\]
+
+Despejando el término exponencial:
+\[
+\frac{12 p}{7 N_v(T)} = \exp\left( -\frac{0.045}{k_B T} \right)
+\]
+Sustituyendo $p = \SI{3e15}{\cm^{-3}}$, $N_v(T) = (\SI{1.04e19}{\cm^{-3}}) \left(\frac{T}{300}\right)^{3/2}$ y $k_B = \SI{8.6173e-5}{\eV/\kelvin}$:
+\[
+\frac{12 \cdot (\num{3e15})}{7 \cdot (\num{1.04e19}) \left( \frac{T}{300} \right)^{3/2}} = \exp\left( -\frac{0.045}{\num{8.6173e-5} \cdot T} \right) \implies \frac{\num{4.945e-4}}{\left( \frac{T}{300} \right)^{3/2}} = \exp\left( -\frac{522.20}{T} \right)
+\]
+
+4. \textit{Resolución numérica:}
+Evaluando la ecuación trascendente para $T$:
+\begin{itemize}
+    \item Para $T = \SI{90.1}{\kelvin}$:
+    \[
+    \frac{\num{4.945e-4}}{(90.1/300)^{1.5}} = \frac{\num{4.945e-4}}{\num{0.1648}} \approx \num{3.00e-3}
+    \]
+    \[
+    \exp\left(-\frac{522.20}{90.1}\right) = \exp(-5.7958) \approx \num{3.04e-3}
+    \]
+\end{itemize}
+Por lo tanto, la solución exacta es $T \approx \SI{90.1}{\kelvin}$.
+
+\subsubsection*{c) Densidad de huecos y nivel de Fermi a $T = \SI{90.1}{\kelvin}$}
+
+1. \textit{Concentración de huecos:} $p = \SI{3e15}{\cm^{-3}}$.
+2. \textit{Densidad de estados a $T = \SI{90.1}{\kelvin}$:}
+\[
+N_v(90.1) = (\SI{1.04e19}{\cm^{-3}}) \left( \frac{90.1}{300} \right)^{3/2} \approx \SI{1.714e18}{\cm^{-3}}
+\]
+3. \textit{Posición del nivel de Fermi ($E_F - E_V$):}
+\[
+E_F - E_V = k_B T \ln\left( \frac{N_v(90.1)}{p} \right) = (\num{8.6173e-5} \times 90.1) \ln\left( \frac{\num{1.714e18}}{\num{3e15}} \right)
+\]
+\[
+E_F - E_V = (\SI{0.007764}{\eV}) \ln(571.33) \approx \SI{0.0493}{\eV}
+\]
+El nivel de Fermi se posiciona a \SI{0.0493}{\eV} por encima del borde de la banda de valencia $E_V$ (ubicado justo por encima del nivel aceptador $E_A = \SI{0.045}{\eV}$).
+\end{problema}
+
+\newpage
+%===============================================
+%================= PROBLEMA 10 =================
+%===============================================
+\begin{problema}[Fotogeneración exponencial en semiconductor semi-infinito con recombinación superficial]
+Consideremos una muestra semiconductora tipo P semi-infinita ($x \ge 0$), con concentración de aceptores $N_A \gg n_i$, sometida a una iluminación monocromática en la cara frontal $x = 0$. La tasa de generación de pares electrón-hueco por unidad de volumen sigue la ley de Beer-Lambert:
+\[
+G(x) = G_0 \, e^{-\alpha x}
+\]
+donde $\alpha$ es el coeficiente de absorción óptica del semiconductor y $G_0$ es la tasa de fotogeneración en la superficie.
+
+En condiciones de débil nivel de inyección y régimen estacionario, conociendo la vida media de minoritarios $\tau_n$, la constante de difusión $D_n$ (y $L_n = \sqrt{D_n \tau_n}$) y sabiendo que la superficie $x = 0$ presenta una velocidad de recombinación $s$:
+
+\begin{enumerate}[label=\alph*)]
+    \item Plantear la ecuación diferencial de continuidad y obtener la distribución espacial del exceso de portadores minoritarios $\delta n(x)$.
+    \item Analizar el perfil resultante para el caso límite de fuerte absorción óptica ($\alpha \to \infty$) distinguiendo entre superficie ideal ($s = 0$) y contacto óhmico ($s \to \infty$).
+\end{enumerate}
+
+\tcblower
+\subsubsection*{1. Ecuación diferencial de transporte y solución general}
+En un semiconductor tipo P ($p_0 \approx N_A \gg n_0$), la dinámica de los portadores en exceso viene gobernada por la ecuación de continuidad de los electrones minoritarios. En régimen estacionario y sin campo eléctrico aplicado:
+\[
+D_n \frac{d^2(\delta n)}{dx^2} - \frac{\delta n}{\tau_n} + G_0 e^{-\alpha x} = 0 \implies \frac{d^2(\delta n)}{dx^2} - \frac{\delta n}{L_n^2} = -\frac{G_0}{D_n} e^{-\alpha x}
+\]
+
+La solución general es la suma de la solución de la ecuación homogénea más una solución particular de la forma $\delta n_p(x) = K e^{-\alpha x}$:
+\[
+\alpha^2 K e^{-\alpha x} - \frac{K}{L_n^2} e^{-\alpha x} = -\frac{G_0}{D_n} e^{-\alpha x} \implies K \left( \frac{\alpha^2 L_n^2 - 1}{L_n^2} \right) = -\frac{G_0}{D_n} \implies K = \frac{G_0 \tau_n}{1 - \alpha^2 L_n^2}
+\]
+
+Por tanto, la solución general adopta la forma (suponiendo $\alpha L_n \neq 1$):
+\[
+\delta n(x) = C_1 e^{-x/L_n} + C_2 e^{x/L_n} + \frac{G_0 \tau_n}{1 - \alpha^2 L_n^2} e^{-\alpha x}
+\]
+
+\subsubsection*{2. Aplicación de condiciones de contorno}
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Condición de acotación en el volumen ($x \to \infty$):}
+    Puesto que la generación se extingue en la profundidad de la muestra y la densidad no puede divergir, se requiere $C_2 = 0$:
+    \[
+    \lim_{x \to \infty} \delta n(x) = 0 \implies C_2 = 0 \implies \delta n(x) = C_1 e^{-x/L_n} + \frac{G_0 \tau_n}{1 - \alpha^2 L_n^2} e^{-\alpha x}
+    \]
+
+    \item \textbf{Recombinación superficial en la frontera ($x = 0$):}
+    El flujo de difusión que llega a la cara $x = 0$ alimenta la recombinación en la superficie con velocidad $s$:
+    \[
+    D_n \left. \frac{d(\delta n)}{dx} \right|_{x=0} = s \, \delta n(0)
+    \]
+
+    Evaluando la derivada y la concentración en $x = 0$:
+    \[
+    \left. \frac{d(\delta n)}{dx} \right|_{x=0} = -\frac{C_1}{L_n} - \frac{\alpha \, G_0 \tau_n}{1 - \alpha^2 L_n^2}, \qquad \delta n(0) = C_1 + \frac{G_0 \tau_n}{1 - \alpha^2 L_n^2}
+    \]
+
+    Sustituyendo en la condición de frontera:
+    \[
+    D_n \left( -\frac{C_1}{L_n} - \frac{\alpha \, G_0 \tau_n}{1 - \alpha^2 L_n^2} \right) = s \left( C_1 + \frac{G_0 \tau_n}{1 - \alpha^2 L_n^2} \right)
+    \]
+    \[
+    -C_1 \left( s + \frac{D_n}{L_n} \right) = \frac{G_0 \tau_n}{1 - \alpha^2 L_n^2} \left( s + \alpha D_n \right) \implies C_1 = -\frac{G_0 \tau_n}{1 - \alpha^2 L_n^2} \left( \frac{s + \alpha D_n}{s + \frac{D_n}{L_n}} \right)
+    \]
+\end{enumerate}
+
+\subsubsection*{3. Distribución espacial definitiva}
+Sustituyendo la constante $C_1$, la densidad espacial de electrones en exceso resulta:
+\[
+\delta n(x) = \frac{G_0 \tau_n}{1 - \alpha^2 L_n^2} \left[ e^{-\alpha x} - \left( \frac{s + \alpha D_n}{s + \frac{D_n}{L_n}} \right) e^{-x/L_n} \right]
+\]
+
+\subsubsection*{4. Discusión de casos límite ($\alpha \to \infty$)}
+Cuando el coeficiente de absorción es muy elevado ($\alpha L_n \gg 1$), la luz se absorbe íntegramente en una capa delgada adyacente a la superficie ($x \approx 0$), equivalente a una inyección puramente superficial:
+\begin{itemize}
+    \item \textbf{Superficie ideal pasivada ($s = 0$):}
+    \[
+    \delta n(x) \approx \frac{G_0 \tau_n}{\alpha L_n} e^{-x/L_n}
+    \]
+    Los portadores generados junto a la frontera difunden hacia el interior decreciendo exponencialmente con la longitud de difusión $L_n$.
+
+    \item \textbf{Contacto óhmico perfecto ($s \to \infty$):}
+    \[
+    \delta n(x) \to 0
+    \]
+    Toda la fotogeneración concentrada en la superficie es absorbida inmediatamente por el sumidero recombinativo sin llegar a penetrar en el volumen del semiconductor.
+\end{itemize}
+\end{problema}
+
+\newpage
+%===============================================
+%================= PROBLEMA 11 =================
+%===============================================
+\begin{problema}[Fotoconductancia en un bloque semiconductor simétrico parcialmente iluminado]
+Se dispone de un semiconductor homogéneo tipo P de longitud $2L$ (comprendido entre $x = -L$ y $x = L$), anchura $B$ (eje $y$) y grosor $C$ (eje $z$), caracterizado por una conductividad en oscuridad $\sigma_0 = e(\mu_n n_0 + \mu_p p_0)$, movilidad de portadores $\mu_n, \mu_p$ y longitud de difusión de minoritarios $L_n = \sqrt{D_n \tau_n}$.
+
+La mitad izquierda de la muestra (Región I: $-L \le x \le 0$) se ilumina de forma uniforme generando $G$ pares electrón-hueco por unidad de volumen y de tiempo. La mitad derecha (Región II: $0 \le x \le L$) se mantiene totalmente en la oscuridad ($G = 0$). Ambas caras extremas ($x = -L$ y $x = L$) disponen de contactos metálicos idénticos que actúan como sumideros perfectos del exceso de portadores.
+
+En régimen estacionario y bajo débil nivel de inyección:
+\begin{enumerate}[label=\alph*)]
+    \item Determinar la distribución espacial del exceso de electrones $\delta n_{\text{I}}(x)$ y $\delta n_{\text{II}}(x)$ expresada mediante funciones hiperbólicas.
+    \item Obtener la resistencia eléctrica equivalente $R$ medida entre las caras $y = 0$ e $y = B$ para la totalidad del bloque semiconductor.
+\end{enumerate}
+
+\tcblower
+\subsubsection*{Ecuaciones de continuidad y soluciones en funciones hiperbólicas}
+Para un semiconductor tipo P bajo débil nivel de inyección, la ecuación de continuidad de electrones minoritarios en cada región es:
+\begin{itemize}
+    \item \textbf{Región I ($-L \le x \le 0$, Iluminada):}
+    \[
+    \frac{d^2(\delta n_{\text{I}})}{dx^2} - \frac{\delta n_{\text{I}}}{L_n^2} + \frac{G}{D_n} = 0 \implies \delta n_{\text{I}}(x) = G \tau_n + A_1 \cosh\left(\frac{x+L}{L_n}\right) + B_1 \sinh\left(\frac{x+L}{L_n}\right)
+    \]
+    \item \textbf{Región II ($0 \le x \le L$, Oscuridad):}
+    \[
+    \frac{d^2(\delta n_{\text{II}})}{dx^2} - \frac{\delta n_{\text{II}}}{L_n^2} = 0 \implies \delta n_{\text{II}}(x) = C_1 \sinh\left(\frac{x-L}{L_n}\right) + D_1 \cosh\left(\frac{x-L}{L_n}\right)
+    \]
+\end{itemize}
+
+\subsubsection*{2. Condiciones de contorno e interfaz}
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Contacto óhmico en $x = -L$:} $\delta n_{\text{I}}(-L) = 0 \implies G \tau_n + A_1 = 0 \implies A_1 = -G \tau_n$.
+    \item \textbf{Contacto óhmico en $x = L$:} $\delta n_{\text{II}}(L) = 0 \implies D_1 = 0$.
+    \item \textbf{Continuidad del exceso en $x = 0$:}
+    \[
+    \delta n_{\text{I}}(0) = \delta n_{\text{II}}(0) \implies G \tau_n \left[ 1 - \cosh\left(\frac{L}{L_n}\right) \right] + B_1 \sinh\left(\frac{L}{L_n}\right) = -C_1 \sinh\left(\frac{L}{L_n}\right)
+    \]
+    \[
+    (B_1 + C_1) \sinh\left(\frac{L}{L_n}\right) = G \tau_n \left[ \cosh\left(\frac{L}{L_n}\right) - 1 \right]
+    \]
+    \item \textbf{Continuidad del flujo difusivo en $x = 0$:}
+    \[
+    \left. \frac{d(\delta n_{\text{I}})}{dx} \right|_{x=0} = \left. \frac{d(\delta n_{\text{II}})}{dx} \right|_{x=0} \implies -G \tau_n \sinh\left(\frac{L}{L_n}\right) + B_1 \cosh\left(\frac{L}{L_n}\right) = C_1 \cosh\left(\frac{L}{L_n}\right)
+    \]
+    \[
+    (B_1 - C_1) \cosh\left(\frac{L}{L_n}\right) = G \tau_n \sinh\left(\frac{L}{L_n}\right)
+    \]
+\end{enumerate}
+
+Resolviendo el sistema de ecuaciones para $B_1$ y $C_1$:
+\[
+B_1 + C_1 = G \tau_n \frac{\cosh\left(\frac{L}{L_n}\right) - 1}{\sinh\left(\frac{L}{L_n}\right)}, \qquad B_1 - C_1 = G \tau_n \frac{\sinh\left(\frac{L}{L_n}\right)}{\cosh\left(\frac{L}{L_n}\right)}
+\]
+\[
+C_1 = -\frac{G \tau_n}{2 \sinh\left(\frac{L}{L_n}\right) \cosh\left(\frac{L}{L_n}\right)} = -\frac{G \tau_n}{\sinh\left(\frac{2L}{L_n}\right)}
+\]
+\[
+B_1 = G \tau_n \left[ \tanh\left(\frac{L}{L_n}\right) - \frac{1}{\sinh\left(\frac{2L}{L_n}\right)} \right]
+\]
+
+Sustituyendo $C_1$, el perfil en la Región II resulta de forma extremadamente compacta:
+\[
+\delta n_{\text{II}}(x) = G \tau_n \frac{\sinh\left(\frac{L-x}{L_n}\right)}{\sinh\left(\frac{2L}{L_n}\right)} \qquad (0 \le x \le L)
+\]
+
+\subsubsection*{3. Cálculo de la resistencia transversal equivalente}
+Dado que la corriente circula en el eje $y$ (entre $y=0$ e $y=B$), las rebanadas elementales de grosor $dx$ a lo largo de toda la longitud $-L \le x \le L$ están conectadas en \textbf{paralelo}. La conductancia total se obtiene integrando la conductividad local $\sigma(x) = \sigma_0 + e(\mu_n + \mu_p)\delta n(x)$:
+\[
+\frac{1}{R} = \int_{-L}^{L} \sigma(x) \frac{C \, dx}{B} = \sigma_0 \frac{2 L C}{B} + \frac{C}{B} e (\mu_n + \mu_p) \left[ \int_{-L}^0 \delta n_{\text{I}}(x) dx + \int_0^L \delta n_{\text{II}}(x) dx \right]
+\]
+
+Calculando las integrales del exceso de carga en ambas regiones:
+\[
+\int_0^L \delta n_{\text{II}}(x) dx = \frac{G \tau_n L_n}{\sinh\left(\frac{2L}{L_n}\right)} \left[ \cosh\left(\frac{L}{L_n}\right) - 1 \right]
+\]
+\[
+\int_{-L}^0 \delta n_{\text{I}}(x) dx = G \tau_n L - G \tau_n L_n \sinh\left(\frac{L}{L_n}\right) + B_1 L_n \left[ \cosh\left(\frac{L}{L_n}\right) - 1 \right]
+\]
+
+Sumando ambas contribuciones, la carga integrada total resulta $Q_{\text{tot}} = \int_{-L}^L \delta n(x) dx$. La resistencia total del dispositivo es:
+\[
+R = \frac{B}{C \left[ 2 L \sigma_0 + e (\mu_n + \mu_p) \int_{-L}^L \delta n(x) dx \right]}
+\]
+\end{problema}
+
+\newpage
+%===============================================
+%================= PROBLEMA 12 =================
+%===============================================
+\begin{problema}[Inyección puntual plana en una muestra corta con recombinación nula en volumen]
+Se considera una barra semiconductora tipo P de longitud reducida $W$ ($W \ll L_n$) y sección transversal $A$. En una posición intermedia $x = d$ ($0 < d < W$), se sitúa una fuente plana delgada que introduce una generación de superficie de $G_s$ pares electrón-hueco por unidad de área y por segundo (por ejemplo, mediante iluminación focalizada).
+
+Los extremos $x = 0$ y $x = W$ cuentan con contactos metálicos ideales ($\delta n(0) = 0$ y $\delta n(W) = 0$). Dado que la muestra es corta, la recombinación en el volumen es totalmente despreciable ($\tau_n \to \infty$).
+
+\begin{enumerate}[label=\alph*)]
+    \item Establecer las ecuaciones diferenciales en cada zona y las condiciones de frontera e interfaz aplicables en $x = 0$, $x = d$ y $x = W$.
+    \item Obtener las expresiones analíticas del exceso de electrones $\delta n(x)$ en la Zona 1 ($0 \le x \le d$) y en la Zona 2 ($d \le x \le W$).
+    \item Determinar el valor máximo de la concentración en exceso $\delta n(d)$ y demostrar que la suma de las corrientes de difusión que salen por los contactos extremos equivale exactamente a la tasa total de carga generada $e G_s A$.
+\end{enumerate}
+
+\tcblower
+\subsubsection*{1. Ecuaciones diferenciales y condiciones de contorno}
+Al ser $W \ll L_n$ y no existir fotogeneración en el volumen fuera de $x = d$, la ecuación de continuidad estacionaria $\frac{d^2(\delta n)}{dx^2} = 0$ conduce a perfiles lineales en ambas zonas:
+\begin{itemize}
+    \item \textbf{Zona 1 ($0 \le x \le d$):} $\delta n_{\text{I}}(x) = A_1 x + B_1$
+    \item \textbf{Zona 2 ($d \le x \le W$):} $\delta n_{\text{II}}(x) = A_2 x + B_2$
+\end{itemize}
+
+Las \textbf{condiciones de contorno e interfaz} son:
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Contacto óhmico en $x = 0$:} $\delta n_{\text{I}}(0) = 0 \implies B_1 = 0 \implies \delta n_{\text{I}}(x) = A_1 x$.
+    \item \textbf{Contacto óhmico en $x = W$:} $\delta n_{\text{II}}(W) = 0 \implies A_2 W + B_2 = 0 \implies \delta n_{\text{II}}(x) = A_2 (x - W)$.
+    \item \textbf{Continuidad de la concentración en $x = d$:}
+    \[
+    \delta n_{\text{I}}(d) = \delta n_{\text{II}}(d) \equiv \delta n(d) \implies A_1 d = A_2 (d - W) \implies 
+    \begin{cases}
+        A_1 = \frac{\delta n(d)}{d}, \\ 
+        A_2 = -\frac{\delta n(d)}{W - d}
+    \end{cases}
+    \]
+    \item \textbf{Salto en el flujo difusivo por fotogeneración plana en $x = d$:}
+    El plano de generación actúa como fuente de la corriente de difusión que fluye hacia ambos lados:
+    \[
+    J_{dn,\text{I}}(d) - J_{dn,\text{II}}(d) = e G_s \implies e D_n \left. \frac{d(\delta n_{\text{I}})}{dx} \right|_{d} - e D_n \left. \frac{d(\delta n_{\text{II}})}{dx} \right|_{d} = e G_s
+    \]
+    \[
+    D_n (A_1 - A_2) = G_s
+    \]
+\end{enumerate}
+
+\subsubsection*{2. Determinación de la concentración máxima y perfiles}
+Sustituyendo las pendientes $A_1$ y $A_2$ en la condición de salto de flujo:
+\[
+D_n \left( \frac{\delta n(d)}{d} + \frac{\delta n(d)}{W - d} \right) = G_s \implies D_n \delta n(d) \left( \frac{W}{d(W - d)} \right) = G_s
+\]
+
+Despejando el exceso de portadores máximo en $x = d$:
+\[
+\delta n(d) = \frac{G_s \, d (W - d)}{D_n W}
+\]
+
+Sustituyendo $\delta n(d)$ en las constantes $A_1$ y $A_2$, las expresiones analíticas de los perfiles resultan:
+\[
+\delta n_{\text{I}}(x) = \frac{G_s (W - d)}{D_n W} \, x \qquad (0 \le x \le d)
+\]
+\[
+\delta n_{\text{II}}(x) = \frac{G_s d}{D_n W} \, (W - x) \qquad (d \le x \le W)
+\]
+
+\subsubsection*{3. Balance global de corriente de difusión en los contactos}
+Las densidades de corriente de difusión en los contactos frontera son:
+\[
+J_{dn}(0) = e D_n \left. \frac{d(\delta n_{\text{I}})}{dx} \right|_{x=0} = e D_n A_1 = e G_s \frac{W - d}{W}
+\]
+\[
+J_{dn}(W) = e D_n \left. \frac{d(\delta n_{\text{II}})}{dx} \right|_{x=W} = e D_n A_2 = -e G_s \frac{d}{W}
+\]
+
+La corriente eléctrica total que sale por el contacto izquierdo en $x = 0$ fluye hacia $-x$ ($I_{\text{izq}} = -J_{dn}(0) A$), mientras que la que sale por el contacto derecho en $x = W$ fluye hacia $+x$ ($I_{\text{der}} = J_{dn}(W) A$). Evaluando la suma de las magnitudes de corriente recolectadas:
+\[
+|J_{dn}(0)| + |J_{dn}(W)| = e G_s \frac{W - d}{W} + e G_s \frac{d}{W} = e G_s
+\]
+
+Multiplicando por la sección transversal $A$, la corriente de recombinación en los contactos cumple con la conservación perfecta del flujo fotogenerado: $I_{\text{total}} = e G_s A$.
+\end{problema}
+
+\newpage
+%===============================================
+%================= PROBLEMA 13 =================
+%===============================================
+\begin{problema}[Caracterización de un semiconductor tipo P mediante el Efecto Hall y conductividad]
+En una muestra de semiconductor extrínseco tipo P impurificado con Boro ($E_A - E_V = 0,045\,\text{eV}$; factor de degeneración $g_A = 4$), se realiza una medida de efecto Hall a $T = 300\,\text{K}$ ($k_B T = 0,026\,\text{eV}$).
+
+Las dimensiones geométricas de la muestra son $L = 1,0\,\text{cm}$ (longitud), $d = 2,0\,\text{mm}$ (anchura) y $w = 0,5\,\text{mm}$ (espesor). Sometida a un campo magnético perpendicular $B_z = 0,3\,\text{T}$, la razón entre la tensión Hall medida entre bordes transversales y la corriente longitudinal es $|V_H / I| = 12\,\Omega$. Asimismo, la resistencia medida a lo largo de la longitud $L$ en oscuridad resulta $R_L = 2,5\,\text{k}\Omega$.
+
+Sabiendo que la densidad efectiva de estados en la banda de valencia es $N_v = 1,04 \times 10^{19}\,\text{cm}^{-3}$:
+
+\begin{enumerate}[label=\alph*)]
+    \item Calcular la densidad de huecos libres $p$ y la posición del nivel de Fermi respecto al borde de la banda de valencia ($E_F - E_V$).
+    \item Determinar la densidad total de impurezas aceptoras $N_A$ teniendo en cuenta la estadística de ocupación del nivel aceptor.
+    \item Calcular la conductividad $\sigma$ del semiconductor y la movilidad de los huecos $\mu_p$.
+\end{enumerate}
+
+\tcblower
+\subsubsection*{a) Densidad de huecos ($p$) y posición del nivel de Fermi ($E_F - E_V$)}
+En un semiconductor de tipo P, la tensión Hall transversal $V_H$ responde a la ecuación:
+\[
+|V_H| = R_H \frac{I B_z}{w} = \frac{1}{e p} \frac{I B_z}{w} \implies p = \frac{B_z}{e w \left| \frac{V_H}{I} \right|}
+\]
+
+Sustituyendo los datos experimentales ($B_z = 0,3\,\text{T}$, $w = 0,5 \times 10^{-3}\,\text{m}$, $|V_H / I| = 12\,\Omega$, $e = 1,60 \times 10^{-19}\,\text{C}$):
+\[
+p = \frac{0,3\,\text{T}}{(1,60 \times 10^{-19}\,\text{C}) \times (0,5 \times 10^{-3}\,\text{m}) \times 12\,\Omega} = 3,125 \times 10^{20}\,\text{m}^{-3} = 3,125 \times 10^{14}\,\text{cm}^{-3}
+\]
+
+Para la aproximación no degenerada, la densidad de huecos libres en la banda de valencia es:
+\[
+p = N_v \exp\left(-\frac{E_F - E_V}{k_B T}\right) \implies E_F - E_V = k_B T \ln\left(\frac{N_v}{p}\right)
+\]
+
+Sustituyendo $N_v = 1,04 \times 10^{19}\,\text{cm}^{-3}$ y $k_B T = 0,026\,\text{eV}$:
+\[
+E_F - E_V = (0,026\,\text{eV}) \ln\left(\frac{1,04 \times 10^{19}\,\text{cm}^{-3}}{3,125 \times 10^{14}\,\text{cm}^{-3}}\right) = (0,026\,\text{eV}) \ln(33280) \approx 0,271\,\text{eV}
+\]
+
+Por consiguiente, el nivel de Fermi se halla a $0,271\,\text{eV}$ por encima del borde de la banda de valencia.
+
+\subsubsection*{b) Densidad total de impurezas aceptoras ($N_A$)}
+Analizamos la fracción de aceptores neutros ($N_A^0$) frente a ionizados ($N_A^-$) empleando el factor de degeneración $g_A = 4$:
+\[
+\frac{N_A^0}{N_A^-} = g_A \exp\left(\frac{E_A - E_F}{k_B T}\right) = g_A \frac{p}{N_v} \exp\left(\frac{E_A - E_V}{k_B T}\right)
+\]
+
+Sustituyendo los valores numéricos ($E_A - E_V = 0,045\,\text{eV}$):
+\[
+\frac{N_A^0}{N_A^-} = 4 \times \left(\frac{3,125 \times 10^{14}}{1,04 \times 10^{19}}\right) \times \exp\left(\frac{0,045}{0,026}\right) \approx 4 \times (3,005 \times 10^{-5}) \times 5,645 \approx 6,78 \times 10^{-4}
+\]
+
+Dado que $N_A^0 \ll N_A^-$, la ionización de las impurezas de Boro a temperatura ambiente es prácticamente completa ($N_A \approx N_A^-$). Por neutralidad global ($p \approx N_A^-$):
+\[
+N_A \approx p = 3,125 \times 10^{14}\,\text{cm}^{-3}
+\]
+
+\subsubsection*{c) Conductividad ($\sigma$) y movilidad de huecos ($\mu_p$)}
+La sección transversal de la muestra por la que fluye la corriente longitudinal es $A_{\text{trans}} = w \cdot d = (0,05\,\text{cm}) \times (0,20\,\text{cm}) = 0,01\,\text{cm}^2$. La conductividad se calcula directamente desde la resistencia medida $R_L$:
+\[
+R_L = \frac{1}{\sigma} \frac{L}{A_{\text{trans}}} \implies \sigma = \frac{L}{R_L \, A_{\text{trans}}} = \frac{1,0\,\text{cm}}{(2500\,\Omega) \times (0,01\,\text{cm}^2)} = 0,04\,\Omega^{-1}\text{cm}^{-1}
+\]
+
+Conociendo que $\sigma \approx e \mu_p p$, despejamos la movilidad de los portadores mayoritarios:
+\[
+\mu_p = \frac{\sigma}{e \, p} = \frac{0,04\,\Omega^{-1}\text{cm}^{-1}}{(1,60 \times 10^{-19}\,\text{C}) \times (3,125 \times 10^{14}\,\text{cm}^{-3})} = 800\,\text{cm}^2/\text{V}\cdot\text{s}
+\]
 \end{problema}

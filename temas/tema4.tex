@@ -69,7 +69,7 @@ Para comprender el comportamiento energético, consideremos primero los semicond
     \label{fig:bandas_aisladas}
 \end{figure}
 
-Al formar la unión en equilibrio térmico, el nivel de Fermi $E_F$ debe permanecer constante y uniforme a lo largo de toda la muestra. Para satisfacer esta condición, las bandas de energía sufren una flexión progresiva en la zona de transición ($x_p < x < x_n$), manteniéndose constante el gap energético $E_g$.
+Al formar la unión en equilibrio térmico, el nivel de Fermi $E_F$ debe permanecer constante y uniforme a lo largo de toda la muestra. Para satisfacer esta condición, las bandas de energía sufren una flexión progresiva en la zona de transición o \textbf{zona de carga espacial} ($x_p < x < x_n$), manteniéndose constante el gap energético $E_g$.
 
 \begin{figure}[h!]
     \centering
@@ -78,7 +78,7 @@ Al formar la unión en equilibrio térmico, el nivel de Fermi $E_F$ debe permane
     \label{fig:bandas_union_equilibrio}
 \end{figure}
 
-Fuera de la zona de carga espacial ($x < x_p$ y $x > x_n$), las regiones se comportan como regiones neutras idénticas a los semiconductores aislados. La curvatura suave de las bandas en la zona de transición refleja la variación espacial del potencial eléctrico $V(x)$ y la presencia del campo eléctrico $E(x) = \frac{1}{e} \frac{dE_C}{dx}$.
+Fuera de la zona de carga espacial ($x < x_p$ y $x > x_n$), las \textbf{zonas neutras} se comportan como regiones idénticas a los semiconductores aislados. La curvatura suave de las bandas en la zona de transición refleja la variación espacial del potencial eléctrico $V(x)$ y la presencia del campo eléctrico $E(x) = \frac{1}{e} \frac{dE_C}{dx}$.
 
 \newpage
 Dado que la concentración de electrones depende de la separación entre la banda de conducción y el nivel de Fermi ($n = N_c \exp[(E_F - E_C)/k_B T]$), $n(x)$ aumenta exponencialmente al pasar de la región P a la N conforme $E_C(x)$ se aproxima a $E_F$. Análogamente, la densidad de huecos $p(x)$ disminuye al alejarse $E_V(x)$ del nivel de Fermi.
@@ -470,14 +470,11 @@ J_s = e n_i^2 \left( \frac{1}{N_a} \sqrt{\frac{D_n}{\tau_{n0}}} + \frac{1}{N_d} 
 
 Sustituyendo los valores numéricos:
 \[
-J_s = (1,6 \times 10^{-19}) \times (1,5 \times 10^{10})^2 \left( \frac{1}{10^{16}} \sqrt{\frac{25}{5 \times 10^{-7}}} + \frac{1}{10^{16}} \sqrt{\frac{10}{5 \times 10^{-7}}} \right)
-\]
-\[
-J_s = 3,6 \times 10^{-15} \left( 7071,07 + 4472,14 \right) = 4,16 \times 10^{-11}\,\text{A/cm}^2
+J_s = 4,16 \times 10^{-11}\,\text{A/cm}^2
 \]
 
 \begin{center}
-    \includegraphics[width=0.6\textwidth]{imagenes/tema4/T4_E2.png}
+    \includegraphics[width=0.85\textwidth]{imagenes/tema4/T4_E2.png}
     \captionof{figure}{.}
     \label{fig:T4_E2}
 \end{center}
@@ -513,7 +510,7 @@ Despejando $V_{a2}$:
 \]
 
 \begin{center}
-    \includegraphics[width=0.6\textwidth]{imagenes/tema4/T4_E3.png}
+    \includegraphics[width=0.85\textwidth]{imagenes/tema4/T4_E3.png}
     \captionof{figure}{.}
     \label{fig:T4_E3}
 \end{center}
@@ -615,7 +612,7 @@ Bajo polarización directa, la inyección exponencial de portadores genera un ex
 
 \newpage
 
-\subsection*{Comportamiento Dinámico}
+\subsection{Comportamiento Dinámico}
 
 \subsubsection*{Modelo de Pequeña Señal}
 
@@ -943,7 +940,7 @@ W_P' = W_P - |x_p| = \SI{5}{\um} - \SI{1.5}{\um} = \SI{3.5}{\um}
 
 Dado que $W_P' = \SI{3.5}{\um} \ll L_n = \SI{60}{\um}$, nos encontramos ante un \textbf{diodo corto}. Por tanto, se puede despreciar la generación y recombinación en el volumen de la zona neutra del lado $P$.
 
-\paragraph{a) Cálculo de la polarización aplicada $V$}
+\subsubsection*{a) Cálculo de la polarización aplicada $V$}
 
 Por tratarse de una unión asimétrica $P-N^+$ ($N_D \gg N_A$), la zona de carga espacial se extiende casi en su totalidad hacia el lado menos dopado ($P$), de modo que $x_n \approx 0$ y $W \approx |x_p|$. 
 
@@ -954,10 +951,7 @@ La anchura de la zona de carga espacial en el lado $P$ bajo una tensión aplicad
 
 Para determinar el potencial de contacto $V_B$, calculamos la posición del nivel de Fermi en la región $P$ respecto de la banda de valencia:
 \[
-p_{p0} = N_A = N_v \exp\left(-\frac{E_{Fp} - E_V}{k_B T}\right) \implies E_{Fp} - E_V = k_B T \ln\left(\frac{N_v}{N_A}\right)
-\]
-\[
-E_{Fp} - E_V = (\SI{0.026}{\eV}) \ln\left(\frac{\num{1.10e19}}{\num{1.5e14}}\right) \approx \SI{0.291}{\eV}
+p_{p0} = N_A = N_v \exp\left(-\frac{E_{Fp} - E_V}{k_B T}\right) \implies E_{Fp} - E_V = k_B T \ln\left(\frac{N_v}{N_A}\right) \approx \SI{0.291}{\eV}
 \]
 
 Puesto que en el semiconductor $N^+$ el nivel de Fermi coincide con el fondo de la banda de conducción ($E_{Fn} = E_C$), la barrera de potencial interna $V_B$ es:
@@ -969,7 +963,7 @@ V_B = \SI{0.829}{\V}
 \]
 
 \begin{center}
-    \includegraphics[width=0.55\textwidth]{imagenes/tema4/T4_P1_a.png}
+    \includegraphics[width=0.85\textwidth]{imagenes/tema4/T4_P1_a.png}
     \captionof{figure}{Diagrama de bandas de energía de los semiconductores P y N+ aislados para ilustrar el potencial de contacto $V_B$.}
 \end{center}
 
@@ -985,7 +979,7 @@ Para reducir la zona de carga espacial a $|x_p| = \SI{1.5}{\um} = \SI{1.5e-4}{\c
     & = 0.829 - 0.257 = \SI{0.572}{\V} \approx \SI{0.57}{\V}
 \end{align*}
 
-\paragraph{b) Cálculo de la densidad de corriente $J$}
+\subsubsection*{b) Cálculo de la densidad de corriente $J$}
 
 En una unión $P-N^+$, la corriente total está dominada ampliamente por la inyección de electrones minoritarios en el lado $P$ ($J \approx J_n$).
 
@@ -1007,9 +1001,18 @@ La pendiente del perfil de concentración es constante:
 
 Obtenemos los parámetros numéricos involucrados:
 \begin{itemize}
-    \item Coeficiente de difusión de electrones: $D_n = \frac{k_B T}{e} \mu_n = (\SI{0.026}{\V}) \times (\SI{1500}{\cm^2/\V\second}) = \SI{39}{\cm^2/\second}$.
-    \item Densidad de electrones minoritarios en equilibrio: $n_{p0} = \frac{n_i^2}{N_A} = \frac{(\num{6.9e9})^2}{\num{1.5e14}} = \SI{3.174e5}{\cm^{-3}}$.
-    \item Longitud de la región neutra: $W_P' = \SI{3.5}{\um} = \SI{3.5e-4}{\cm}$.
+    \item Coeficiente de difusión de electrones:
+    \[
+    D_n = \frac{k_B T}{e} \mu_n = (\SI{0.026}{\V}) \times (\SI{1500}{\cm^2/\V\second}) = \SI{39}{\cm^2/\second}
+    \]    
+    \item Densidad de electrones minoritarios en equilibrio:
+    \[
+    n_{p0} = \frac{n_i^2}{N_A} = \frac{(\num{6.9e9})^2}{\num{1.5e14}} = \SI{3.174e5}{\cm^{-3}}
+    \]
+    \item Longitud de la región neutra:
+    \[
+    W_P' = \SI{3.5}{\um} = \SI{3.5e-4}{\cm}
+    \]
 \end{itemize}
 
 Evaluando la densidad de corriente de difusión de electrones:
@@ -1048,7 +1051,7 @@ n_i = \SI{6.9e9}{\cm^{-3}}, \quad N_c = \SI{2.83e19}{\cm^{-3}}, \quad N_v = \SI{
 \mu_n = \SI{1500}{\cm^2/\V\second}, \quad \mu_p = \SI{450}{\cm^2/\V\second}, \quad \epsilon = \SI{1.061e-12}{\farad\per\cm}
 \]
 \tcblower
-\textbf{a) Potencial de contacto de la unión $P^+-N$}
+\subsubsection*{a) Potencial de contacto de la unión $P^+-N$}
 
 La resistencia de la región semiconductora tipo N de sección transversal $A = L^2$ y longitud $L = \SI{10}{\um} = \SI{10e-4}{\cm}$ se expresa como:
 \[
@@ -1057,46 +1060,38 @@ R = \frac{L}{\sigma A} = \frac{L}{e \mu_n n_{n0} L^2} = \frac{1}{e \mu_n n_{n0} 
 
 Despejando la concentración de electrones mayoritarios en equilibrio $n_{n0} \approx N_D$:
 \[
-\begin{aligned}
-N_D = n_{n0} &= \frac{1}{e\,\mu_n\,R\,L} \\
-&= \frac{1}{(\SI{1.6e-19}{\coulomb})\,(\SI{1500}{\cm\squared\per\volt\per\second})\,(\SI{10.38e3}{\ohm})\,(\SI{10e-4}{\cm})} \\
-&= \SI{4.014e14}{\per\cm\cubed}
-\end{aligned}
+N_D = n_{n0} = \frac{1}{e\,\mu_n\,R\,L} = \SI{4.014e14}{\per\cm\cubed}
 \]
 
 La separación del nivel de Fermi en el lado N respecto al fondo de la banda de conducción $E_C$ es:
 \[
-E_C - E_{Fn} = k_B T \ln\left(\frac{N_c}{n_{n0}}\right) = (\SI{0.026}{\eV}) \ln\left(\frac{\num{2.83e19}}{\num{4.014e14}}\right) \approx \SI{0.291}{\eV} \quad (\approx \SI{0.28}{\eV})
+E_C - E_{Fn} = k_B T \ln\left(\frac{N_c}{n_{n0}}\right) = \SI{0.2891}{\eV}
 \]
 
 Puesto que el lado $P^+$ está fuertemente degenerado ($E_{Fp} = E_V$), la barrera de potencial interno $V_B$ resulta:
 \[
-e V_B = E_{Fn} - E_{Fp} = E_C - (E_C - E_{Fn}) - E_V = E_g - (E_C - E_{Fn}) = \SI{1.12}{\eV} - \SI{0.28}{\eV} = \SI{0.84}{\eV}
+e V_B = E_{Fn} - E_{Fp} = \underbrace{(E_C - E_V)}_{E_g} - (E_C-E_{Fn}) = \SI{1.12}{\eV} - \SI{0.29}{\eV} = \SI{0.83}{\eV}
 \]
 \[
-V_B = \SI{0.84}{\V} \quad (\text{o bien } \SI{0.83}{\V} \text{ tomando el valor no redondeado})
+V_B = \SI{0.83}{\V}
 \]
 
-\textbf{b) Anchura y capacidad de la zona de transición en función de $V$}
+\subsubsection*{b) Anchura y capacidad de la zona de transición en función de $V$}
 
 Por tratarse de una unión asimétrica $P^+-N$ ($N_A \gg N_D$), la zona de carga espacial penetra de forma casi exclusiva en el lado menos dopado N ($x_p \approx 0$), resultando $W(V) \approx x_n(V)$:
+
+\begin{align*}
+    x_n(V) & = \sqrt{\frac{2\epsilon (V_B - V)}{e N_D}} = \\[8pt]
+    & = \SI{1.82e-4}{\cm} \sqrt{0.84 - V} = \\[8pt]
+    & = 1.82 \sqrt{0.84 - V} \quad (\si{\um}, \text{con } V \text{ en voltios})
+\end{align*}
+
+La capacidad de transición $C(V)$ para la superficie $A = L^2$ es:
 \[
-x_n(V) = \sqrt{\frac{2\epsilon (V_B - V)}{e N_D}} = \sqrt{\frac{2 \times (\num{1.061e-12})}{\num{1.6e-19} \times \num{4.014e14}}} \sqrt{0.84 - V} = \SI{1.82e-4}{\cm} \sqrt{0.84 - V}
-\]
-\[
-x_n(V) = 1.82 \sqrt{0.84 - V} \quad (\si{\um}, \text{con } V \text{ en voltios})
+C(V) = \frac{\epsilon A}{x_n(V)}= \num{5.83e-15}\,(0.84 - V)^{-1/2} \quad (\si{\farad})
 \]
 
-La capacidad de transición $C(V)$ para la superficie $A = L^2 = (\SI{10e-4}{\cm})^2 = \SI{1e-6}{\cm\squared}$ es:
-\[
-\begin{aligned}
-C(V) &= \frac{\epsilon A}{x_n(V)}
-= \frac{(\SI{1.061e-12}{\farad\per\cm})\,(\SI{1e-6}{\cm\squared})}{\SI{1.82e-4}{\cm}}\,(0.84 - V)^{-1/2} \\
-&= \num{5.83e-15}\,(0.84 - V)^{-1/2} \quad (\si{\farad})
-\end{aligned}
-\]
-
-\textbf{c) Distribución de portadores en la zona N}
+\subsubsection*{c) Distribución de portadores en la zona N}
 
 Al ser un diodo corto ($L - x_n \ll L_p$), se desprecia la recombinación en el volumen de la región neutra N ($x_n \le x \le L$). La ecuación de continuidad estacionaria simplificada se reduce a:
 \[
@@ -1116,7 +1111,7 @@ p_n(x) = p_{n0} + \frac{p_{n0}\left[\exp\left(\frac{e V}{k_B T}\right) - 1\right
 
 Bajo polarización directa ($V > 0$), se establece un perfil decreciente positivo inyectado hacia el contacto óhmico. Bajo polarización inversa ($V < 0$), el perfil presenta pendiente positiva con deplesión en la frontera $x = x_n$.
 
-\textbf{d) Característica $I-V$ y comentario sobre la polarización inversa}
+\subsubsection*{d) Característica $I-V$ y comentario sobre la polarización inversa}
 
 Al ser una unión $P^+-N$, la corriente está dominada totalmente por la difusión de huecos minoritarios en el lado N:
 \[
@@ -1128,7 +1123,7 @@ Con $D_p = \frac{k_B T}{e} \mu_p = (\SI{0.026}{\V}) \times (\SI{450}{\cm^2/\V\se
 I(V) = \frac{e D_p p_{n0} L^2}{L - x_n(V)} \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right]
 \]
 
-\textbf{Comentario sobre la polarización inversa y efecto de perforación (Punch-through):}
+\subsubsection*{Comentario sobre la polarización inversa y efecto de perforación (Punch-through):}
 \begin{itemize}
     \item En un diodo largo, la corriente en inversa se satura a un valor constante. En cambio, en este diodo corto, para $V < 0$ se tiene $\exp(e V / k_B T) \approx 0$ y la corriente inversa resulta:
     \[
@@ -1171,7 +1166,7 @@ Supuesto un diodo largo ($W_N \gg L_p$), $P^+$ fuertemente dopado ($N_A \gg N_D$
 \end{center}
 
 \tcblower
-\textbf{a) Obtención de la densidad de corriente $J$}
+\subsubsection*{a) Obtención de la densidad de corriente $J$}
 
 Al ser una unión asimétrica $P^+-N$ ($N_A \gg N_D$), la densidad de electrones minoritarios en el lado $P^+$ en equilibrio es despreciable ($n_{p0} = n_i^2 / N_A \ll p_{n0} = n_i^2 / N_D$). Por tanto, la corriente inyectada de electrones hacia el lado P es totalmente insignificante y la corriente total está dominada por el flujo de difusión de huecos minoritarios en el lado N ($J \approx J_p$).
 
@@ -1214,7 +1209,7 @@ Puesto que $\frac{e D_p \tau_p G}{L_p} = e G \frac{D_p \tau_p}{L_p} = e L_p G$, 
 J = J_0 \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] - J_L = J_0 \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] - e L_p G
 \]
 
-\textbf{b) Análisis de la influencia de la iluminación y detectabilidad}
+\subsubsection*{b) Análisis de la influencia de la iluminación y detectabilidad}
 
 \begin{itemize}
     \item \textbf{En polarización directa ($V > 0$):} La corriente total $J_{\text{directa}} \approx J_0 \exp\left(\frac{e V}{k_B T}\right) - J_L$ está dominada por el término exponencial inyectado, el cual crece aceleradamente. Salvo para niveles de iluminación extremadamente elevados, la fotocorriente constante $J_L$ representa una pequeña fracción insignificante de la corriente total de oscuridad.
@@ -1223,7 +1218,7 @@ J = J_0 \left[ \exp\left(\frac{e V}{k_B T}\right) - 1 \right] - J_L = J_0 \left[
 
 \textbf{Conclusión de detectabilidad:} Es infinitamente más fácil y preciso detectar la radiación luminosa en \textbf{polarización inversa} (modo fotodiodo), ya que el cambio relativo en la corriente $\frac{\Delta J}{J_{\text{oscuridad}}} = \frac{J_L}{J_0} \gg 1$ es enorme.
 
-\textbf{c) Parámetros característicos y modo de generación fotovoltaica}
+\subsubsection*{c) Parámetros característicos y modo de generación fotovoltaica}
 
 \begin{center}
     \includegraphics[width=0.55\textwidth]{imagenes/tema4/T4_P5_a.png}
@@ -1243,7 +1238,7 @@ Analizando los puntos singulares de la característica $J-V$ bajo iluminación:
     \]
 \end{enumerate}
 
-\textbf{Operación en el cuarto cuadrante (Celda solar / Fotopila):}
+\subsubsection*{Operación en el cuarto cuadrante (Celda solar / Fotopila):}
 En el intervalo de tensión $0 < V < V_{oc}$, la tensión aplicada es positiva ($V > 0$) mientras que la corriente resulta negativa ($J < 0$). En esta región, la potencia por unidad de área es negativa:
 \[
 P = J \cdot V < 0
